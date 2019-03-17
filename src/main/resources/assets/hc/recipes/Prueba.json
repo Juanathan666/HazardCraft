@@ -1,0 +1,28 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    " d ",
+    "o o",
+    " o "
+  ],
+  
+  "key": 
+  {
+    "o": 
+    {
+      "item": "minecraft:gold_ingot"
+    },
+
+    "d":
+    {
+  	  "item": "minecraft:diamond"
+    }
+
+  },
+  
+  "result": 
+  {
+    "item": "hc:madera",
+    "count": 1
+  }
+}
