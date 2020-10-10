@@ -22,7 +22,7 @@ public class Eventos {
 		if(!botas.isEmpty() && event.player.isInWater()) {
 		tick++;
 		int level = EnchantmentHelper.getMaxEnchantmentLevel(Encantamiento.Habilidad_Aquatica, event.player);
-		if(tick>70 && !event.player.world.isRemote) {
+		if(tick>90 && !event.player.world.isRemote && !event.player.capabilities.isCreativeMode) {
 			
 			switch (level) {
 			case 1:
