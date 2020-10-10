@@ -55,7 +55,7 @@ public class Eventos {
 		tick = 0;
 		if(botas.getItem() == Items.IRON_BOOTS && event.player.world.isRaining()) {
 			
-			event.player.setItemStackToSlot(EntityEquipmentSlot.LEGS, new ItemStack(Armaduras.botas_de_hierro_oxidado));
+			event.player.setItemStackToSlot(EntityEquipmentSlot.FEET, new ItemStack(Armaduras.botas_de_hierro_oxidado));
 
 		}else {
 event.player.setItemStackToSlot(EntityEquipmentSlot.FEET, ItemStack.EMPTY);
@@ -65,7 +65,7 @@ event.player.setItemStackToSlot(EntityEquipmentSlot.FEET, ItemStack.EMPTY);
 	
 	if(casco.getMaxDamage()<casco.getItemDamage()) {
 		if(casco.getItem() == Items.IRON_HELMET && event.player.world.isRaining()) {
-			event.player.setItemStackToSlot(EntityEquipmentSlot.LEGS, new ItemStack(Armaduras.casco_de_hierro_oxidado));
+			event.player.setItemStackToSlot(EntityEquipmentSlot.HEAD, new ItemStack(Armaduras.casco_de_hierro_oxidado));
 
 			
 		}else {
@@ -77,7 +77,7 @@ event.player.setItemStackToSlot(EntityEquipmentSlot.HEAD, ItemStack.EMPTY);
 	if(pechera.getMaxDamage()<pechera.getItemDamage()) {
 		
 		if(pechera.getItem() == Items.IRON_CHESTPLATE && event.player.world.isRaining()) {
-			event.player.setItemStackToSlot(EntityEquipmentSlot.LEGS, new ItemStack(Armaduras.pechera_de_hierro_oxidado));
+			event.player.setItemStackToSlot(EntityEquipmentSlot.CHEST, new ItemStack(Armaduras.pechera_de_hierro_oxidado));
 			
 		}else {
 event.player.setItemStackToSlot(EntityEquipmentSlot.CHEST, ItemStack.EMPTY);
