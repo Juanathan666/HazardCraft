@@ -1,5 +1,9 @@
 package HazardCraft;
 
+
+
+
+import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import HazardCraft.CambiosMecanicas.Eventos;
@@ -11,6 +15,7 @@ import HazardCraft.Proxy.CommonProxy;
 import MuerteEntidades.Pollos;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -34,9 +39,10 @@ public class HazardCraft
     public static final String MODID = "hc";
     public static final String NAME = "HazardCraft";
     public static final String VERSION = "1.0";
+    public static String nombre_mensajes = TextFormatting.GRAY + "[" + TextFormatting.BLUE + "HazardCraft" + TextFormatting.GRAY + "] ";
     public static CreativeTabs HazardCraftTab = new HazardCraftTab(CreativeTabs.getNextID(), MODID, MODID + "." + "HazardCraftTab", 0);	
 
-    private static Logger logger;
+    public static final Logger logger = LogManager.getFormatterLogger("HazardCraft");
     public static boolean cliente;
 
     @EventHandler
