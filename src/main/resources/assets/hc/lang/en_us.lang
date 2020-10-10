@@ -1,3 +1,6 @@
-item.madera_item.name=madera item
+itemGroup.hc=HazardCraft
 
-tile.madera.name=madera
+
+item.madera_item.name=wood item
+
+tile.madera.name=wood

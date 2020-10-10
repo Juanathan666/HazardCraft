@@ -1,19 +1,25 @@
 package HazardCraft.Interfaces;
 
+import java.io.IOException;
+
+import org.lwjgl.opengl.GL11;
+
+import HazardCraft.HazardCraft;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
-
-import org.lwjgl.opengl.GL11;
-
-import HazardCraft.HazardCraft;
 
 public class Interfaz1 extends GuiContainer {
 
+	public GuiButton atras;
+	public GuiButton siguiente;
+	
     private ResourceLocation texture = new ResourceLocation(HazardCraft.MODID + ":" + "textures/gui/mesa_de_trabajo_de_zafiro.png");
 
     public Interfaz1(InventoryPlayer invPlayer, World world, BlockPos pos) {
@@ -45,5 +51,25 @@ public class Interfaz1 extends GuiContainer {
         drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
 
     }
+@Override
+public void initGui() {
+	
+	int centroX = this.width/2;
+	int centroY = this.height/2;
+	
+	this.buttonList.add(this.siguiente = new texturabotones(0, centroX + 45, centroY + 140, new TextComponentTranslation("boton.siguiente.name").getFormattedText(), "e.png", 60, 20)); //Parametros de los botones (id, x, y, width, height, text)
 
+	super.initGui();
+}
+
+@Override
+protected void actionPerformed(GuiButton boton) throws IOException {
+	
+	if(boton.id == 0) {
+		Minecraft.getMinecraft().player.sendMessage(new TextComponentTranslation("manko si"));
+	}
+	
+	
+	super.actionPerformed(boton);
+   }
 }
