@@ -3,7 +3,6 @@ package HazardCraft.Iniciar;
 import java.util.ArrayList;
 import java.util.List;
 
-import HazardCraft.Items.ItemBase;
 import HazardCraft.Items.madera_item;
 import net.minecraft.item.Item;
 

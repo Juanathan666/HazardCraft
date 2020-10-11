@@ -1,0 +1,16 @@
+itemGroup.hc=HazardCraft
+itemGroup.EventosTab=Eventos
+death.attack.acida=El acido descompuso a %1$s.
+death.attack.acida.player=%$s Se descompuso mientras escapaba de %2$s.
+enchantment.Habilidad_Aquatica=Habilidad Aquatica
+
+item.casco_de_hierro_oxidado.name=Casco de hierro oxidado
+item.pechera_de_hierro_oxidado.name=Pechera de hierro oxidado
+item.grebas_de_hierro_oxidado.name=Grebas de hierro oxidado
+item.botas_de_hierro_oxidado.name=Botas de hierro oxidado
+
+
+item.madera_item.name=madera item
+
+tile.madera.name=madera
+boton.siguiente.name=siguiente

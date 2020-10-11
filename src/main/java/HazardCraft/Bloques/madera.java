@@ -2,18 +2,13 @@ package HazardCraft.Bloques;
 
 import java.util.Random;
 
-import HazardCraft.Iniciar.Bloques;
+import Eventos.Eventos_Principal;
+import HazardCraft.HazardCraft;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import HazardCraft.HazardCraft;
 
 public class madera extends BlockBase 
 {
@@ -25,6 +20,13 @@ public class madera extends BlockBase
 		setResistance(15.0F);
 		setHarvestLevel("Pickaxe", 0);
 		setSoundType(SoundType.WOOD);
+		if(Eventos_Principal.Navidad) {
+			setCreativeTab(HazardCraft.EventosTab);
+		}else {
+			setCreativeTab(HazardCraft.HazardCraftTab);
+		}
+	
+		
 	}
 	
 	@Override
