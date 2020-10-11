@@ -2,6 +2,8 @@ package HazardCraft.Bloques;
 
 import java.util.Random;
 
+import Eventos.Eventos_Principal;
+import HazardCraft.HazardCraft;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -18,6 +20,13 @@ public class madera extends BlockBase
 		setResistance(15.0F);
 		setHarvestLevel("Pickaxe", 0);
 		setSoundType(SoundType.WOOD);
+		if(Eventos_Principal.Navidad) {
+			setCreativeTab(HazardCraft.EventosTab);
+		}else {
+			setCreativeTab(HazardCraft.HazardCraftTab);
+		}
+	
+		
 	}
 	
 	@Override

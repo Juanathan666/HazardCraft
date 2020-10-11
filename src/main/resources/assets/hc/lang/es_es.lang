@@ -1,4 +1,5 @@
 itemGroup.hc=HazardCraft
+itemGroup.EventosTab=Eventos
 death.attack.acida=El acido descompuso a %1$s.
 death.attack.acida.player=%$s Se descompuso mientras escapaba de %2$s.
 enchantment.Habilidad_Aquatica=Habilidad Aquatica

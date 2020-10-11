@@ -28,39 +28,9 @@ public class Armaduras {
 		pechera_de_hierro_oxidado = new ArmaduraBases(hierro_oxidado,1, EntityEquipmentSlot.CHEST, "pechera_de_hierro_oxidado");
 		grebas_de_hierro_oxidado = new ArmaduraBases(hierro_oxidado,2, EntityEquipmentSlot.LEGS, "grebas_de_hierro_oxidado");
 		botas_de_hierro_oxidado = new ArmaduraBases(hierro_oxidado,1, EntityEquipmentSlot.FEET, "botas_de_hierro_oxidado");
-
-		Registrar(casco_de_hierro_oxidado);
-		Registrar(pechera_de_hierro_oxidado);
-		Registrar(grebas_de_hierro_oxidado);
-		Registrar(botas_de_hierro_oxidado);
-
-		
-		
-		
 	}
 	
 	
-	public static void registerrender() {
-		Registrar_t(casco_de_hierro_oxidado);
-		Registrar_t(pechera_de_hierro_oxidado);
-		Registrar_t(grebas_de_hierro_oxidado);
-		Registrar_t(botas_de_hierro_oxidado);
-	}
 	
-	private static void Registrar_t(Item item) {
-		
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
-		
-		
-
-	}
-	
-	private static void Registrar(Item item){
-		
-		item.setCreativeTab(HazardCraft.HazardCraftTab);
-		ForgeRegistries.ITEMS.register(item);
-		
-		}
-		
 	
 }

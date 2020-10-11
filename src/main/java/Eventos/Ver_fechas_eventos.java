@@ -23,7 +23,7 @@ public class Ver_fechas_eventos {
 	public static int MesVerano;
 	
 	public static int ano;
-	public static String URL = "https://www.dropbox.com/s/i7r1eebqvl01hv3/RubyCraft-DiasEventos.txt?raw=1";
+	public static String URL = "https://www.dropbox.com/s/39u9724yryb0uok/Hazardcraft-eventos-dias.txt?raw=1";
 
 	public static void VerFechasEventos(){
 		new Thread("VerFechaEventos"){
@@ -33,19 +33,19 @@ public class Ver_fechas_eventos {
 					URL url = new URL(URL);
 					Scanner scanner = new Scanner(url.openStream());
 					String hueco1 = scanner.nextLine();
-				
+					String hueco2 = scanner.nextLine();
 					
 					String IHalloween = scanner.nextLine();
 					String AHalloween = scanner.nextLine();
 					String MesHalloween = scanner.nextLine();
 					
-					String hueco2 = scanner.nextLine();
+					String hueco3 = scanner.nextLine();
 
 					String INavidad = scanner.nextLine();
 					String ANavidad = scanner.nextLine();
 					String MesNavidad = scanner.nextLine();
 					
-					String hueco3 = scanner.nextLine();
+					String hueco4 = scanner.nextLine();
 					
 					String IVerano = scanner.nextLine();
 					String AVerano = scanner.nextLine();
@@ -93,6 +93,7 @@ public class Ver_fechas_eventos {
 			//Testear Navidad
 		    if (calendar.get(2) + 1 == MesNavidad && calendar.get(5) >= INavidad && calendar.get(5) <= ANavidad){
 		      Eventos_Principal.Navidad = true;
+		      
 		       } 
 		     
 		    	//Testear Hallowen

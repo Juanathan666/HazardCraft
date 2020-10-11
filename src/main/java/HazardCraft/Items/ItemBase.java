@@ -1,5 +1,6 @@
 package HazardCraft.Items;
 
+import Eventos.Eventos_Principal;
 import HazardCraft.HazardCraft;
 import HazardCraft.Iniciar.Items;
 import HazardCraft.Util.Modelos;
@@ -11,7 +12,10 @@ public class ItemBase extends Item implements Modelos
 	{
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		setCreativeTab(HazardCraft.HazardCraftTab);
+	
+		
+			setCreativeTab(HazardCraft.HazardCraftTab);
+		
 		
 		Items.ITEMS.add(this);
 	}
