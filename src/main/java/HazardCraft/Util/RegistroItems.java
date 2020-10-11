@@ -16,6 +16,7 @@ public class RegistroItems
 	public static void onItemRegister(RegistryEvent.Register<Item> event)
 	{
 		event.getRegistry().registerAll(Items.ITEMS.toArray(new Item [0]));
+		
 	}
 	
 	@SubscribeEvent

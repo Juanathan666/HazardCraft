@@ -1,13 +1,10 @@
 package HazardCraft.Interfaces;
 
-import org.lwjgl.opengl.GL11;
-
 import HazardCraft.HazardCraft;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.renderer.GlStateManager;
-import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.util.ResourceLocation;
 
 public class texturabotones extends GuiButton

@@ -4,9 +4,7 @@ import java.util.Random;
 
 import HazardCraft.HazardCraft;
 import HazardCraft.Iniciar.Armaduras;
-import ibxm.Player;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
@@ -14,7 +12,6 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.EnumDifficulty;
-import net.minecraft.world.World;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 
@@ -113,7 +110,6 @@ public class Eventos {
 	if(botas.getMaxDamage()<botas.getItemDamage()) {
 		tick = 0;
 		if(botas.getItem() == Items.IRON_BOOTS && event.player.world.isRaining()) {
-			
 			event.player.setItemStackToSlot(EntityEquipmentSlot.FEET, new ItemStack(Armaduras.botas_de_hierro_oxidado));
 
 		}else {

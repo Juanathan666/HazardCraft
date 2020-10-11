@@ -13,6 +13,7 @@ public class ClientProxy extends CommonProxy
 	@Override
 	public void init() {
 		Armaduras.registerrender();
+		
 	}
 	
 	public void registerItemRenderer(Item item, int meta, String id)

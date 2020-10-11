@@ -6,6 +6,7 @@ package HazardCraft;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import Eventos.Eventos_Principal;
 import HazardCraft.CambiosMecanicas.Eventos;
 import HazardCraft.CambiosMecanicas.Registrar_encantamiento;
 import HazardCraft.CambiosMecanicas.nonadar;
@@ -14,7 +15,6 @@ import HazardCraft.Proxy.ClientProxy;
 import HazardCraft.Proxy.CommonProxy;
 import MuerteEntidades.Pollos;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -48,14 +48,14 @@ public class HazardCraft
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-    	
+    
     	if(event.getSide()==Side.CLIENT) {
     		cliente = true;
     	}else {
     		cliente = false;
     	}
     			
-    	
+    	Eventos_Principal.eventos_preinit();
         MinecraftForge.EVENT_BUS.register(new Pollos());
         MinecraftForge.EVENT_BUS.register(new DropeoBloquesMinecraft());
         MinecraftForge.EVENT_BUS.register(new Eventos());
@@ -63,20 +63,20 @@ public class HazardCraft
         MinecraftForge.EVENT_BUS.register(new nonadar());
         }
         MinecraftForge.EVENT_BUS.register(new Registrar_encantamiento());
-        Armaduras.Registar_Armadura();
+    	Armaduras.Registar_Armadura();
     }
 
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
     	Proxy.init();
-    	
+    	Eventos_Principal.eventos_init();
     	ClientProxy.RegistrarInterfaces();
     }
     
     @EventHandler
     public void Postinit(FMLPostInitializationEvent event)
     {
-        
+    	Eventos_Principal.eventos_post_init();
     }
 }

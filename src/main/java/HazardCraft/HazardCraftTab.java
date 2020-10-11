@@ -2,7 +2,6 @@ package HazardCraft;
 
 import HazardCraft.Iniciar.Bloques;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 
 public class HazardCraftTab extends CreativeTabs {
