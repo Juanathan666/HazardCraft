@@ -9,11 +9,13 @@ import net.minecraft.init.Biomes;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 
 public class Eventos {
@@ -25,9 +27,22 @@ public class Eventos {
 	private static boolean mensaje = false;
 	private static boolean activar_lluvia_acida = false; 
 	private static int prob_lluvia = 0;
+	/**
+	@SubscribeEvent
+	public void oncraftevent(ItemCraftedEvent event) {
+		ItemStack stack = event.crafting;
+
+		if (stack.getItem() == new ItemStack(Items.DIAMOND_SWORD).getItem())
+		{
+			stack.addEnchantment(Encantamiento.Habilidad_Aquatica, 1);
+			
+		}
+	}**/
+	
+	
 	@SubscribeEvent
 	public void PlayerTickEventos(PlayerTickEvent event){
-		System.out.println(tick+" " + tick_lluvia + " " + tick_lluvia_acida + mensaje + " " + activar_lluvia_acida + " " + prob_lluvia);
+		//System.out.println(tick+" " + tick_lluvia + " " + tick_lluvia_acida + mensaje + " " + activar_lluvia_acida + " " + prob_lluvia);
 		//Muestra el mensaje si sale la probabilidad de activar la lluvia acida
 		if(!mensaje && event.player.world.isRaining()) {
 			Random rand = new Random();

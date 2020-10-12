@@ -15,7 +15,7 @@ public class Habilidad_Aquatica extends Enchantment {
 		
 		this.setName("Habilidad_Aquatica");
 		this.setRegistryName(new ResourceLocation(HazardCraft.MODID + ":Habilidad_Aquatica"));
-		
+
 		Encantamiento.ENCHATMENTS.add(this);
 		
 	}
@@ -41,4 +41,6 @@ public class Habilidad_Aquatica extends Enchantment {
 		
 		return true;
 	}
+	
+	
 }

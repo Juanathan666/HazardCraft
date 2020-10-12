@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:diamond_block"
+        }
+    },
+     "result":
+    {
+        "item": "minecraft:diamond_sword",
+        "nbt":
+        {
+            "ench":
+            [
+                {
+                    "id": -1,
+                    "lvl": 1
+                }
+            ]
+        },
+        "count": 1
+    }
+}
