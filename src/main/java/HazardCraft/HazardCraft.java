@@ -17,6 +17,7 @@ import HazardCraft.Proxy.CommonProxy;
 import HazardCraft.Util.RegistroItems;
 import MuerteEntidades.Pollos;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -70,7 +71,7 @@ public class HazardCraft
         MinecraftForge.EVENT_BUS.register(new Registrar_encantamiento());
        
     	Armaduras.Registar_Armadura();
-    	
+    	cambiar_stack.iniciar();
     }
 
     @EventHandler

@@ -13,4 +13,8 @@ item.botas_de_hierro_oxidado.name=Botas de hierro oxidado
 item.madera_item.name=madera item
 
 tile.madera.name=madera
+tile.bloque_de_marmol_blanco.name=Marmol Blanco
+tile.bloque_de_marmol_verde.name=Marmol Verde
+tile.bloque_de_marmol_rojo.name=Marmol Rojo
+tile.bloque_de_marmol_negro.name=Marmol Negro
 boton.siguiente.name=siguiente
