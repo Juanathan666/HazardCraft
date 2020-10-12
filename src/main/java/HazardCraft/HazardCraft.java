@@ -53,6 +53,7 @@ public class HazardCraft
     Eventos_Principal.eventos_preinit();
     Buscar_Actualizaciones.MirarActualizaciones();
     MinecraftForge.EVENT_BUS.register(new TestearActualizaciones());
+    //Mira si el mod se esta ejecutando en un servidor o en un cliente
     	if(event.getSide()==Side.CLIENT) {
     		cliente = true;
     	}else {

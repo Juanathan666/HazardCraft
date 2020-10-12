@@ -5,6 +5,7 @@ import java.util.Random;
 import HazardCraft.HazardCraft;
 import HazardCraft.Iniciar.Armaduras;
 import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.init.Biomes;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
@@ -17,24 +18,27 @@ import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 
 public class Eventos {
 
-	public static int tick;
-	public static int tick_lluvia;
-	public static int tick_lluvia_acida;
-	public static DamageSource lluvia_acida_damage_source = new DamageSource("acida").setDamageBypassesArmor();
-	public static boolean mensaje = false;
+	private static int tick;
+	private static int tick_lluvia;
+	private static int tick_lluvia_acida;
+	private static DamageSource lluvia_acida_damage_source = new DamageSource("acida").setDamageBypassesArmor();
+	private static boolean mensaje = false;
 	private static boolean activar_lluvia_acida = false; 
 	private static int prob_lluvia = 0;
 	@SubscribeEvent
 	public void PlayerTickEventos(PlayerTickEvent event){
+		System.out.println(tick+" " + tick_lluvia + " " + tick_lluvia_acida + mensaje + " " + activar_lluvia_acida + " " + prob_lluvia);
 		//Muestra el mensaje si sale la probabilidad de activar la lluvia acida
 		if(!mensaje && event.player.world.isRaining()) {
 			Random rand = new Random();
-			prob_lluvia = rand.nextInt(40);
+			prob_lluvia = rand.nextInt(20);
 			if(prob_lluvia==1 && !event.player.world.isRemote){
 				
 				 event.player.sendMessage(new TextComponentTranslation(HazardCraft.nombre_mensajes + TextFormatting.RED + "LLuvia acida activada."));
 				 activar_lluvia_acida = true;
 
+			}else if(!(prob_lluvia ==1) && event.player.world.canSeeSky(event.player.getPosition())) {
+				event.player.sendMessage(new TextComponentTranslation(HazardCraft.nombre_mensajes + TextFormatting.GREEN + "La Lluvia no contiene acido."));
 			}
 			mensaje = true;
 			//Pone en default las variables al dejar de llover
@@ -45,15 +49,13 @@ public class Eventos {
 			 tick_lluvia = 0;
 			 tick_lluvia_acida = 0;
 			 prob_lluvia = 0;
-		 }
-			
-		
+		 }	
 		//Hace daño al jugador si la lluvia acida se activa
 			if(activar_lluvia_acida) { 
 				tick_lluvia_acida++;
                   if (event.player.world.canSeeSky(event.player.getPosition()) && !event.player.capabilities.isCreativeMode && !event.player.world.isRemote) {
-			
-				if(tick_lluvia_acida>110) {
+			//Hara daño cada x tick si se comple la condicion de que en el bioma que se encuentra el jugador puede llover. Osea en un desierto no le ara daño
+				if(tick_lluvia_acida>110 && event.player.world.getBiome(event.player.getPosition()).canRain()) {
 					//Hace mas daño segun la dificultad en pacifico no hace daño
 					if(event.player.world.getDifficulty() == EnumDifficulty.EASY) {
 					event.player.attackEntityFrom(lluvia_acida_damage_source, 1.0F);
@@ -64,7 +66,9 @@ public class Eventos {
 					}
 			
 		 }
-}                 //Reinicia la variable para hacer 1 toque de daño cada cierto tiempo
+							
+}                
+                  //Reinicia la variable para hacer 1 toque de daño cada cierto tiempo
 				if(tick_lluvia_acida>113) {
 					tick_lluvia_acida =0;
 				}
@@ -150,7 +154,7 @@ event.player.setItemStackToSlot(EntityEquipmentSlot.LEGS, new ItemStack(Armadura
 	}
 
 //Te cambia la armadura de hierro por la de hierro oxidado si esta lloviendo
-if(event.player.world.isRaining() && event.player.world.canSeeSky(event.player.getPosition())) {
+if(event.player.world.isRaining() && event.player.world.canSeeSky(event.player.getPosition()) && event.player.world.getBiome(event.player.getPosition()).canRain()) {
 	if(casco.getItem() == Items.IRON_HELMET || pechera.getItem() == Items.IRON_CHESTPLATE || grebas.getItem() == Items.IRON_LEGGINGS || botas.getItem() == Items.IRON_BOOTS) {
 	tick_lluvia++;
 	if(casco.getItem() == Items.IRON_HELMET && tick_lluvia>70 && !event.player.world.isRemote) {
