@@ -1,4 +1,4 @@
-package HazardCraft;
+package HazardCraft.CambiosMecanicas;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;

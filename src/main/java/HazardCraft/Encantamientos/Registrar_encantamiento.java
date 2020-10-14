@@ -1,4 +1,4 @@
-package HazardCraft.CambiosMecanicas;
+package HazardCraft.Encantamientos;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentProtection;

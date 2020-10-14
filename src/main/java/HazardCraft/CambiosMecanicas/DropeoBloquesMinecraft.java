@@ -1,4 +1,4 @@
-package HazardCraft;
+package HazardCraft.CambiosMecanicas;
 
 import java.util.Iterator;
 import java.util.Map;

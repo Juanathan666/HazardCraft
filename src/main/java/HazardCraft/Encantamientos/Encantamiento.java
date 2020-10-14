@@ -1,4 +1,4 @@
-package HazardCraft.CambiosMecanicas;
+package HazardCraft.Encantamientos;
 
 import java.util.ArrayList;
 import java.util.List;

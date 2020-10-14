@@ -1,7 +1,10 @@
 itemGroup.hc=HazardCraft
+
 itemGroup.EventosTab=Eventos
+
 death.attack.acida=El acido descompuso a %1$s.
 death.attack.acida.player=%1$s Se descompuso mientras escapaba de %2$s.
+
 enchantment.Habilidad_Aquatica=Habilidad Aquatica
 
 item.casco_de_hierro_oxidado.name=Casco de hierro oxidado
@@ -9,12 +12,19 @@ item.pechera_de_hierro_oxidado.name=Pechera de hierro oxidado
 item.grebas_de_hierro_oxidado.name=Grebas de hierro oxidado
 item.botas_de_hierro_oxidado.name=Botas de hierro oxidado
 
+tile.bloque_de_marmol_blanco.name=Marmol Blanco pulido
+tile.bloque_de_marmol_verde.name=Marmol Verde pulido
+tile.bloque_de_marmol_rojo.name=Marmol Rojo pulido
+tile.bloque_de_marmol_negro.name=Marmol Negro pulido
 
-item.madera_item.name=madera item
+tile.mena_de_marmol_blanco.name=Marmol Blanco
+tile.mena_de_marmol_verde.name=Marmol Verde
+tile.mena_de_marmol_rojo.name=Marmol Rojo
+tile.mena_de_marmol_negro.name=Marmol Negro
 
-tile.madera.name=madera
-tile.bloque_de_marmol_blanco.name=Marmol Blanco
-tile.bloque_de_marmol_verde.name=Marmol Verde
-tile.bloque_de_marmol_rojo.name=Marmol Rojo
-tile.bloque_de_marmol_negro.name=Marmol Negro
+tile.ladrillos_de_marmol_blanco.name=Ladrillos de Marmol Blanco
+tile.ladrillos_de_marmol_verde.name=Ladrillos de Marmol Verde
+tile.ladrillos_de_marmol_rojo.name=Ladrillos de Marmol Rojo
+tile.ladrillos_de_marmol_negro.name=Ladrillos de Marmol Negro
+
 boton.siguiente.name=siguiente

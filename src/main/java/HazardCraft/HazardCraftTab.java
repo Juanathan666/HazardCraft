@@ -21,7 +21,7 @@ public class HazardCraftTab extends CreativeTabs {
 	@Override
 	public ItemStack getTabIconItem() {
 		
-			return new ItemStack(Bloques.MADERA);
+			return new ItemStack(Bloques.BLOQUE_DE_MARMOL_ROJO);
 		   
 	}
 

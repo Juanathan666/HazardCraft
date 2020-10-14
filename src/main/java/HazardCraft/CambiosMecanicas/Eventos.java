@@ -3,6 +3,7 @@ package HazardCraft.CambiosMecanicas;
 import java.util.Random;
 
 import HazardCraft.HazardCraft;
+import HazardCraft.Encantamientos.Encantamiento;
 import HazardCraft.Iniciar.Armaduras;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.init.Biomes;

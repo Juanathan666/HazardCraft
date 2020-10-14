@@ -4,12 +4,14 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import Eventos.Eventos_Principal;
+import Eventos.HazardCraftTabEventos;
 import HazardCraft.Actualizaciones.Buscar_Actualizaciones;
 import HazardCraft.Actualizaciones.TestearActualizaciones;
-import HazardCraft.Bloques.madera;
+import HazardCraft.CambiosMecanicas.DropeoBloquesMinecraft;
 import HazardCraft.CambiosMecanicas.Eventos;
-import HazardCraft.CambiosMecanicas.Registrar_encantamiento;
+import HazardCraft.CambiosMecanicas.cambiar_stack;
 import HazardCraft.CambiosMecanicas.nonadar;
+import HazardCraft.Encantamientos.Registrar_encantamiento;
 import HazardCraft.Iniciar.Armaduras;
 import HazardCraft.Iniciar.Items;
 import HazardCraft.Proxy.ClientProxy;
