@@ -28,5 +28,7 @@ tile.ladrillos_de_marmol_rojo.name=Ladrillos de Marmol Rojo
 tile.ladrillos_de_marmol_negro.name=Ladrillos de Marmol Negro
 
 tile.pilar_de_marmol_blanco.name=Pilar de Marmol Blanco
+tile.pilar_de_marmol_blanco_inferior.name=Pilar de Marmol Blanco Inferior
+tile.pilar_de_marmol_blanco_superior.name=Pilar de Marmol Blanco Superior
 
 boton.siguiente.name=siguiente

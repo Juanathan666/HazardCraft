@@ -6,7 +6,6 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
@@ -26,33 +25,22 @@ public class pilar_de_marmol_blanco extends BlockBase{
 	
 	@Override
 	public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer,ItemStack stack) {
-	
+		if(world.getBlockState(pos.up()).getBlock().equals(Blocks.AIR) && !world.getBlockState(pos.up()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO) && !world.getBlockState(pos.down()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO_INFERIOR) && !world.getBlockState(pos.down()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO) && !world.getBlockState(pos.down()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO_SUPERIOR)) {
+			    world.setBlockState(pos, Bloques.PILAR_DE_MARMOL_BLANCO_INFERIOR.getDefaultState(), 0);
 
-		if(world.getBlockState(pos.down()).getBlock() == Bloques.PILAR_DE_MARMOL_BLANCO) {
-			
-		    world.setBlockState(pos.down(), Bloques.PILAR_DE_MARMOL_BLANCO_INFERIOR.getDefaultState(), 0);
-			
 		}
 		
-		if(!(world.getBlockState(pos.up()).getBlock() == Bloques.PILAR_DE_MARMOL_BLANCO) && world.getBlockState(pos.down()).getBlock() == Bloques.PILAR_DE_MARMOL_BLANCO) {
-			
+		if(!world.getBlockState(pos.up()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO) && world.getBlockState(pos.down()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO)) {
+		    world.setBlockState(pos, Bloques.PILAR_DE_MARMOL_BLANCO_SUPERIOR.getDefaultState(), 0);
+
+	}
+		if(world.getBlockState(pos.down()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO_SUPERIOR)) {
+			world.setBlockState(pos.down(), Bloques.PILAR_DE_MARMOL_BLANCO.getDefaultState(), 0);
 			world.setBlockState(pos, Bloques.PILAR_DE_MARMOL_BLANCO_SUPERIOR.getDefaultState(), 0);
-			
 		}
+	
 		
 		super.onBlockPlacedBy(world, pos, state, placer, stack);
-	}
-	
-	@Override
-	public void onBlockDestroyedByPlayer(World world, BlockPos pos, IBlockState state) {
-		
-		if(world.getBlockState(pos.down()).getBlock() == Bloques.PILAR_DE_MARMOL_BLANCO_INFERIOR) {
-			world.setBlockState(pos.down(), Bloques.PILAR_DE_MARMOL_BLANCO.getDefaultState(), 0);
-		}
-		
-		
-		
-		super.onBlockDestroyedByPlayer(world, pos, state);
 	}
 	
 	@Override

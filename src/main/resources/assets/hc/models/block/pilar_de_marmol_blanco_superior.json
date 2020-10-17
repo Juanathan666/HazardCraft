@@ -1,16 +1,16 @@
 {
 	"parent": "block/block",
 	"textures": {
-		"normal": "hc:blocks/bloque_de_marmol_blanco",
-		"tapa": "hc:blocks/bloque_de_marmol_blanco",
-		"inferior": "hc:blocks/bloque_de_marmol_blanco",
-		"particle": "hc:blocks/bloque_de_marmol_blanco"
+		"normal": "hc:blocks/bloque_de_marmol_inv",
+		"tapa": "hc:blocks/bloque_de_marmol_inv",
+		"inferior": "hc:blocks/bloque_de_marmol_inv",
+		"particle": "hc:blocks/bloque_de_marmol_inv"
 	},
 	"elements": [
 		{
 			"comment": "columna",
-			"from": [ 2, 4, 2 ],
-			"to": [ 14, 16, 14 ],
+			"from": [ 14, 0, 14 ],
+			"to": [ 2, 12, 2 ],
 			"faces": {
 				"down": { "uv": [ 2, 2, 14, 14 ], "texture": "tapa" },
 				"up": { "uv": [ 2, 2, 14, 14 ], "texture": "tapa" },
@@ -22,8 +22,8 @@
 		},	 
 		{
 			"comment": "bottom",
-			"from": [ 0, 0, 0 ],
-			"to": [ 16, 4, 16 ],
+			"from": [ 16, 12, 16 ],
+			"to": [ 0, 16, 0 ],
 			"faces": {
 				"down": { "uv": [ 0, 0, 16, 16 ], "texture": "normal" },
 				"up": { "uv": [ 0, 0, 16, 16 ], "texture": "normal" },
