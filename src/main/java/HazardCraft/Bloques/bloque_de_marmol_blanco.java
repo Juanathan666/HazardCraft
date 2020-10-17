@@ -5,7 +5,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 
-public class bloque_de_marmol_blanco extends BlockBase {
+public class bloque_de_marmol_blanco extends BlockBase{
 
 	public bloque_de_marmol_blanco(String name, Material material) {
 		super(name, material);

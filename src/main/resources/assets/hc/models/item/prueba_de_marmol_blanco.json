@@ -1,6 +1,0 @@
-{
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "hc:blocks/prueba_de_marmol_blanco"
-    }
- }

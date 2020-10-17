@@ -16,6 +16,7 @@ import HazardCraft.Bloques.mena_de_marmol_blanco;
 import HazardCraft.Bloques.mena_de_marmol_negro;
 import HazardCraft.Bloques.mena_de_marmol_rojo;
 import HazardCraft.Bloques.mena_de_marmol_verde;
+import HazardCraft.Bloques.pilar_de_marmol_blanco;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -38,5 +39,7 @@ public class Bloques
 	public static final Block LADRILLOS_DE_MARMOL_NEGRO = new ladrillos_de_marmol_negro("ladrillos_de_marmol_negro", Material.ROCK);
 	public static final Block LADRILLOS_DE_MARMOL_VERDE = new ladrillos_de_marmol_verde("ladrillos_de_marmol_verde", Material.ROCK);
 	public static final Block LADRILLOS_DE_MARMOL_ROJO = new ladrillos_de_marmol_rojo("ladrillos_de_marmol_rojo", Material.ROCK);
+	
+	public static final Block PILAR_DE_MARMOL_BLANCO = new pilar_de_marmol_blanco("pilar_de_marmol_blanco", Material.ROCK);
 
 }
