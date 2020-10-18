@@ -3,7 +3,6 @@ package HazardCraft.Iniciar;
 import java.util.ArrayList;
 import java.util.List;
 
-import HazardCraft.HazardCraft;
 import HazardCraft.Bloques.bloque_de_marmol_blanco;
 import HazardCraft.Bloques.bloque_de_marmol_negro;
 import HazardCraft.Bloques.bloque_de_marmol_rojo;
@@ -21,7 +20,6 @@ import HazardCraft.Bloques.pilar_de_marmol_blanco_inferior;
 import HazardCraft.Bloques.pilar_de_marmol_blanco_superior;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 
 public class Bloques
 {
@@ -45,5 +43,6 @@ public class Bloques
 	public static  Block PILAR_DE_MARMOL_BLANCO = new pilar_de_marmol_blanco("pilar_de_marmol_blanco", Material.ROCK);
 	public static  Block PILAR_DE_MARMOL_BLANCO_INFERIOR = new pilar_de_marmol_blanco_inferior("pilar_de_marmol_blanco_inferior", Material.ROCK);
 	public static Block PILAR_DE_MARMOL_BLANCO_SUPERIOR = new pilar_de_marmol_blanco_superior("pilar_de_marmol_blanco_superior", Material.ROCK);
+
 
 }

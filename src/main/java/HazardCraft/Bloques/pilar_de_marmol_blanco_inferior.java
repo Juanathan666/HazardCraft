@@ -46,6 +46,16 @@ public class pilar_de_marmol_blanco_inferior extends BlockBase {
 		return false;
 	}
 
+	@Override
+	public void onBlockDestroyedByPlayer(World world, BlockPos pos, IBlockState state) {
+		
+		if(world.getBlockState(pos.up()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO_SUPERIOR)) {
+			
+			world.setBlockState(pos.up(), Bloques.PILAR_DE_MARMOL_BLANCO.getDefaultState(), 0);
+		}
+		
+		super.onBlockDestroyedByPlayer(world, pos, state);
+	}
 	
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {

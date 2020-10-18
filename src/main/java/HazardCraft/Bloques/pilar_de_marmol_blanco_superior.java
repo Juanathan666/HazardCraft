@@ -32,8 +32,8 @@ public class pilar_de_marmol_blanco_superior extends BlockBase {
 	
 	@Override
 	public void onBlockDestroyedByPlayer(World world, BlockPos pos, IBlockState state) {
-		BlockPos posmenos2 = new BlockPos(pos.getX(), pos.getY()-2, pos.getZ());
-	if(world.getBlockState(pos.down()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO) && !world.getBlockState(posmenos2).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO_INFERIOR)) {
+		
+	if(world.getBlockState(pos.down()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO)) {
 		
 		world.setBlockState(pos.down(), Bloques.PILAR_DE_MARMOL_BLANCO_SUPERIOR.getDefaultState(), 0);
 	}

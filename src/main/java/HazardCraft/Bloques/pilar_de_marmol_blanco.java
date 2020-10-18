@@ -25,12 +25,10 @@ public class pilar_de_marmol_blanco extends BlockBase{
 	
 	@Override
 	public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer,ItemStack stack) {
-		if(world.getBlockState(pos.up()).getBlock().equals(Blocks.AIR) && !world.getBlockState(pos.up()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO) && !world.getBlockState(pos.down()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO_INFERIOR) && !world.getBlockState(pos.down()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO) && !world.getBlockState(pos.down()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO_SUPERIOR)) {
-			    world.setBlockState(pos, Bloques.PILAR_DE_MARMOL_BLANCO_INFERIOR.getDefaultState(), 0);
-
-		}
-		
-		if(!world.getBlockState(pos.up()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO) && world.getBlockState(pos.down()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO)) {
+		if(!world.getBlockState(pos.down()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO_INFERIOR) && !world.getBlockState(pos.down()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO)) {
+			world.setBlockState(pos, Bloques.PILAR_DE_MARMOL_BLANCO_INFERIOR.getDefaultState(), 0);
+	}
+		if(!world.getBlockState(pos.up()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO) && (world.getBlockState(pos.down()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO) || world.getBlockState(pos.down()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO_INFERIOR))) {
 		    world.setBlockState(pos, Bloques.PILAR_DE_MARMOL_BLANCO_SUPERIOR.getDefaultState(), 0);
 
 	}
