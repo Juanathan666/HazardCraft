@@ -12,6 +12,7 @@ import HazardCraft.CambiosMecanicas.Eventos;
 import HazardCraft.CambiosMecanicas.cambiar_stack;
 import HazardCraft.CambiosMecanicas.nonadar;
 import HazardCraft.Encantamientos.Registrar_encantamiento;
+import HazardCraft.Generacion.Registrar_generacion_estructuras;
 import HazardCraft.Generacion.generacion_normal;
 import HazardCraft.Iniciar.Armaduras;
 import HazardCraft.Proxy.ClientProxy;
@@ -52,6 +53,7 @@ public class HazardCraft
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+    	GameRegistry.registerWorldGenerator(new Registrar_generacion_estructuras(), 0);
     	GameRegistry.registerWorldGenerator(new generacion_normal(), 3);
     Eventos_Principal.eventos_preinit();
     Buscar_Actualizaciones.MirarActualizaciones();
