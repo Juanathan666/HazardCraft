@@ -21,6 +21,9 @@ tile.mena_de_marmol_blanco.name=Marmol Blanco
 tile.mena_de_marmol_verde.name=Marmol Verde
 tile.mena_de_marmol_rojo.name=Marmol Rojo
 tile.mena_de_marmol_negro.name=Marmol Negro
+tile.mena_de_cobre.name=Mena de Cobre
+tile.mena_de_zafiro.name=Mena de Zafiro
+tile.mena_de_estano.name=Mena de Estaño
 
 tile.ladrillos_de_marmol_blanco.name=Ladrillos de Marmol Blanco
 tile.ladrillos_de_marmol_verde.name=Ladrillos de Marmol Verde
@@ -32,3 +35,20 @@ tile.pilar_de_marmol_blanco_inferior.name=Pilar de Marmol Blanco Inferior
 tile.pilar_de_marmol_blanco_superior.name=Pilar de Marmol Blanco Superior
 
 boton.siguiente.name=siguiente
+
+//Nether Update 1.16 vanilla
+//Bloques
+tile.escombros_ancestrales.name=Escombros ancestrales
+tile.bloque_de_netherita.name=Bloque de netherita
+//Items
+item.fragmento_de_netherita.name=Fragmento de netherita
+item.lingote_de_netherita.name=Lingote de netherita
+item.casco_de_netherita.name=Casco de Netherita
+item.pechera_de_netherita.name=Pechera de Netherita
+item.grebas_de_netherita.name=Grebas de Netherita
+item.botas_de_netherita.name=Botas de Netherita
+item.pico_de_netherita.name=Pico de Netherita
+item.espada_de_netherita.name=Espada de Netherita
+item.hacha_de_netherita.name=Hacha de Netherita
+item.pala_de_netherita.name=Pala de Netherita
+item.azada_de_netherita.name=Azada de Netherita

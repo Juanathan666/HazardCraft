@@ -6,17 +6,14 @@ import HazardCraft.HazardCraft;
 import HazardCraft.Encantamientos.Encantamiento;
 import HazardCraft.Iniciar.Armaduras;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.init.Biomes;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 
 public class Eventos {

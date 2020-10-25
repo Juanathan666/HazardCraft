@@ -1,0 +1,26 @@
+{
+    "block.bloque_de_netherita_romper":{
+	"category": "block",
+	"subtitle": "Bloque Netherita roto",
+	"sounds": [ {"name":"hc:block/netherita/romper", "stream": true} ]
+	},
+	
+	 "block.bloque_de_netherita_colocar":{
+	"category": "block",
+	"subtitle": "Bloque Netherita colocado",
+	"sounds": [ {"name":"hc:block/netherita/colocar", "stream": true} ]
+	},
+	
+	 "block.bloque_de_netherita_andar":{
+	"category": "block",
+	"subtitle": "Andar sobre Bloque de netherita",
+	"sounds": [ {"name":"hc:block/netherita/andar", "stream": true} ]
+	},
+	
+	 "armor.armadura_de_netherita_poner":{
+	"category": "armor",
+	"subtitle": "Armadura de netherita puesta",
+	"sounds": [ {"name":"hc:armor/netherita/colocar", "stream": true} ]
+	}
+	
+}

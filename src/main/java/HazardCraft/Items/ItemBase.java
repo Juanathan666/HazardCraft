@@ -1,6 +1,5 @@
 package HazardCraft.Items;
 
-import Eventos.Eventos_Principal;
 import HazardCraft.HazardCraft;
 import HazardCraft.Iniciar.Items;
 import HazardCraft.Util.Modelos;

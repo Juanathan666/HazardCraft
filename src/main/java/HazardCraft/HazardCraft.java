@@ -15,6 +15,9 @@ import HazardCraft.Encantamientos.Registrar_encantamiento;
 import HazardCraft.Generacion.Registrar_generacion_estructuras;
 import HazardCraft.Generacion.generacion_normal;
 import HazardCraft.Iniciar.Armaduras;
+import HazardCraft.Iniciar.Crafteos_Hornos;
+import HazardCraft.Iniciar.Herramientas;
+import HazardCraft.Iniciar.Sonidos;
 import HazardCraft.Proxy.ClientProxy;
 import HazardCraft.Proxy.CommonProxy;
 import MuerteEntidades.Pollos;
@@ -75,6 +78,7 @@ public class HazardCraft
         MinecraftForge.EVENT_BUS.register(new Registrar_encantamiento());
        
     	Armaduras.Registar_Armadura();
+    	Herramientas.Registrar_Herramientas();
     	cambiar_stack.iniciar();
     }
 
@@ -84,7 +88,8 @@ public class HazardCraft
     	Proxy.init();
     	Eventos_Principal.eventos_init();
     	ClientProxy.RegistrarInterfaces();
-
+        Crafteos_Hornos.iniciar();
+        Sonidos.Iniciar();
     }
     
     @EventHandler

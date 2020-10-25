@@ -1,0 +1,28 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "lll",
+    " p ",
+	" p "
+  ],
+  
+  "key": 
+  {
+    "l": 
+    {
+      "item": "hc:lingote_de_netherita"
+    },
+
+"p": 
+    {
+      "item": "minecraft:stick"
+    }
+
+  },
+  
+  "result": 
+  {
+    "item": "hc:pico_de_netherita",
+    "count": 1
+  }
+}

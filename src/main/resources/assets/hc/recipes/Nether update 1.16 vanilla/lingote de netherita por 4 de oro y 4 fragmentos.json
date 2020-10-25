@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+
+	{
+	  "item": "minecraft:gold_ingot"
+	},
+	
+	{
+	  "item": "minecraft:gold_ingot"
+	},
+	
+	{
+	  "item": "minecraft:gold_ingot"
+	},
+	
+	{
+	  "item": "minecraft:gold_ingot"
+	},
+	{
+	  "item": "hc:fragmento_de_netherita"
+	},
+	
+	{
+	  "item": "hc:fragmento_de_netherita"
+	},
+	
+	{
+	  "item": "hc:fragmento_de_netherita"
+	},
+	
+	{
+	  "item": "hc:fragmento_de_netherita"
+	}
+	
+  ],
+  "result": {
+    "item": "hc:lingote_de_netherita",
+    "count": 1
+  }
+}

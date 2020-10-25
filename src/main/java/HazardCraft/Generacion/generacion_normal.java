@@ -3,7 +3,10 @@ package HazardCraft.Generacion;
 import java.util.Random;
 
 import HazardCraft.Iniciar.Bloques;
+import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.block.state.pattern.BlockMatcher;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -17,37 +20,52 @@ public class generacion_normal implements IWorldGenerator {
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) 
 	{
 		switch (world.provider.getDimension()) {
-		case -1:
-			
-			break;
 		case 1:
+			generateEND(random, chunkX, chunkZ, world, chunkGenerator, chunkProvider);
 			break;
-
 		case 0:
 			generateOverworld(random, chunkX, chunkZ, world, chunkGenerator, chunkProvider);
-
 			break;
+		case -1:
+			generateNether(random, chunkX, chunkZ, world, chunkGenerator, chunkProvider);
+			break;
+
+		
 		
 		}
 	}
 	
+private void generateEND(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
+	
+	}
+	
 	private void generateOverworld(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
 	{
-		generateOre(Bloques.MENA_DE_MARMOL_BLANCO.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(7) + 4, 18);
-		generateOre(Bloques.MENA_DE_MARMOL_VERDE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(7) + 4, 18);
-		generateOre(Bloques.MENA_DE_MARMOL_NEGRO.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(7) + 4, 18);
-		generateOre(Bloques.MENA_DE_MARMOL_ROJO.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(7) + 4, 18);
+		generateOre(Bloques.MENA_DE_MARMOL_BLANCO.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(7) + 4, 18, Blocks.STONE);
+		generateOre(Bloques.MENA_DE_MARMOL_VERDE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(7) + 4, 18, Blocks.STONE);
+		generateOre(Bloques.MENA_DE_MARMOL_NEGRO.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(7) + 4, 18, Blocks.STONE);
+		generateOre(Bloques.MENA_DE_MARMOL_ROJO.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(7) + 4, 18, Blocks.STONE);
+		generateOre(Bloques.MENA_DE_COBRE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(7) + 4, 18, Blocks.STONE);
+		generateOre(Bloques.MENA_DE_ZAFIRO.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(7) + 4, 18, Blocks.STONE);
 
 	}
 	
-	private void generateOre(IBlockState ore, World world, Random random, int x, int z, int minY, int maxY, int size, int chances) 
+private void generateNether(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
+	
+	generateOre(Bloques.ESCOMBROS_ANCESTRALES.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(7) + 4, 18, Blocks.NETHERRACK);
+	
+	}
+	
+	
+	
+	private void generateOre(IBlockState ore, World world, Random random, int x, int z, int minY, int maxY, int size, int chances, Block quebloquereemplaza) 
 	{
 		int deltaY = maxY - minY;
 		
 		for (int i = 0; i < chances; i++) {
 			BlockPos pos = new BlockPos(x + random.nextInt(16), minY + random.nextInt(deltaY), z + random.nextInt(16));
+			WorldGenMinable generator = new WorldGenMinable(ore, size, BlockMatcher.forBlock(quebloquereemplaza));
 			
-			WorldGenMinable generator = new WorldGenMinable(ore, size);
 			generator.generate(world, random, pos);
 		}
 	}

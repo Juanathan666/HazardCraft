@@ -1,7 +1,6 @@
 package HazardCraft.Proxy;
 
 import HazardCraft.HazardCraft;
-import HazardCraft.Iniciar.Armaduras;
 import HazardCraft.Interfaces.RegistroInterfaces;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;

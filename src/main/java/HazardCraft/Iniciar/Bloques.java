@@ -7,14 +7,19 @@ import HazardCraft.Bloques.bloque_de_marmol_blanco;
 import HazardCraft.Bloques.bloque_de_marmol_negro;
 import HazardCraft.Bloques.bloque_de_marmol_rojo;
 import HazardCraft.Bloques.bloque_de_marmol_verde;
+import HazardCraft.Bloques.bloque_de_netherita;
+import HazardCraft.Bloques.escombros_ancestrales;
 import HazardCraft.Bloques.ladrillos_de_marmol_blanco;
 import HazardCraft.Bloques.ladrillos_de_marmol_negro;
 import HazardCraft.Bloques.ladrillos_de_marmol_rojo;
 import HazardCraft.Bloques.ladrillos_de_marmol_verde;
+import HazardCraft.Bloques.mena_de_cobre;
+import HazardCraft.Bloques.mena_de_estano;
 import HazardCraft.Bloques.mena_de_marmol_blanco;
 import HazardCraft.Bloques.mena_de_marmol_negro;
 import HazardCraft.Bloques.mena_de_marmol_rojo;
 import HazardCraft.Bloques.mena_de_marmol_verde;
+import HazardCraft.Bloques.mena_de_zafiro;
 import HazardCraft.Bloques.pilar_de_marmol_blanco;
 import HazardCraft.Bloques.pilar_de_marmol_blanco_inferior;
 import HazardCraft.Bloques.pilar_de_marmol_blanco_superior;
@@ -37,12 +42,20 @@ public class Bloques
 	
 	public static final Block LADRILLOS_DE_MARMOL_BLANCO = new ladrillos_de_marmol_blanco("ladrillos_de_marmol_blanco", Material.ROCK);
 	public static final Block LADRILLOS_DE_MARMOL_NEGRO = new ladrillos_de_marmol_negro("ladrillos_de_marmol_negro", Material.ROCK);
-	public static  final Block LADRILLOS_DE_MARMOL_VERDE = new ladrillos_de_marmol_verde("ladrillos_de_marmol_verde", Material.ROCK);
-	public static  final Block LADRILLOS_DE_MARMOL_ROJO = new ladrillos_de_marmol_rojo("ladrillos_de_marmol_rojo", Material.ROCK);
+	public static final Block LADRILLOS_DE_MARMOL_VERDE = new ladrillos_de_marmol_verde("ladrillos_de_marmol_verde", Material.ROCK);
+	public static final Block LADRILLOS_DE_MARMOL_ROJO = new ladrillos_de_marmol_rojo("ladrillos_de_marmol_rojo", Material.ROCK);
 	
-	public static  Block PILAR_DE_MARMOL_BLANCO = new pilar_de_marmol_blanco("pilar_de_marmol_blanco", Material.ROCK);
-	public static  Block PILAR_DE_MARMOL_BLANCO_INFERIOR = new pilar_de_marmol_blanco_inferior("pilar_de_marmol_blanco_inferior", Material.ROCK);
+	public static Block PILAR_DE_MARMOL_BLANCO = new pilar_de_marmol_blanco("pilar_de_marmol_blanco", Material.ROCK);
+	public static Block PILAR_DE_MARMOL_BLANCO_INFERIOR = new pilar_de_marmol_blanco_inferior("pilar_de_marmol_blanco_inferior", Material.ROCK);
 	public static Block PILAR_DE_MARMOL_BLANCO_SUPERIOR = new pilar_de_marmol_blanco_superior("pilar_de_marmol_blanco_superior", Material.ROCK);
+	
+	public static final Block MENA_DE_COBRE = new mena_de_cobre("mena_de_cobre", Material.ROCK);
+	public static final Block MENA_DE_ZAFIRO = new mena_de_zafiro("mena_de_zafiro", Material.ROCK);
+	public static final Block MENA_DE_ESTANO = new mena_de_estano("mena_de_estano", Material.ROCK);
 
+	//Actualizacion del nether (Vanilla 1.16)
+	public static final Block ESCOMBROS_ANCESTRALES = new escombros_ancestrales("escombros_ancestrales", Material.ROCK);
+	public static final Block BLOQUE_DE_NETHERITA = new bloque_de_netherita("bloque_de_netherita", Material.ROCK);
 
+    
 }

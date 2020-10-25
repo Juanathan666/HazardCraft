@@ -1,10 +1,8 @@
 package Eventos;
 
-import HazardCraft.Iniciar.Bloques;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class HazardCraftTabEventos extends CreativeTabs {

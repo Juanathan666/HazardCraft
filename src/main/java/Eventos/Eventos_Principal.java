@@ -1,12 +1,6 @@
 package Eventos;
 
-import HazardCraft.HazardCraft;
-import HazardCraft.Iniciar.Bloques;
-import HazardCraft.Iniciar.Items;
-import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 public class Eventos_Principal {
 
