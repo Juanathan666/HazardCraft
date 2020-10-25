@@ -7,7 +7,9 @@ import HazardCraft.Iniciar.Bloques;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -37,13 +39,17 @@ public class pilar_de_marmol_blanco_inferior extends BlockBase {
 	public boolean isFullCube(IBlockState state) {
 		return false;
 	}
-
 	@Override
 	public void onBlockDestroyedByPlayer(World world, BlockPos pos, IBlockState state) {
 		
 		if(world.getBlockState(pos.up()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO_SUPERIOR)) {
 			
 			world.setBlockState(pos.up(), Bloques.PILAR_DE_MARMOL_BLANCO.getDefaultState(), 0);
+		}
+		
+   if(world.getBlockState(pos.up()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO)) {
+			
+			world.setBlockState(pos.up(), Bloques.PILAR_DE_MARMOL_BLANCO_INFERIOR.getDefaultState(), 0);
 		}
 		
 		super.onBlockDestroyedByPlayer(world, pos, state);

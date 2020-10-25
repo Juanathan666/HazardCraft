@@ -36,7 +36,9 @@ public class pilar_de_marmol_blanco extends BlockBase{
 			world.setBlockState(pos, Bloques.PILAR_DE_MARMOL_BLANCO_SUPERIOR.getDefaultState(), 0);
 		}
 	
-		
+		if(world.getBlockState(pos.up()).getBlock() == Bloques.PILAR_DE_MARMOL_BLANCO_INFERIOR) {
+			world.setBlockState(pos.up(), Bloques.PILAR_DE_MARMOL_BLANCO.getDefaultState());
+		}
 		super.onBlockPlacedBy(world, pos, state, placer, stack);
 	}
 	
