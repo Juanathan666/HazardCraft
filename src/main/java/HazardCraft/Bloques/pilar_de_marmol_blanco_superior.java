@@ -4,6 +4,7 @@ import java.util.Random;
 
 import HazardCraft.HazardCraft;
 import HazardCraft.Iniciar.Bloques;
+import HazardCraft.Util.PilarBase_estados;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -28,12 +29,7 @@ public class pilar_de_marmol_blanco_superior extends BlockBase {
 	
 	@Override
 	public void onBlockDestroyedByPlayer(World world, BlockPos pos, IBlockState state) {
-		
-	if(world.getBlockState(pos.down()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO)) {
-		
-		world.setBlockState(pos.down(), Bloques.PILAR_DE_MARMOL_BLANCO_SUPERIOR.getDefaultState(), 0);
-	}
-		
+	PilarBase_estados.superior_onblock_destroyed(world, pos, state, Bloques.PILAR_DE_MARMOL_BLANCO_INFERIOR, Bloques.PILAR_DE_MARMOL_BLANCO_SUPERIOR, Bloques.PILAR_DE_MARMOL_BLANCO);
 		super.onBlockDestroyedByPlayer(world, pos, state);
 	}
 	@Override

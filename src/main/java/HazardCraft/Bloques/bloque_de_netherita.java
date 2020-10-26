@@ -19,10 +19,6 @@ public class bloque_de_netherita extends BlockBase {
 	private static double y;
 	private static double z;
     private static int tick = 0;
-	
-    public static final SoundType GLASS1 = new SoundType(-1.0F, 1.0F, SoundEvents.BLOCK_GLASS_BREAK, SoundEvents.BLOCK_GLASS_STEP, SoundEvents.BLOCK_GLASS_PLACE, SoundEvents.BLOCK_GLASS_HIT, SoundEvents.BLOCK_GLASS_FALL);
-
-	
 	public bloque_de_netherita(String name, Material material) {
 		super(name, material);
 	
@@ -30,12 +26,8 @@ public class bloque_de_netherita extends BlockBase {
 		setHardness(5.0F);
 		setResistance(5.0F);
 		setHarvestLevel("pickaxe", 2);
-		setSoundType(GLASS1);
-		
-		
+		setSoundType(Quitar_sonido);	
 	}
-
-
 	
 @Override
 public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer,ItemStack stack) {

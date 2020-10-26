@@ -2,6 +2,7 @@ package HazardCraft.Bloques;
 
 import HazardCraft.HazardCraft;
 import HazardCraft.Iniciar.Bloques;
+import HazardCraft.Util.PilarBase_estados;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -24,21 +25,7 @@ public class pilar_de_marmol_blanco extends BlockBase{
 	
 	@Override
 	public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer,ItemStack stack) {
-		if(!world.getBlockState(pos.down()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO_INFERIOR) && !world.getBlockState(pos.down()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO)) {
-			world.setBlockState(pos, Bloques.PILAR_DE_MARMOL_BLANCO_INFERIOR.getDefaultState(), 0);
-	}
-		if(!world.getBlockState(pos.up()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO) && (world.getBlockState(pos.down()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO) || world.getBlockState(pos.down()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO_INFERIOR))) {
-		    world.setBlockState(pos, Bloques.PILAR_DE_MARMOL_BLANCO_SUPERIOR.getDefaultState(), 0);
-
-	}
-		if(world.getBlockState(pos.down()).getBlock().equals(Bloques.PILAR_DE_MARMOL_BLANCO_SUPERIOR)) {
-			world.setBlockState(pos.down(), Bloques.PILAR_DE_MARMOL_BLANCO.getDefaultState(), 0);
-			world.setBlockState(pos, Bloques.PILAR_DE_MARMOL_BLANCO_SUPERIOR.getDefaultState(), 0);
-		}
-	
-		if(world.getBlockState(pos.up()).getBlock() == Bloques.PILAR_DE_MARMOL_BLANCO_INFERIOR) {
-			world.setBlockState(pos.up(), Bloques.PILAR_DE_MARMOL_BLANCO.getDefaultState());
-		}
+		PilarBase_estados.normal_onblock_placed(world, pos, state, Bloques.PILAR_DE_MARMOL_BLANCO_INFERIOR, Bloques.PILAR_DE_MARMOL_BLANCO_SUPERIOR, Bloques.PILAR_DE_MARMOL_BLANCO);
 		super.onBlockPlacedBy(world, pos, state, placer, stack);
 	}
 	
