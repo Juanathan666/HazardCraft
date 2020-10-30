@@ -1,9 +1,9 @@
 {
     "parent": "block/block",
     "textures": {
-        "normal": "hc:blocks/bloque_de_marmol_blanco",
-	"tapa": "hc:blocks/bloque_de_marmol_blanco",
-	"particle": "hc:blocks/bloque_de_marmol_blanco"
+        "normal": "hc:blocks/bloque_de_marmol_verde",
+	"tapa": "hc:blocks/bloque_de_marmol_verde",
+	"particle": "hc:blocks/bloque_de_marmol_verde"
     },
     "elements": [
 	{

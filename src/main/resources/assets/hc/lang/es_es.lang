@@ -34,6 +34,18 @@ tile.pilar_de_marmol_blanco.name=Pilar de Marmol Blanco
 tile.pilar_de_marmol_blanco_inferior.name=Pilar de Marmol Blanco Inferior
 tile.pilar_de_marmol_blanco_superior.name=Pilar de Marmol Blanco Superior
 
+tile.pilar_de_marmol_verde.name=Pilar de Marmol Verde
+tile.pilar_de_marmol_verde_inferior.name=Pilar de Marmol Verde Inferior
+tile.pilar_de_marmol_verde_superior.name=Pilar de Marmol Verde Superior
+
+tile.pilar_de_marmol_negro.name=Pilar de Marmol Negro
+tile.pilar_de_marmol_negro_inferior.name=Pilar de Marmol Negro Inferior
+tile.pilar_de_marmol_negro_superior.name=Pilar de Marmol Negro Superior
+
+tile.pilar_de_marmol_rojo.name=Pilar de Marmol Rojo
+tile.pilar_de_marmol_rojo_inferior.name=Pilar de Marmol Rojo Inferior
+tile.pilar_de_marmol_rojo_superior.name=Pilar de Marmol Rojo Superior
+
 boton.siguiente.name=siguiente
 
 //Nether Update 1.16 vanilla
