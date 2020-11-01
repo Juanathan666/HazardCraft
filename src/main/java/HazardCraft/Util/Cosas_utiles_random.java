@@ -1,7 +1,9 @@
 package HazardCraft.Util;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.World;
 
 public class Cosas_utiles_random {
 
@@ -40,5 +42,15 @@ public class Cosas_utiles_random {
 		return  Math.sqrt((Math.pow(e.x, 2)) + (Math.pow(e.y, 2)) + (Math.pow(e.z, 2)));
 		
 	}
-	
+	public static RayTraceResult dar_coordenadas_de_donde_esta_mirando(World world, EntityPlayer player, double distancia, float ticks) {
+		//Cojemos el vector de la posicion de los ojos
+		    Vec3d posicion_ojos = player.getPositionEyes(ticks);
+		    //cojemos el vector de la mirada con el ya esta incluida la orientacion de la cabeza del jugador
+	        Vec3d posicion_mirada = player.getLook(ticks);
+	        //Multiplicamos la mirada por la distancia a la que queremos que llegue el vector
+	        Vec3d resultado_posicion_final = posicion_ojos.addVector(posicion_mirada.x * distancia, posicion_mirada.y * distancia, posicion_mirada.z * distancia);
+	         //Trazamos un haz de luz "RTX" a partir de 2 vectores el vector de la posicion del ojo con el vector de la mirada multiplicado por la distancia y
+	        //devolvemos el valor
+	        		 return world.rayTraceBlocks(posicion_ojos, resultado_posicion_final, false, false, true);
+	}
 }

@@ -1,5 +1,6 @@
 package HazardCraft.Items;
 
+import HazardCraft.Util.Cosas_utiles_random;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -25,11 +26,11 @@ public class madera_item extends ItemBase
 		boolean ya = false;
 		//player.openGui(HazardCraft.instance, 1, player.world, (int)player.posX, (int)player.posY, (int)player.posZ);
 		
-		RayTraceResult lookingAt = player.rayTrace(1000, 1);
+		RayTraceResult lookingAt = Cosas_utiles_random.dar_coordenadas_de_donde_esta_mirando(worldIn, player, 1000, 1);
 	        for(int i = (int) lookingAt.getBlockPos().getY(); i>0 && !ya; i--) {
 	        	BlockPos pos = new BlockPos(lookingAt.getBlockPos().getX(), i, lookingAt.getBlockPos().getZ());
 	        	if(!worldIn.getBlockState(pos).getBlock().equals(Blocks.AIR)) {
-	    	        EntityLightningBolt l = new EntityLightningBolt(worldIn, lookingAt.getBlockPos().getX(), lookingAt.getBlockPos().getY(), lookingAt.getBlockPos().getZ(), false);
+	    	        EntityLightningBolt l = new EntityLightningBolt(worldIn, lookingAt.getBlockPos().getX(), i+1, lookingAt.getBlockPos().getZ(), false);
 	        		worldIn.spawnEntity(l);
 	        		//worldIn.setBlockState(pos, Blocks.OBSIDIAN.getDefaultState());
 
