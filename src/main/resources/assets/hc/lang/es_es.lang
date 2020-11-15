@@ -1,5 +1,5 @@
 itemGroup.hc=HazardCraft
-
+item.madera_item.item=Item de prueba
 itemGroup.EventosTab=Eventos
 
 death.attack.acida=El acido descompuso a %1$s.
