@@ -1,0 +1,22 @@
+{
+    "parent": "block/block",
+    "textures": {
+        "normal": "hc:blocks/bloque_de_marmol_verde",
+	"tapa": "hc:blocks/bloque_de_marmol_verde",
+	"particle": "hc:blocks/bloque_de_marmol_verde"
+    },
+    "elements": [
+	{
+		"from": [ 2, 0, 2 ],
+		"to": [ 14, 16, 14 ],
+		"faces": {
+			"down": { "uv": [ 2, 2, 14, 14 ], "texture": "tapa" },
+			"up": { "uv": [ 2, 2, 14, 14 ], "texture": "tapa" },
+			"north": { "uv": [ 2, 0, 14, 16 ], "texture": "normal" },
+			"south": { "uv": [ 2, 0, 14, 16 ], "texture": "normal" },
+			"west": { "uv": [ 2, 0, 14, 16 ], "texture": "normal" },
+		        "east": { "uv": [ 2, 0, 14, 16 ], "texture": "normal" }
+		}
+	}
+    ]
+ }

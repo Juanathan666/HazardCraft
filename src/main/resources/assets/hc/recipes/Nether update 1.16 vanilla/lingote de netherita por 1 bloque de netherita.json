@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+ 
+	{
+	  "item": "hc:bloque_de_netherita"
+	}
+	
+  ],
+  "result": {
+    "item": "hc:lingote_de_netherita",
+    "count": 9
+  }
+}

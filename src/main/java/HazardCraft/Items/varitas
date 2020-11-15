@@ -1,0 +1,23 @@
+explosiones
+
+basica: sin romper bloques radio 1/2 durabilidad:5
+principiante: rompe bloques radio 2 durabilidad:12
+experto: rompe bloques radio 3 durabilidad:25
+maestro rompe bloque hace fuego radio 5 durabilidad:40
+
+
+
+regeneracion:
+
+basica;1 5d         2s
+principante:2 12d   4s  
+experto:3 25d       10s
+maestro:4 40d       30s
+
+rayo: 
+
+basica: 1 rayo que no haga nada       5
+principiante: 1 rayo normal            12
+experto:  2 rayos 1 en la coord y otro random en un radio de 10                       25 
+maestro:  5 rayos 1 en la coord y los otros 1:x+2,otrox-2 3:z+2, 4:z-2         40
+

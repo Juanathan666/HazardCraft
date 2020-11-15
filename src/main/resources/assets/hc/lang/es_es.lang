@@ -1,0 +1,102 @@
+itemGroup.hc=HazardCraft
+
+itemGroup.EventosTab=Eventos
+
+death.attack.acida=El acido descompuso a %1$s.
+death.attack.acida.player=%1$s Se descompuso mientras escapaba de %2$s.
+
+enchantment.Habilidad_Aquatica=Habilidad Aquatica
+
+effect.caida_lenta=Caida Lenta
+potion.effect.caida_lenta=Poción de Caida Lenta
+splash_potion.effect.caida_lenta=Poción de Caida Lenta arrojadiza
+tipped_arrow.effect.caida_lenta=Flecha de Caida Lenta
+lingering_potion.effect.caida_lenta=Poción de Caida Lenta persistente
+
+item.casco_de_hierro_oxidado.name=Casco de hierro oxidado
+item.pechera_de_hierro_oxidado.name=Pechera de hierro oxidado
+item.grebas_de_hierro_oxidado.name=Grebas de hierro oxidado
+item.botas_de_hierro_oxidado.name=Botas de hierro oxidado
+
+item.varita_de_caida_lenta_basica.name=Varita de caida lenta Basica
+item.varita_de_caida_lenta_principiante.name=Varita de caida lenta de Principiantes
+item.varita_de_caida_lenta_experto.name=Varita de caida lenta Experto
+item.varita_de_caida_lenta_maestro.name=Varita de caida lenta Maestro
+
+item.varita_de_fuego_basica.name=Varita de fuego Basica
+item.varita_de_fuego_principiante.name=Varita de fuego de Principiantes
+item.varita_de_fuego_experto.name=Varita de fuego Experto
+item.varita_de_fuego_maestro.name=Varita de fuego Maestro
+
+item.varita_de_fuerza_basica.name=Varita de fuerza Basica
+item.varita_de_fuerza_principiante.name=Varita de fuerza de Principiantes
+item.varita_de_fuerza_experto.name=Varita de fuerza Experto
+item.varita_de_fuerza_maestro.name=Varita de fuerza Maestro
+
+item.varita_de_explosiones_basica.name=Varita de explosiones Basica
+item.varita_de_explosiones_principiante.name=Varita de explosiones de Principiantes
+item.varita_de_explosiones_experto.name=Varita de explosiones Experto
+item.varita_de_explosiones_maestro.name=Varita de explosiones Maestro
+
+item.varita_de_regeneracion_basica.name=Varita de regeneración Basica
+item.varita_de_regeneracion_principiante.name=Varita de regeneración de Principiantes
+item.varita_de_regeneracion_experto.name=Varita de regeneración Experto
+item.varita_de_regeneracion_maestro.name=Varita de regeneración Maestro
+
+item.varita_de_rayos_basica.name=Varita de rayos Basica
+item.varita_de_rayos_principiante.name=Varita de rayos de Principiantes
+item.varita_de_rayos_experto.name=Varita de rayos Experto
+item.varita_de_rayos_maestro.name=Varita de rayos Maestro
+
+tile.bloque_de_marmol_blanco.name=Marmol Blanco pulido
+tile.bloque_de_marmol_verde.name=Marmol Verde pulido
+tile.bloque_de_marmol_rojo.name=Marmol Rojo pulido
+tile.bloque_de_marmol_negro.name=Marmol Negro pulido
+
+tile.mena_de_marmol_blanco.name=Marmol Blanco
+tile.mena_de_marmol_verde.name=Marmol Verde
+tile.mena_de_marmol_rojo.name=Marmol Rojo
+tile.mena_de_marmol_negro.name=Marmol Negro
+tile.mena_de_cobre.name=Mena de Cobre
+tile.mena_de_zafiro.name=Mena de Zafiro
+tile.mena_de_estano.name=Mena de Estaño
+
+tile.ladrillos_de_marmol_blanco.name=Ladrillos de Marmol Blanco
+tile.ladrillos_de_marmol_verde.name=Ladrillos de Marmol Verde
+tile.ladrillos_de_marmol_rojo.name=Ladrillos de Marmol Rojo
+tile.ladrillos_de_marmol_negro.name=Ladrillos de Marmol Negro
+
+tile.pilar_de_marmol_blanco.name=Pilar de Marmol Blanco
+tile.pilar_de_marmol_blanco_inferior.name=Pilar de Marmol Blanco Inferior
+tile.pilar_de_marmol_blanco_superior.name=Pilar de Marmol Blanco Superior
+
+tile.pilar_de_marmol_verde.name=Pilar de Marmol Verde
+tile.pilar_de_marmol_verde_inferior.name=Pilar de Marmol Verde Inferior
+tile.pilar_de_marmol_verde_superior.name=Pilar de Marmol Verde Superior
+
+tile.pilar_de_marmol_negro.name=Pilar de Marmol Negro
+tile.pilar_de_marmol_negro_inferior.name=Pilar de Marmol Negro Inferior
+tile.pilar_de_marmol_negro_superior.name=Pilar de Marmol Negro Superior
+
+tile.pilar_de_marmol_rojo.name=Pilar de Marmol Rojo
+tile.pilar_de_marmol_rojo_inferior.name=Pilar de Marmol Rojo Inferior
+tile.pilar_de_marmol_rojo_superior.name=Pilar de Marmol Rojo Superior
+
+boton.siguiente.name=siguiente
+
+//Nether Update 1.16 vanilla
+//Bloques
+tile.escombros_ancestrales.name=Escombros ancestrales
+tile.bloque_de_netherita.name=Bloque de netherita
+//Items
+item.fragmento_de_netherita.name=Fragmento de netherita
+item.lingote_de_netherita.name=Lingote de netherita
+item.casco_de_netherita.name=Casco de Netherita
+item.pechera_de_netherita.name=Pechera de Netherita
+item.grebas_de_netherita.name=Grebas de Netherita
+item.botas_de_netherita.name=Botas de Netherita
+item.pico_de_netherita.name=Pico de Netherita
+item.espada_de_netherita.name=Espada de Netherita
+item.hacha_de_netherita.name=Hacha de Netherita
+item.pala_de_netherita.name=Pala de Netherita
+item.azada_de_netherita.name=Azada de Netherita

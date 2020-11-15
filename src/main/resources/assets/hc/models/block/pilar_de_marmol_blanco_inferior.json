@@ -1,0 +1,37 @@
+{
+	"parent": "block/block",
+	"textures": {
+		"normal": "hc:blocks/bloque_de_marmol_blanco",
+		"tapa": "hc:blocks/bloque_de_marmol_blanco",
+		"inferior": "hc:blocks/bloque_de_marmol_blanco",
+		"particle": "hc:blocks/bloque_de_marmol_blanco"
+	},
+	"elements": [
+		{
+			"comment": "columna",
+			"from": [ 2, 4, 2 ],
+			"to": [ 14, 16, 14 ],
+			"faces": {
+				"down": { "uv": [ 2, 2, 14, 14 ], "texture": "tapa" },
+				"up": { "uv": [ 2, 2, 14, 14 ], "texture": "tapa" },
+				"north": { "uv": [ 2, 0, 14, 12 ], "texture": "normal" },
+				"south": { "uv": [ 2, 0, 14, 12 ], "texture": "normal" },
+				"west": { "uv": [ 2, 0, 14, 12 ], "texture": "normal" },
+				"east": { "uv": [ 2, 0, 14, 12 ], "texture": "normal" }
+			}
+		},	 
+		{
+			"comment": "bottom",
+			"from": [ 0, 0, 0 ],
+			"to": [ 16, 4, 16 ],
+			"faces": {
+				"down": { "uv": [ 0, 0, 16, 16 ], "texture": "normal" },
+				"up": { "uv": [ 0, 0, 16, 16 ], "texture": "normal" },
+				"north": { "uv": [ 0, 12, 16, 16 ], "texture": "inferior" },
+				"south": { "uv": [ 0, 12, 16, 16 ], "texture": "inferior" },
+				"west": { "uv": [ 0, 12, 16, 16 ], "texture": "inferior" },
+				"east": { "uv": [ 0, 12, 16, 16 ], "texture": "inferior" }
+			}
+		}
+	]
+}

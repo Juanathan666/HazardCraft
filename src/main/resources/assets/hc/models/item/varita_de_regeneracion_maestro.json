@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "hc:items/varita_de_regeneracion_maestro"
+    }
+ }

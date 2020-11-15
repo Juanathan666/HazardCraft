@@ -1,0 +1,6 @@
+{   
+     "parent": "block/cube",
+	  "textures": {
+	    "up": "hc:blocks/escombros_ancestrales_arriba","down": "hc:blocks/escombros_ancestrales_arriba","east": "hc:blocks/escombros_ancestrales_lado","north": "hc:blocks/escombros_ancestrales_lado","south": "hc:blocks/escombros_ancestrales_lado","west": "hc:blocks/escombros_ancestrales_lado","particle": "hc:blocks/escombros_ancestrales_lado"
+	}
+}
