@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 public class Pociones {
 
-	public static final Potion CAIDA_LENTA_EFECTO= new CustomPotion("caida_lenta", false, 6225862, 0, 0);
+	public static final Potion CAIDA_LENTA_EFECTO= new CustomPotion("caida_lenta", false, 8323072, 0, 0);
 	public static final PotionType CAIDA_LENTA_POCION = new PotionType("caida_lenta", new PotionEffect[] {new PotionEffect(CAIDA_LENTA_EFECTO, 24*(60))}).setRegistryName("caida_lenta");
 	
 	

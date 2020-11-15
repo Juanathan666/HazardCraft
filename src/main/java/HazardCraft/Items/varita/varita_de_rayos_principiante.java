@@ -1,8 +1,10 @@
-package HazardCraft.Items;
+package HazardCraft.Items.varita;
 
 import HazardCraft.Iniciar.Items;
 import HazardCraft.Iniciar.Sonidos;
+import HazardCraft.Items.ItemBase;
 import HazardCraft.Util.Cosas_utiles_random;
+import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -14,11 +16,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 
-public class varita_de_explosiones extends ItemBase
+public class varita_de_rayos_principiante extends ItemBase
 {
-	private static final int durabilidad = 10;
+	private static final int durabilidad = 12;
 
-	public varita_de_explosiones(String name) 
+	public varita_de_rayos_principiante(String name) 
 	{
 		super(name);
 		setMaxDamage(durabilidad);
@@ -34,10 +36,10 @@ public class varita_de_explosiones extends ItemBase
 	        for(int i = (int) lookingAt.getBlockPos().getY(); i>0 && !ya; i--) {
 	        	BlockPos pos = new BlockPos(lookingAt.getBlockPos().getX(), i, lookingAt.getBlockPos().getZ());
 	        	if(!worldIn.getBlockState(pos).getBlock().equals(Blocks.AIR)) {
-	    			if(player.getHeldItem(hand.MAIN_HAND).getItem().equals(Items.VARITA_DE_EXPLOSIONES)) {
+	    			if(player.getHeldItem(hand.MAIN_HAND).getItem().equals(Items.VARITA_DE_RAYOS_PRINCIPIANTE)) {
 	                    funcion_varita(worldIn, player, hand, "main",lookingAt.getBlockPos().getX(), i, lookingAt.getBlockPos().getZ());
 
-	    			}else if(player.getHeldItem(hand.OFF_HAND).getItem().equals(Items.VARITA_DE_EXPLOSIONES)) {
+	    			}else if(player.getHeldItem(hand.OFF_HAND).getItem().equals(Items.VARITA_DE_RAYOS_PRINCIPIANTE)) {
 	    				
 	                    funcion_varita(worldIn, player, hand, "off",lookingAt.getBlockPos().getX(), i, lookingAt.getBlockPos().getZ());
 	    			}
@@ -58,7 +60,8 @@ public class varita_de_explosiones extends ItemBase
 			int damage = player.getHeldItem(hand.MAIN_HAND).getItemDamage();
 			
 			if(!(damage==durabilidad)) {
-                world.newExplosion(world.getEntityByID(1), x, y+1, z, 3, true, true);					
+				EntityLightningBolt l = new EntityLightningBolt(world, x, y+1, z, false);
+	    		world.spawnEntity(l);						
 	    		if(world.isRemote) {
 			player.getHeldItem(hand.MAIN_HAND).setItemDamage(damage+1);
 
@@ -76,8 +79,8 @@ public class varita_de_explosiones extends ItemBase
 		int damage = player.getHeldItem(hand.OFF_HAND).getItemDamage();
 		
 		if(!(damage==durabilidad)) {
-            world.newExplosion(world.getEntityByID(1), x, y+1, z, 3, true, true);					
-			
+			EntityLightningBolt l = new EntityLightningBolt(world, x, y+1, z, false);
+    		world.spawnEntity(l);			
     		if(world.isRemote) {
 		player.getHeldItem(hand.OFF_HAND).setItemDamage(damage+1);
 

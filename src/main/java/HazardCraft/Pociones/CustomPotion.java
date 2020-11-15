@@ -17,7 +17,7 @@ public class CustomPotion extends Potion {
 
 	@Override
 	public boolean hasStatusIcon() {
-	Minecraft.getMinecraft().getTextureManager().bindTexture(new ResourceLocation(HazardCraft.MODID + "texture/gui/potion_effects.png"));
+	 Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(HazardCraft.MODID + ":" + "textures/gui/potion_effects.png"));
 		return true;
 	}
 	

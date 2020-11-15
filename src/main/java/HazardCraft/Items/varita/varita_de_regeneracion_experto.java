@@ -1,7 +1,8 @@
-package HazardCraft.Items;
+package HazardCraft.Items.varita;
 
 import HazardCraft.Iniciar.Items;
 import HazardCraft.Iniciar.Sonidos;
+import HazardCraft.Items.ItemBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
@@ -12,11 +13,11 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
 
-public class varita_de_fuerza extends ItemBase {
+public class varita_de_regeneracion_experto extends ItemBase {
 
-	private static final int durabilidad = 10;
+	private static final int durabilidad = 25;
 	
-	public varita_de_fuerza(String name) {
+	public varita_de_regeneracion_experto(String name) {
 			
 		super(name);
 		
@@ -29,10 +30,10 @@ public class varita_de_fuerza extends ItemBase {
 
 	
 		
-			if(player.getHeldItem(hand.MAIN_HAND).getItem().equals(Items.VARITA_DE_FUERZA)) {
+			if(player.getHeldItem(hand.MAIN_HAND).getItem().equals(Items.VARITA_DE_REGENERACION_EXPERTO)) {
 			
 		funcion_varita(world, player, hand, "main");
-		}else if(player.getHeldItem(hand.OFF_HAND).getItem().equals(Items.VARITA_DE_FUERZA)) {
+		}else if(player.getHeldItem(hand.OFF_HAND).getItem().equals(Items.VARITA_DE_REGENERACION_EXPERTO)) {
 			
 			funcion_varita(world, player, hand, "off");
 		}
@@ -46,7 +47,7 @@ public class varita_de_fuerza extends ItemBase {
 			int damage = player.getHeldItem(hand.MAIN_HAND).getItemDamage();
 			
 			if(!(damage==durabilidad)) {
-				player.addPotionEffect(new PotionEffect(Potion.getPotionById(5), 24*(5) , 1));
+				player.addPotionEffect(new PotionEffect(Potion.getPotionFromResourceLocation("minecraft:regeneration"), 24*(10) , 1));
 				if(world.isRemote) {
 			player.getHeldItem(hand.MAIN_HAND).setItemDamage(damage+1);
 
@@ -66,7 +67,7 @@ public class varita_de_fuerza extends ItemBase {
 		int damage = player.getHeldItem(hand.OFF_HAND).getItemDamage();
 		
 		if(!(damage==durabilidad)) {
-			player.addPotionEffect(new PotionEffect(Potion.getPotionById(5), 24*(5) , 1));
+			player.addPotionEffect(new PotionEffect(Potion.getPotionFromResourceLocation("minecraft:regeneration"), 24*(10) , 1));
 			if(world.isRemote) {
 		player.getHeldItem(hand.OFF_HAND).setItemDamage(damage+1);
 

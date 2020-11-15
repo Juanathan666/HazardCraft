@@ -1,9 +1,9 @@
-package HazardCraft.Items;
+package HazardCraft.Items.varita;
 
 import HazardCraft.Iniciar.Items;
 import HazardCraft.Iniciar.Sonidos;
+import HazardCraft.Items.ItemBase;
 import HazardCraft.Util.Cosas_utiles_random;
-import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -15,11 +15,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 
-public class varita_de_rayos extends ItemBase
+public class varita_de_fuego_basica extends ItemBase
 {
-	private static final int durabilidad = 10;
+	private static final int durabilidad = 5;
 
-	public varita_de_rayos(String name) 
+	public varita_de_fuego_basica(String name) 
 	{
 		super(name);
 		setMaxDamage(durabilidad);
@@ -35,10 +35,10 @@ public class varita_de_rayos extends ItemBase
 	        for(int i = (int) lookingAt.getBlockPos().getY(); i>0 && !ya; i--) {
 	        	BlockPos pos = new BlockPos(lookingAt.getBlockPos().getX(), i, lookingAt.getBlockPos().getZ());
 	        	if(!worldIn.getBlockState(pos).getBlock().equals(Blocks.AIR)) {
-	    			if(player.getHeldItem(hand.MAIN_HAND).getItem().equals(Items.VARITA_DE_RAYOS)) {
+	    			if(player.getHeldItem(hand.MAIN_HAND).getItem().equals(Items.VARITA_DE_FUEGO_BASICA)) {
 	                    funcion_varita(worldIn, player, hand, "main",lookingAt.getBlockPos().getX(), i, lookingAt.getBlockPos().getZ());
 
-	    			}else if(player.getHeldItem(hand.OFF_HAND).getItem().equals(Items.VARITA_DE_RAYOS)) {
+	    			}else if(player.getHeldItem(hand.OFF_HAND).getItem().equals(Items.VARITA_DE_FUEGO_BASICA)) {
 	    				
 	                    funcion_varita(worldIn, player, hand, "off",lookingAt.getBlockPos().getX(), i, lookingAt.getBlockPos().getZ());
 	    			}
@@ -55,12 +55,12 @@ public class varita_de_rayos extends ItemBase
 	
 	
 	public static void funcion_varita(World world, EntityPlayer player, EnumHand hand, String cual_mano, int x, int y, int z) {
+		BlockPos posb = new BlockPos(x,y+1,z);
 		if(cual_mano.equalsIgnoreCase("main")) {
 			int damage = player.getHeldItem(hand.MAIN_HAND).getItemDamage();
 			
 			if(!(damage==durabilidad)) {
-				EntityLightningBolt l = new EntityLightningBolt(world, x, y+1, z, false);
-	    		world.spawnEntity(l);						
+				world.setBlockState(posb, Blocks.FIRE.getDefaultState());			
 	    		if(world.isRemote) {
 			player.getHeldItem(hand.MAIN_HAND).setItemDamage(damage+1);
 
@@ -78,8 +78,7 @@ public class varita_de_rayos extends ItemBase
 		int damage = player.getHeldItem(hand.OFF_HAND).getItemDamage();
 		
 		if(!(damage==durabilidad)) {
-			EntityLightningBolt l = new EntityLightningBolt(world, x, y+1, z, false);
-    		world.spawnEntity(l);			
+			world.setBlockState(posb, Blocks.FIRE.getDefaultState());					
     		if(world.isRemote) {
 		player.getHeldItem(hand.OFF_HAND).setItemDamage(damage+1);
 

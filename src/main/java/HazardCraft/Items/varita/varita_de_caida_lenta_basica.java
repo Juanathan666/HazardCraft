@@ -1,8 +1,9 @@
-package HazardCraft.Items;
+package HazardCraft.Items.varita;
 
 import HazardCraft.Iniciar.Items;
 import HazardCraft.Iniciar.Pociones;
 import HazardCraft.Iniciar.Sonidos;
+import HazardCraft.Items.ItemBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -14,11 +15,11 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class varita_de_caida_lenta extends ItemBase {
+public class varita_de_caida_lenta_basica extends ItemBase {
 
-	private static final int durabilidad = 10;
+	private static final int durabilidad = 5;
 	
-	public varita_de_caida_lenta(String name) {
+	public varita_de_caida_lenta_basica(String name) {
 			
 		super(name);
 		
@@ -31,10 +32,10 @@ public class varita_de_caida_lenta extends ItemBase {
 
 	
 		
-			if(player.getHeldItem(hand.MAIN_HAND).getItem().equals(Items.VARITA_DE_CAIDA_LENTA)) {
+			if(player.getHeldItem(hand.MAIN_HAND).getItem().equals(Items.VARITA_DE_CAIDA_LENTA_BASICA)) {
 			
 		funcion_varita(world, player, hand, "main");
-		}else if(player.getHeldItem(hand.OFF_HAND).getItem().equals(Items.VARITA_DE_CAIDA_LENTA)) {
+		}else if(player.getHeldItem(hand.OFF_HAND).getItem().equals(Items.VARITA_DE_CAIDA_LENTA_BASICA)) {
 			
 			funcion_varita(world, player, hand, "off");
 		}
@@ -50,7 +51,7 @@ public class varita_de_caida_lenta extends ItemBase {
 			int damage = player.getHeldItem(hand.MAIN_HAND).getItemDamage();
 			
 			if(!(damage==durabilidad)) {
-				player.addPotionEffect(new PotionEffect(Pociones.CAIDA_LENTA_EFECTO, 24*(5) , 1));
+				player.addPotionEffect(new PotionEffect(Pociones.CAIDA_LENTA_EFECTO, 24*(2) , 1));
 				if(world.isRemote) {
 			player.getHeldItem(hand.MAIN_HAND).setItemDamage(damage+1);
 
@@ -71,7 +72,7 @@ public class varita_de_caida_lenta extends ItemBase {
 		int damage = player.getHeldItem(hand.OFF_HAND).getItemDamage();
 		
 		if(!(damage==durabilidad)) {
-			player.addPotionEffect(new PotionEffect(Pociones.CAIDA_LENTA_EFECTO, 24*(5) , 1));
+			player.addPotionEffect(new PotionEffect(Pociones.CAIDA_LENTA_EFECTO, 24*(2) , 1));
 			if(world.isRemote) {
 		player.getHeldItem(hand.OFF_HAND).setItemDamage(damage+1);
 
