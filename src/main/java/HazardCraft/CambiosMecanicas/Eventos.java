@@ -5,6 +5,7 @@ import java.util.Random;
 import HazardCraft.HazardCraft;
 import HazardCraft.Encantamientos.Encantamiento;
 import HazardCraft.Iniciar.Armaduras;
+import HazardCraft.Iniciar.Pociones;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -13,6 +14,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.EnumDifficulty;
+import net.minecraftforge.event.entity.living.LivingFallEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 
@@ -37,9 +39,21 @@ public class Eventos {
 		}
 	}**/
 	
+	@SubscribeEvent
+	public void OnplayerFallevent(LivingFallEvent event) {
+		if(event.getEntityLiving().isPotionActive(Pociones.CAIDA_LENTA_EFECTO)) {
+			event.setCanceled(true);
+			event.getEntityLiving().removeActivePotionEffect(Pociones.CAIDA_LENTA_EFECTO);
+		}
+		
+	}
 	
 	@SubscribeEvent
-	public void PlayerTickEventos(PlayerTickEvent event){
+	public void PlayerTickEventos(PlayerTickEvent event){	
+		if(event.player.isPotionActive(Pociones.CAIDA_LENTA_EFECTO)) {
+			event.player.motionY = -0.3D;
+		}
+		
 		//System.out.println(tick+" " + tick_lluvia + " " + tick_lluvia_acida + mensaje + " " + activar_lluvia_acida + " " + prob_lluvia);
 		//Muestra el mensaje si sale la probabilidad de activar la lluvia acida
 		if(!mensaje && event.player.world.isRaining()) {
@@ -63,13 +77,13 @@ public class Eventos {
 			 tick_lluvia_acida = 0;
 			 prob_lluvia = 0;
 		 }	
-		//Hace daño al jugador si la lluvia acida se activa
+		//Hace daï¿½o al jugador si la lluvia acida se activa
 			if(activar_lluvia_acida) { 
 				tick_lluvia_acida++;
                   if (event.player.world.canSeeSky(event.player.getPosition()) && !event.player.capabilities.isCreativeMode && !event.player.world.isRemote) {
-			//Hara daño cada x tick si se comple la condicion de que en el bioma que se encuentra el jugador puede llover. Osea en un desierto no le ara daño
+			//Hara daï¿½o cada x tick si se comple la condicion de que en el bioma que se encuentra el jugador puede llover. Osea en un desierto no le ara daï¿½o
 				if(tick_lluvia_acida>110 && event.player.world.getBiome(event.player.getPosition()).canRain()) {
-					//Hace mas daño segun la dificultad en pacifico no hace daño
+					//Hace mas daï¿½o segun la dificultad en pacifico no hace daï¿½o
 					if(event.player.world.getDifficulty() == EnumDifficulty.EASY) {
 					event.player.attackEntityFrom(lluvia_acida_damage_source, 1.0F);
 					}else if(event.player.world.getDifficulty() == EnumDifficulty.NORMAL) {
@@ -81,7 +95,7 @@ public class Eventos {
 		 }
 							
 }                
-                  //Reinicia la variable para hacer 1 toque de daño cada cierto tiempo
+                  //Reinicia la variable para hacer 1 toque de daï¿½o cada cierto tiempo
 				if(tick_lluvia_acida>113) {
 					tick_lluvia_acida =0;
 				}

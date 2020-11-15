@@ -32,7 +32,6 @@ public class madera_item extends ItemBase
 	        	if(!worldIn.getBlockState(pos).getBlock().equals(Blocks.AIR)) {
 	    	        EntityLightningBolt l = new EntityLightningBolt(worldIn, lookingAt.getBlockPos().getX(), i+1, lookingAt.getBlockPos().getZ(), false);
 	        		worldIn.spawnEntity(l);
-	        		//worldIn.setBlockState(pos, Blocks.OBSIDIAN.getDefaultState());
 
 	        		ya=true;
 	        	}

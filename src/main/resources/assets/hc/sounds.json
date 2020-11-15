@@ -11,6 +11,11 @@
 	"sounds": [ {"name":"hc:block/netherita/colocar", "stream": true} ]
 	},
 	
+	"item.romper_varita":{
+	"category": "players",
+	"subtitle": "Varita rota",
+	"sounds": [ {"name":"hc:item/romper_varita", "stream": true} ]
+	},
 	 "block.bloque_de_netherita_andar":{
 	"category": "block",
 	"subtitle": "Andar sobre Bloque de netherita",

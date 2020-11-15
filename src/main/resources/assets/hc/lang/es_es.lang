@@ -11,6 +11,12 @@ item.casco_de_hierro_oxidado.name=Casco de hierro oxidado
 item.pechera_de_hierro_oxidado.name=Pechera de hierro oxidado
 item.grebas_de_hierro_oxidado.name=Grebas de hierro oxidado
 item.botas_de_hierro_oxidado.name=Botas de hierro oxidado
+item.varita_de_rayos.name=Varita de rayos
+item.varita_de_caida_lenta.name=Varita de caida lenta
+item.varita_de_explosiones.name=Varita de explosiones
+item.varita_de_fuego.name=Varita de fuego
+item.varita_de_regeneracion.name=Varita de Regeneración
+item.varita_de_fuerza.name=Varita de Fuerza
 
 tile.bloque_de_marmol_blanco.name=Marmol Blanco pulido
 tile.bloque_de_marmol_verde.name=Marmol Verde pulido
@@ -23,7 +29,7 @@ tile.mena_de_marmol_rojo.name=Marmol Rojo
 tile.mena_de_marmol_negro.name=Marmol Negro
 tile.mena_de_cobre.name=Mena de Cobre
 tile.mena_de_zafiro.name=Mena de Zafiro
-tile.mena_de_estano.name=Mena de Esta�o
+tile.mena_de_estano.name=Mena de Estaño
 
 tile.ladrillos_de_marmol_blanco.name=Ladrillos de Marmol Blanco
 tile.ladrillos_de_marmol_verde.name=Ladrillos de Marmol Verde
