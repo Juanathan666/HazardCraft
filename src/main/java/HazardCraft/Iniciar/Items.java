@@ -3,7 +3,9 @@ package HazardCraft.Iniciar;
 import java.util.ArrayList;
 import java.util.List;
 
+import HazardCraft.Items.fragmento_de_enderita;
 import HazardCraft.Items.fragmento_de_netherita;
+import HazardCraft.Items.lingote_de_enderita;
 import HazardCraft.Items.lingote_de_netherita;
 import HazardCraft.Items.madera_item;
 import HazardCraft.Items.varita.varita_de_caida_lenta_basica;
@@ -43,7 +45,11 @@ public class Items
 	public static final Item LINGOTE_DE_NETHERITA = new lingote_de_netherita ("lingote_de_netherita");
 	//Actualizacion del nether (Vanilla 1.16) acaba
 
-
+	//Enderita
+	public static final Item FRAGMENTO_DE_ENDERITA = new fragmento_de_enderita("fragmento_de_enderita");
+	public static final Item LINGOTE_DE_ENDERITA = new lingote_de_enderita("lingote_de_enderita");
+	
+    //VARITAS
 	public static final Item VARITA_DE_EXPLOSIONES_BASICA = new varita_de_explosiones_basica("varita_de_explosiones_basica");
 	public static final Item VARITA_DE_EXPLOSIONES_PRINCIPIANTE = new varita_de_explosiones_principiante("varita_de_explosiones_principiante");
 	public static final Item VARITA_DE_EXPLOSIONES_EXPERTO = new varita_de_explosiones_experto("varita_de_explosiones_experto");

@@ -3,6 +3,7 @@ package HazardCraft.Iniciar;
 import java.util.ArrayList;
 import java.util.List;
 
+import HazardCraft.Bloques.bloque_de_enderita;
 import HazardCraft.Bloques.bloque_de_marmol_blanco;
 import HazardCraft.Bloques.bloque_de_marmol_negro;
 import HazardCraft.Bloques.bloque_de_marmol_rojo;
@@ -14,6 +15,7 @@ import HazardCraft.Bloques.ladrillos_de_marmol_negro;
 import HazardCraft.Bloques.ladrillos_de_marmol_rojo;
 import HazardCraft.Bloques.ladrillos_de_marmol_verde;
 import HazardCraft.Bloques.mena_de_cobre;
+import HazardCraft.Bloques.mena_de_enderita;
 import HazardCraft.Bloques.mena_de_estano;
 import HazardCraft.Bloques.mena_de_marmol_blanco;
 import HazardCraft.Bloques.mena_de_marmol_negro;
@@ -77,6 +79,10 @@ public class Bloques
 	//Actualizacion del nether (Vanilla 1.16)
 	public static final Block ESCOMBROS_ANCESTRALES = new escombros_ancestrales("escombros_ancestrales", Material.ROCK);
 	public static final Block BLOQUE_DE_NETHERITA = new bloque_de_netherita("bloque_de_netherita", Material.ROCK);
+	
+	//Enderita
+	public static final Block MENA_DE_ENDERITA = new mena_de_enderita("mena_de_enderita", Material.ROCK);
+	public static final Block BLOQUE_DE_ENDERITA = new bloque_de_enderita("bloque_de_enderita", Material.IRON);
 
     
 }

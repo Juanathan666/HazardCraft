@@ -37,6 +37,8 @@ public class generacion_normal implements IWorldGenerator {
 	
 private void generateEND(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
 	
+	generateOre(Bloques.MENA_DE_ENDERITA.getDefaultState(), world, random, chunkX*16, chunkZ*16, 30, 60, 3+random.nextInt(5), 7, Blocks.END_STONE);
+	
 	}
 	
 	private void generateOverworld(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)

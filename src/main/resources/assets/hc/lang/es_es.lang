@@ -18,31 +18,38 @@ item.pechera_de_hierro_oxidado.name=Pechera de hierro oxidado
 item.grebas_de_hierro_oxidado.name=Grebas de hierro oxidado
 item.botas_de_hierro_oxidado.name=Botas de hierro oxidado
 
+item.fragmento_de_enderita.name=Fragmento de Enderita
+item.lingote_de_enderita.name=Lingote de Enderita
+item.casco_de_enderita.name=Casco de Enderita
+item.pechera_de_enderita.name=Pechera de Enderita
+item.grebas_de_enderita.name=Grebas de Enderita
+item.botas_de_enderita.name=Botas de Enderita
+item.pico_de_enderita.name=Pico de Enderita
+item.espada_de_enderita.name=Espada de Enderita
+item.hacha_de_enderita.name=Hacha de Enderita
+item.pala_de_enderita.name=Pala de Enderita
+item.azada_de_enderita.name=Azada de Enderita
+
 item.varita_de_caida_lenta_basica.name=Varita de caida lenta Basica
 item.varita_de_caida_lenta_principiante.name=Varita de caida lenta de Principiantes
 item.varita_de_caida_lenta_experto.name=Varita de caida lenta Experto
 item.varita_de_caida_lenta_maestro.name=Varita de caida lenta Maestro
-
 item.varita_de_fuego_basica.name=Varita de fuego Basica
 item.varita_de_fuego_principiante.name=Varita de fuego de Principiantes
 item.varita_de_fuego_experto.name=Varita de fuego Experto
 item.varita_de_fuego_maestro.name=Varita de fuego Maestro
-
 item.varita_de_fuerza_basica.name=Varita de fuerza Basica
 item.varita_de_fuerza_principiante.name=Varita de fuerza de Principiantes
 item.varita_de_fuerza_experto.name=Varita de fuerza Experto
 item.varita_de_fuerza_maestro.name=Varita de fuerza Maestro
-
 item.varita_de_explosiones_basica.name=Varita de explosiones Basica
 item.varita_de_explosiones_principiante.name=Varita de explosiones de Principiantes
 item.varita_de_explosiones_experto.name=Varita de explosiones Experto
 item.varita_de_explosiones_maestro.name=Varita de explosiones Maestro
-
 item.varita_de_regeneracion_basica.name=Varita de regeneración Basica
 item.varita_de_regeneracion_principiante.name=Varita de regeneración de Principiantes
 item.varita_de_regeneracion_experto.name=Varita de regeneración Experto
 item.varita_de_regeneracion_maestro.name=Varita de regeneración Maestro
-
 item.varita_de_rayos_basica.name=Varita de rayos Basica
 item.varita_de_rayos_principiante.name=Varita de rayos de Principiantes
 item.varita_de_rayos_experto.name=Varita de rayos Experto
@@ -81,6 +88,9 @@ tile.pilar_de_marmol_negro_superior.name=Pilar de Marmol Negro Superior
 tile.pilar_de_marmol_rojo.name=Pilar de Marmol Rojo
 tile.pilar_de_marmol_rojo_inferior.name=Pilar de Marmol Rojo Inferior
 tile.pilar_de_marmol_rojo_superior.name=Pilar de Marmol Rojo Superior
+
+tile.mena_de_enderita.name=Mena de Enderita
+tile.bloque_de_enderita.name=Bloque de Enderita
 
 boton.siguiente.name=siguiente
 
