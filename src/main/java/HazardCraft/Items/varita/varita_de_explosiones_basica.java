@@ -60,7 +60,7 @@ public class varita_de_explosiones_basica extends ItemBase
 			
 			if(!(damage==durabilidad)) {
                 world.newExplosion(world.getEntityByID(1), x, y+1, z, 1, false, false);					
-	    		if(world.isRemote) {
+	    		if(world.isRemote && !player.capabilities.isCreativeMode) {
 			player.getHeldItem(hand.MAIN_HAND).setItemDamage(damage+1);
 
 			
@@ -79,7 +79,7 @@ public class varita_de_explosiones_basica extends ItemBase
 		if(!(damage==durabilidad)) {
             world.newExplosion(world.getEntityByID(1), x, y+1, z, 1, false, false);					
 			
-    		if(world.isRemote) {
+    		if(world.isRemote && !player.capabilities.isCreativeMode) {
 		player.getHeldItem(hand.OFF_HAND).setItemDamage(damage+1);
 
 		

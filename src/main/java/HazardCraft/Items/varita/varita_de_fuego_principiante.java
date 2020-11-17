@@ -62,7 +62,7 @@ public class varita_de_fuego_principiante extends ItemBase
 			if(!(damage==durabilidad)) {
 				world.setBlockState(posb, Blocks.FIRE.getDefaultState());		
 				world.setBlockState(posb.north(), Blocks.FIRE.getDefaultState());		
-	    		if(world.isRemote) {
+	    		if(world.isRemote && !player.capabilities.isCreativeMode) {
 			player.getHeldItem(hand.MAIN_HAND).setItemDamage(damage+1);
 
 			
@@ -82,7 +82,7 @@ public class varita_de_fuego_principiante extends ItemBase
 			world.setBlockState(posb, Blocks.FIRE.getDefaultState());		
 			world.setBlockState(posb.north(), Blocks.FIRE.getDefaultState());		
 
-    		if(world.isRemote) {
+    		if(world.isRemote && !player.capabilities.isCreativeMode) {
 		player.getHeldItem(hand.OFF_HAND).setItemDamage(damage+1);
 
 		

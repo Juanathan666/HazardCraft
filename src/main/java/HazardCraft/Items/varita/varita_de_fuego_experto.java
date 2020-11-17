@@ -74,7 +74,7 @@ public class varita_de_fuego_experto extends ItemBase
 				if(world.getBlockState(posb.east()).getBlock().equals(Blocks.AIR)) {
 				world.setBlockState(posb.east(), Blocks.FIRE.getDefaultState());
 				}
-	    		if(world.isRemote) {
+	    		if(world.isRemote && !player.capabilities.isCreativeMode) {
 			player.getHeldItem(hand.MAIN_HAND).setItemDamage(damage+1);
 
 			
@@ -105,7 +105,7 @@ public class varita_de_fuego_experto extends ItemBase
 			if(world.getBlockState(posb.east()).getBlock().equals(Blocks.AIR)) {
 			world.setBlockState(posb.east(), Blocks.FIRE.getDefaultState());
 			}
-    		if(world.isRemote) {
+    		if(world.isRemote && !player.capabilities.isCreativeMode) {
 		player.getHeldItem(hand.OFF_HAND).setItemDamage(damage+1);
 
 		

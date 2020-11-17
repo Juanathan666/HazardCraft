@@ -48,7 +48,7 @@ public class varita_de_fuerza_principiante extends ItemBase {
 			
 			if(!(damage==durabilidad)) {
 				player.addPotionEffect(new PotionEffect(Potion.getPotionById(5), 24*(4) , 1));
-				if(world.isRemote) {
+				if(world.isRemote && !player.capabilities.isCreativeMode) {
 			player.getHeldItem(hand.MAIN_HAND).setItemDamage(damage+1);
 
 			
@@ -68,7 +68,7 @@ public class varita_de_fuerza_principiante extends ItemBase {
 		
 		if(!(damage==durabilidad)) {
 			player.addPotionEffect(new PotionEffect(Potion.getPotionById(5), 24*(4) , 1));
-			if(world.isRemote) {
+			if(world.isRemote && !player.capabilities.isCreativeMode) {
 		player.getHeldItem(hand.OFF_HAND).setItemDamage(damage+1);
 
 		

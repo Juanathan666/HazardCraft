@@ -79,7 +79,7 @@ public class varita_de_rayos_experto extends ItemBase
 	    			}
 	    		}
 	    		
-	    		if(world.isRemote) {
+	    		if(world.isRemote && !player.capabilities.isCreativeMode) {
 			player.getHeldItem(hand.MAIN_HAND).setItemDamage(damage+1);
 
 			
@@ -111,7 +111,7 @@ public class varita_de_rayos_experto extends ItemBase
     			
     			}
     		}		
-    		if(world.isRemote) {
+    		if(world.isRemote && !player.capabilities.isCreativeMode) {
 		player.getHeldItem(hand.OFF_HAND).setItemDamage(damage+1);
 
 		

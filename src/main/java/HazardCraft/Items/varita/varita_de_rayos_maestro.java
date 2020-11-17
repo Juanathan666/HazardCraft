@@ -70,7 +70,7 @@ public class varita_de_rayos_maestro extends ItemBase
 	    		world.spawnEntity(ls);
 	    		EntityLightningBolt lc = new EntityLightningBolt(world, x, y+1, z, false);
 	    		world.spawnEntity(lc);
-	    		if(world.isRemote) {
+	    		if(world.isRemote && !player.capabilities.isCreativeMode) {
 			player.getHeldItem(hand.MAIN_HAND).setItemDamage(damage+1);
 
 			
@@ -97,7 +97,7 @@ public class varita_de_rayos_maestro extends ItemBase
     		world.spawnEntity(ls);
     		EntityLightningBolt lc = new EntityLightningBolt(world, x, y+1, z, false);
     		world.spawnEntity(lc);		
-    		if(world.isRemote) {
+    		if(world.isRemote && !player.capabilities.isCreativeMode) {
 		player.getHeldItem(hand.OFF_HAND).setItemDamage(damage+1);
 
 		

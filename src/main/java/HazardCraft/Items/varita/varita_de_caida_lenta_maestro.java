@@ -52,7 +52,7 @@ public class varita_de_caida_lenta_maestro extends ItemBase {
 			
 			if(!(damage==durabilidad)) {
 				player.addPotionEffect(new PotionEffect(Pociones.CAIDA_LENTA_EFECTO, 24*(30) , 1));
-				if(world.isRemote) {
+				if(world.isRemote && !player.capabilities.isCreativeMode) {
 			player.getHeldItem(hand.MAIN_HAND).setItemDamage(damage+1);
 
 			
@@ -73,7 +73,7 @@ public class varita_de_caida_lenta_maestro extends ItemBase {
 		
 		if(!(damage==durabilidad)) {
 			player.addPotionEffect(new PotionEffect(Pociones.CAIDA_LENTA_EFECTO, 24*(30) , 1));
-			if(world.isRemote) {
+			if(world.isRemote && !player.capabilities.isCreativeMode) {
 		player.getHeldItem(hand.OFF_HAND).setItemDamage(damage+1);
 
 		
