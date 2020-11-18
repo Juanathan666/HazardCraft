@@ -1,0 +1,22 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "lll",
+    "l l"
+  ],
+  
+  "key": 
+  {
+    "l": 
+    {
+      "item": "hc:lingote_de_netherita"
+    }
+
+  },
+  
+  "result": 
+  {
+    "item": "hc:casco_de_netherita",
+    "count": 1
+  }
+}
