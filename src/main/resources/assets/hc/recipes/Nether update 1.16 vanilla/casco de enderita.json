@@ -2,22 +2,21 @@
   "pattern": 
   [
     "lll",
-    "lll",
-    "lll"
+    "l l"
   ],
   
   "key": 
   {
     "l": 
     {
-      "item": "hc:lingote_de_netherita"
+      "item": "hc:lingote_de_enderita"
     }
 
   },
   
   "result": 
   {
-    "item": "hc:bloque_de_netherita",
+    "item": "hc:casco_de_enderita",
     "count": 1
   }
 }

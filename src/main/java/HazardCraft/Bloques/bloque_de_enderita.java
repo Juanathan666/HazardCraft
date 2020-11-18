@@ -10,8 +10,8 @@ public class bloque_de_enderita extends BlockBase {
 		super(name, material);
 	
 		setCreativeTab(HazardCraft.HazardCraftTab);
-		setHardness(7.0F);
-		setResistance(7.0F);
+		setHardness(10.0F);
+		setResistance(10.0F);
 		setHarvestLevel("pickaxe", 4);
 		setSoundType(SoundType.STONE);
 	}

@@ -10,14 +10,14 @@
   {
     "l": 
     {
-      "item": "hc:lingote_de_netherita"
+      "item": "hc:lingote_de_enderita"
     }
 
   },
   
   "result": 
   {
-    "item": "hc:grebas_de_netherita",
+    "item": "hc:grebas_de_enderita",
     "count": 1
   }
 }

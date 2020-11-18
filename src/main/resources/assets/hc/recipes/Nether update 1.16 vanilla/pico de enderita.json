@@ -1,8 +1,8 @@
 {"type": "minecraft:crafting_shaped",
   "pattern": 
   [
-    "ll ",
-    "lp ",
+    "lll",
+    " p ",
 	" p "
   ],
   
@@ -10,7 +10,7 @@
   {
     "l": 
     {
-      "item": "hc:lingote_de_netherita"
+      "item": "hc:lingote_de_enderita"
     },
 
 "p": 
@@ -22,7 +22,7 @@
   
   "result": 
   {
-    "item": "hc:hacha_de_netherita",
+    "item": "hc:pico_de_enderita",
     "count": 1
   }
 }

@@ -1,5 +1,8 @@
 package Eventos;
 
+import HazardCraft.HazardCraft;
+import HazardCraft.Iniciar.Bloques;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.MinecraftForge;
 
 public class Eventos_Principal {
@@ -7,6 +10,8 @@ public class Eventos_Principal {
 	public static boolean Navidad = false;
 	public static boolean Halloween = false;
 	public static boolean Verano = false;
+	
+	private static final CreativeTabs Tab_evento = HazardCraft.EventosTab;
 	
 	public static void eventos_preinit() {
 		

@@ -16,6 +16,7 @@ public class cambiar_stack {
 	}
 	
 	
+	@SuppressWarnings("unused")
 	public void adjust(Item item, int preferredSize) {
 	    if (preferredSize > 0 && (this._allowDownsizing || item.getItemStackLimit(new ItemStack(item)) < preferredSize))
 	      try {
