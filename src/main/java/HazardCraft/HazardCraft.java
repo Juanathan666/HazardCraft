@@ -16,6 +16,8 @@ import HazardCraft.Generacion.Registrar_generacion_estructuras;
 import HazardCraft.Generacion.generacion_normal;
 import HazardCraft.Iniciar.Armaduras;
 import HazardCraft.Iniciar.Crafteos_Hornos;
+import HazardCraft.Iniciar.Entidades;
+import HazardCraft.Iniciar.Entidades_Render;
 import HazardCraft.Iniciar.Herramientas;
 import HazardCraft.Iniciar.Pociones;
 import HazardCraft.Iniciar.Sonidos;
@@ -82,6 +84,8 @@ public class HazardCraft
     	Herramientas.Registrar_Herramientas();
     	cambiar_stack.iniciar();
     	Pociones.iniciar();
+    	Entidades.iniciar_entidades();
+    	Entidades_Render.registrar_modelos();
     }
 
     @EventHandler
