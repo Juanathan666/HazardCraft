@@ -21,6 +21,7 @@ import HazardCraft.Bloques.mena_de_marmol_blanco;
 import HazardCraft.Bloques.mena_de_marmol_negro;
 import HazardCraft.Bloques.mena_de_marmol_rojo;
 import HazardCraft.Bloques.mena_de_marmol_verde;
+import HazardCraft.Bloques.mena_de_xp;
 import HazardCraft.Bloques.mena_de_zafiro;
 import HazardCraft.Bloques.pilar_de_marmol_blanco;
 import HazardCraft.Bloques.pilar_de_marmol_blanco_inferior;
@@ -75,7 +76,7 @@ public class Bloques
 	public static final Block MENA_DE_COBRE = new mena_de_cobre("mena_de_cobre", Material.ROCK);
 	public static final Block MENA_DE_ZAFIRO = new mena_de_zafiro("mena_de_zafiro", Material.ROCK);
 	public static final Block MENA_DE_ESTANO = new mena_de_estano("mena_de_estano", Material.ROCK);
-
+    public static final Block MENA_DE_XP = new mena_de_xp("mena_de_xp",Material.ROCK);
 	//Actualizacion del nether (Vanilla 1.16)
 	public static final Block ESCOMBROS_ANCESTRALES = new escombros_ancestrales("escombros_ancestrales", Material.ROCK);
 	public static final Block BLOQUE_DE_NETHERITA = new bloque_de_netherita("bloque_de_netherita", Material.ROCK);

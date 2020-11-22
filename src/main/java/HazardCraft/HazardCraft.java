@@ -70,7 +70,7 @@ public class HazardCraft
     	}else {
     		cliente = false;
     	}
-    			
+    	
     	
         MinecraftForge.EVENT_BUS.register(new Pollos());
         MinecraftForge.EVENT_BUS.register(new DropeoBloquesMinecraft());

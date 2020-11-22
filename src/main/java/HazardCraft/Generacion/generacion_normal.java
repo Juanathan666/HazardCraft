@@ -6,8 +6,10 @@ import HazardCraft.Iniciar.Bloques;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.block.state.pattern.BlockMatcher;
+import net.minecraft.client.Minecraft;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.IChunkGenerator;
@@ -49,6 +51,7 @@ private void generateEND(Random random, int chunkX, int chunkZ, World world, ICh
 		generateOre(Bloques.MENA_DE_MARMOL_ROJO.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(7) + 4, 18, Blocks.STONE);
 		generateOre(Bloques.MENA_DE_COBRE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(7) + 4, 18, Blocks.STONE);
 		generateOre(Bloques.MENA_DE_ZAFIRO.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(7) + 4, 18, Blocks.STONE);
+		generateOre_bajo_probabilidad(Bloques.MENA_DE_XP.getDefaultState(), world, random, chunkX*16, chunkZ*16, 3, 17, 20+random.nextInt(10), 100, Blocks.STONE);
 
 	}
 	
@@ -70,5 +73,21 @@ private void generateNether(Random random, int chunkX, int chunkZ, World world, 
 			
 			generator.generate(world, random, pos);
 		}
+	}
+	
+	
+	private void generateOre_bajo_probabilidad(IBlockState ore, World world, Random random, int x, int z, int minY, int maxY, int size, int chances, Block quebloquereemplaza) 
+	{
+		int deltaY = maxY - minY;
+		
+		int e = random.nextInt(chances);
+		
+		if(e==1) {
+			BlockPos pos = new BlockPos(x + random.nextInt(16), minY + random.nextInt(deltaY), z + random.nextInt(16));
+			WorldGenMinable generator = new WorldGenMinable(ore, size, BlockMatcher.forBlock(quebloquereemplaza));
+			//Minecraft.getMinecraft().player.sendMessage(new TextComponentTranslation(pos.getX() + " " + pos.getY() + ":" + pos.getZ()));
+			generator.generate(world, random, pos);
+		}
+		
 	}
 }
