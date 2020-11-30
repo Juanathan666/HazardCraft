@@ -1,7 +1,6 @@
 package Eventos;
 
 import HazardCraft.HazardCraft;
-import HazardCraft.Iniciar.Bloques;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.MinecraftForge;
 

@@ -3,8 +3,6 @@ package HazardCraft.Entidades.Texturas;
 import HazardCraft.HazardCraft;
 import HazardCraft.Entidades.prueba;
 import HazardCraft.Entidades.Modelos.prueba_Modelo;
-import net.minecraft.client.model.ModelBase;
-import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.util.ResourceLocation;

@@ -4,8 +4,8 @@ import java.util.Random;
 
 import HazardCraft.HazardCraft;
 import HazardCraft.Encantamientos.Encantamiento;
-import HazardCraft.Iniciar.Armaduras;
 import HazardCraft.Iniciar.Pociones;
+import HazardCraft.Items.Armaduras.Base.Armaduras;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;

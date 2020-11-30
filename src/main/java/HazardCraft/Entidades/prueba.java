@@ -178,7 +178,7 @@ public class prueba extends EntityMob
 
  @Override
 protected void dropFewItems(boolean wasRecentlyHit, int lootingModifier) {
-	this.dropItem(HazardCraft.Iniciar.Items.FRAGMENTO_DE_ENDERITA, 2);
+	this.dropItem(HazardCraft.Items.Registrar.Items_End.FRAGMENTO_DE_ENDERITA, 2);
 	super.dropFewItems(wasRecentlyHit, lootingModifier);
 }
 
