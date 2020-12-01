@@ -19,18 +19,25 @@ public class TestearActualizaciones {
 
 	
 	@SubscribeEvent
-	public void onClientTick(ClientTickEvent event){
-		if(Buscar_Actualizaciones.HayNuevaVersion() && !Iniciadosesion && Minecraft.getMinecraft().currentScreen == null && !Buscar_Actualizaciones.URLNOVALIDAERROR){
-			
+	public void onClientTick(ClientTickEvent event)
+	{
+		if(Buscar_Actualizaciones.HayNuevaVersion() && !Iniciadosesion && Minecraft.getMinecraft().currentScreen == null && !Buscar_Actualizaciones.URLNOVALIDAERROR)
+		{
 			Minecraft.getMinecraft().player.sendMessage(new TextComponentTranslation(HazardCraft.nombre_mensajes + TextFormatting.GOLD + Minecraft.getMinecraft().player.getName() + " Hay Una Nueva Version: " + TextFormatting.RED + UltimaVersion));
+			
 			Minecraft.getMinecraft().player.sendMessage(new TextComponentTranslation(HazardCraft.nombre_mensajes + TextFormatting.GOLD + Mensaje1));
-			if(Mensaje2a == true){
+			
+			if(Mensaje2a == true)
+			{
 			Minecraft.getMinecraft().player.sendMessage(new TextComponentTranslation(HazardCraft.nombre_mensajes + TextFormatting.GOLD + Mensaje2));
-			}if(Mensaje3a == true){
+			}
+			
+			if(Mensaje3a == true)
+			{
 			Minecraft.getMinecraft().player.sendMessage(new TextComponentTranslation(HazardCraft.nombre_mensajes + TextFormatting.GOLD + Mensaje3));
 			}
+			
 			Iniciadosesion = true;
 		}
 	}
-	
 }

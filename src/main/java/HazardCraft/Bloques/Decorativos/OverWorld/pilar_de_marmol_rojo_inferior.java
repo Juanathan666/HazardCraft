@@ -47,13 +47,12 @@ public class pilar_de_marmol_rojo_inferior extends Registro_Bloques {
 	
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-		// TODO Auto-generated method stub
 		return Item.getItemFromBlock(Bloques_OverWorld_Decoracion.PILAR_DE_MARMOL_ROJO);
 	}
-@Override
-protected boolean canSilkHarvest() {
-	// TODO Auto-generated method stub
-	return false;
-}
+
+	@Override
+	protected boolean canSilkHarvest() {
+		return false;
+	}
 	
 }

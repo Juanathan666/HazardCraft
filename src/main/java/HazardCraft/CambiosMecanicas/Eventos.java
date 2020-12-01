@@ -4,8 +4,8 @@ import java.util.Random;
 
 import HazardCraft.HazardCraft;
 import HazardCraft.Encantamientos.Encantamiento;
-import HazardCraft.Iniciar.Pociones;
 import HazardCraft.Items.Armaduras.Base.Armaduras;
+import HazardCraft.Pociones.Pociones;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -27,6 +27,7 @@ public class Eventos {
 	private static boolean mensaje = false;
 	private static boolean activar_lluvia_acida = false; 
 	private static int prob_lluvia = 0;
+	
 	/**
 	@SubscribeEvent
 	public void oncraftevent(ItemCraftedEvent event) {
@@ -40,176 +41,220 @@ public class Eventos {
 	}**/
 	
 	@SubscribeEvent
-	public void OnplayerFallevent(LivingFallEvent event) {
-		if(event.getEntityLiving().isPotionActive(Pociones.CAIDA_LENTA_EFECTO)) {
+	public void OnplayerFallevent(LivingFallEvent event) 
+	{
+		if(event.getEntityLiving().isPotionActive(Pociones.CAIDA_LENTA_EFECTO)) 
+		{
 			event.setCanceled(true);
 			event.getEntityLiving().removeActivePotionEffect(Pociones.CAIDA_LENTA_EFECTO);
 		}
-		
 	}
 	
 	@SubscribeEvent
-	public void PlayerTickEventos(PlayerTickEvent event){	
-		if(event.player.isPotionActive(Pociones.CAIDA_LENTA_EFECTO)) {
+	public void PlayerTickEventos(PlayerTickEvent event)
+	{	
+		if(event.player.isPotionActive(Pociones.CAIDA_LENTA_EFECTO)) 
+		{
 			event.player.motionY = -0.3D;
 		}
 		
 		//System.out.println(tick+" " + tick_lluvia + " " + tick_lluvia_acida + mensaje + " " + activar_lluvia_acida + " " + prob_lluvia);
 		//Muestra el mensaje si sale la probabilidad de activar la lluvia acida
-		if(!mensaje && event.player.world.isRaining()) {
+		
+		if(!mensaje && event.player.world.isRaining()) 
+		{
 			Random rand = new Random();
 			prob_lluvia = rand.nextInt(10);
-			if(prob_lluvia==1 && !event.player.world.isRemote){
-				
+			
+			if(prob_lluvia==1 && !event.player.world.isRemote)
+			{
 				 event.player.sendMessage(new TextComponentTranslation(HazardCraft.nombre_mensajes + TextFormatting.RED + "LLuvia acida activada."));
 				 activar_lluvia_acida = true;
-
-			}else if(!(prob_lluvia ==1) && event.player.world.canSeeSky(event.player.getPosition())) {
+			}
+			else if(!(prob_lluvia ==1) && event.player.world.canSeeSky(event.player.getPosition())) 
+			{
 				//event.player.sendMessage(new TextComponentTranslation(HazardCraft.nombre_mensajes + TextFormatting.GREEN + "La Lluvia no contiene acido."));
 			}
+			
 			mensaje = true;
 			//Pone en default las variables al dejar de llover
-		}else if(!event.player.world.isRaining() && mensaje) {
-
+			
+		}
+		else if(!event.player.world.isRaining() && mensaje) 
+		{
 			 mensaje = false;
 			 activar_lluvia_acida = false;
 			 tick_lluvia = 0;
 			 tick_lluvia_acida = 0;
 			 prob_lluvia = 0;
-		 }	
+		 }
+		
 		//Hace da�o al jugador si la lluvia acida se activa
-			if(activar_lluvia_acida) { 
-				tick_lluvia_acida++;
-                  if (event.player.world.canSeeSky(event.player.getPosition()) && !event.player.capabilities.isCreativeMode && !event.player.world.isRemote) {
+		
+		if(activar_lluvia_acida) 
+		{ 
+			tick_lluvia_acida++;
+            
+			if (event.player.world.canSeeSky(event.player.getPosition()) && !event.player.capabilities.isCreativeMode && !event.player.world.isRemote) 
+			{
 			//Hara da�o cada x tick si se comple la condicion de que en el bioma que se encuentra el jugador puede llover. Osea en un desierto no le ara da�o
-				if(tick_lluvia_acida>110 && event.player.world.getBiome(event.player.getPosition()).canRain()) {
+				
+				if(tick_lluvia_acida>110 && event.player.world.getBiome(event.player.getPosition()).canRain()) 
+				{
 					//Hace mas da�o segun la dificultad en pacifico no hace da�o
-					if(event.player.world.getDifficulty() == EnumDifficulty.EASY) {
+					if(event.player.world.getDifficulty() == EnumDifficulty.EASY) 
+					{
 					event.player.attackEntityFrom(lluvia_acida_damage_source, 1.0F);
-					}else if(event.player.world.getDifficulty() == EnumDifficulty.NORMAL) {
+					}
+					else if(event.player.world.getDifficulty() == EnumDifficulty.NORMAL) 
+					{
 						event.player.attackEntityFrom(lluvia_acida_damage_source, 2.0F);
-					}else if(event.player.world.getDifficulty() == EnumDifficulty.HARD) {
+					}
+					else if(event.player.world.getDifficulty() == EnumDifficulty.HARD) 
+					{
 						event.player.attackEntityFrom(lluvia_acida_damage_source, 3.0F);
 					}
-			
-		 }
-							
-}                
-                  //Reinicia la variable para hacer 1 toque de da�o cada cierto tiempo
-				if(tick_lluvia_acida>113) {
-					tick_lluvia_acida =0;
 				}
+							
+			}                
+                  //Reinicia la variable para hacer 1 toque de da�o cada cierto tiempo
+			if(tick_lluvia_acida>113) 
+			{
+				tick_lluvia_acida =0;
+			}
 		}
 			
 		//Quitar durabilidad por estar en el agua con el encantamiento
 		ItemStack casco = event.player.getItemStackFromSlot(EntityEquipmentSlot.HEAD);  
 		ItemStack pechera = event.player.getItemStackFromSlot(EntityEquipmentSlot.CHEST);  
 		ItemStack grebas = event.player.getItemStackFromSlot(EntityEquipmentSlot.LEGS);  
-		ItemStack botas = event.player.getItemStackFromSlot(EntityEquipmentSlot.FEET);  
-		if(!botas.isEmpty() && event.player.isInWater()) {
-		tick++;
-		int level = EnchantmentHelper.getMaxEnchantmentLevel(Encantamiento.Habilidad_Aquatica, event.player);
-		if(tick>90 && !event.player.world.isRemote && !event.player.capabilities.isCreativeMode) {
+		ItemStack botas = event.player.getItemStackFromSlot(EntityEquipmentSlot.FEET); 
+		
+		if(!botas.isEmpty() && event.player.isInWater()) 
+		{
+			tick++;
+			int level = EnchantmentHelper.getMaxEnchantmentLevel(Encantamiento.Habilidad_Aquatica, event.player);
 			
-			switch (level) {
-			case 1:
-				botas.setItemDamage(botas.getItemDamage()+5);
-				break;
+			if(tick>90 && !event.player.world.isRemote && !event.player.capabilities.isCreativeMode) 
+			{
+				switch (level) 
+				{
+					case 1:
+						botas.setItemDamage(botas.getItemDamage()+5);
+					break;
 
-			case 2:
-				botas.setItemDamage(botas.getItemDamage()+3);
-				break;
+					case 2:
+						botas.setItemDamage(botas.getItemDamage()+3);
+					break;
 
-			case 3:
-				botas.setItemDamage(botas.getItemDamage()+1);
-
-				break;
-			case 4:
-				//botas.setItemDamage(botas.getItemDamage()+1);
-                  
-				break;
+					case 3:
+						botas.setItemDamage(botas.getItemDamage()+1);
+					break;
+					case 4:
+						//botas.setItemDamage(botas.getItemDamage()+1);
+					break;
+				}
+			
+				tick = 0;
 			}
-			
-	
-			
-	tick = 0;
-		 }
-		}else {
+		}
+		else 
+		{
 			tick = 0;
 		}
 	
-	if(botas.getMaxDamage()<botas.getItemDamage()) {
-		tick = 0;
-		if(botas.getItem() == Items.IRON_BOOTS && event.player.world.isRaining()) {
-			event.player.setItemStackToSlot(EntityEquipmentSlot.FEET, new ItemStack(Armaduras.botas_de_hierro_oxidado));
-
-		}else {
-event.player.setItemStackToSlot(EntityEquipmentSlot.FEET, ItemStack.EMPTY);
-
-		}
-	}
-	
-	if(casco.getMaxDamage()<casco.getItemDamage()) {
-		if(casco.getItem() == Items.IRON_HELMET && event.player.world.isRaining()) {
-			event.player.setItemStackToSlot(EntityEquipmentSlot.HEAD, new ItemStack(Armaduras.casco_de_hierro_oxidado));
-
+		if(botas.getMaxDamage()<botas.getItemDamage()) 
+		{
+			tick = 0;
 			
-		}else {
-event.player.setItemStackToSlot(EntityEquipmentSlot.HEAD, ItemStack.EMPTY);
-		}
-
-	}
-	
-	if(pechera.getMaxDamage()<pechera.getItemDamage()) {
-		
-		if(pechera.getItem() == Items.IRON_CHESTPLATE && event.player.world.isRaining()) {
-			event.player.setItemStackToSlot(EntityEquipmentSlot.CHEST, new ItemStack(Armaduras.pechera_de_hierro_oxidado));
+			if(botas.getItem() == Items.IRON_BOOTS && event.player.world.isRaining()) 
+			{
+				event.player.setItemStackToSlot(EntityEquipmentSlot.FEET, new ItemStack(Armaduras.botas_de_hierro_oxidado));
+			}
 			
-		}else {
-event.player.setItemStackToSlot(EntityEquipmentSlot.CHEST, ItemStack.EMPTY);
-
+			else 
+			{
+				event.player.setItemStackToSlot(EntityEquipmentSlot.FEET, ItemStack.EMPTY);
+			}
 		}
-	}
 	
-	if(grebas.getMaxDamage()<grebas.getItemDamage()) {
-		if(grebas.getItem() == Items.IRON_LEGGINGS && event.player.world.isRaining()) {
-event.player.setItemStackToSlot(EntityEquipmentSlot.LEGS, new ItemStack(Armaduras.grebas_de_hierro_oxidado));
-		}else {
-			event.player.setItemStackToSlot(EntityEquipmentSlot.LEGS, ItemStack.EMPTY);
+		if(casco.getMaxDamage()<casco.getItemDamage()) 
+		{
+			if(casco.getItem() == Items.IRON_HELMET && event.player.world.isRaining()) 
+			{
+				event.player.setItemStackToSlot(EntityEquipmentSlot.HEAD, new ItemStack(Armaduras.casco_de_hierro_oxidado));
+			}
+			else 
+			{
+				event.player.setItemStackToSlot(EntityEquipmentSlot.HEAD, ItemStack.EMPTY);
+			}
+		}
+	
+		if(pechera.getMaxDamage()<pechera.getItemDamage()) 
+		{
+			if(pechera.getItem() == Items.IRON_CHESTPLATE && event.player.world.isRaining()) 
+			{
+				event.player.setItemStackToSlot(EntityEquipmentSlot.CHEST, new ItemStack(Armaduras.pechera_de_hierro_oxidado));
+			}
+			else 
+			{
+				event.player.setItemStackToSlot(EntityEquipmentSlot.CHEST, ItemStack.EMPTY);
+			}
+		}
+	
+		if(grebas.getMaxDamage()<grebas.getItemDamage()) 
+		{
+			if(grebas.getItem() == Items.IRON_LEGGINGS && event.player.world.isRaining()) 
+			{
+				event.player.setItemStackToSlot(EntityEquipmentSlot.LEGS, new ItemStack(Armaduras.grebas_de_hierro_oxidado));
+			}
+			else 
+			{
+				event.player.setItemStackToSlot(EntityEquipmentSlot.LEGS, ItemStack.EMPTY);
+			}
 		}
 
-	}
-
-//Te cambia la armadura de hierro por la de hierro oxidado si esta lloviendo
-if(event.player.world.isRaining() && event.player.world.canSeeSky(event.player.getPosition()) && event.player.world.getBiome(event.player.getPosition()).canRain()) {
-	if(casco.getItem() == Items.IRON_HELMET || pechera.getItem() == Items.IRON_CHESTPLATE || grebas.getItem() == Items.IRON_LEGGINGS || botas.getItem() == Items.IRON_BOOTS) {
-	tick_lluvia++;
-	if(casco.getItem() == Items.IRON_HELMET && tick_lluvia>70 && !event.player.world.isRemote) {
-		casco.setItemDamage(casco.getItemDamage()+1);
-	}
-	
-if(pechera.getItem() == Items.IRON_CHESTPLATE && tick_lluvia>70 && !event.player.world.isRemote) {
-	pechera.setItemDamage(pechera.getItemDamage()+1);
-	}
-if(grebas.getItem() == Items.IRON_LEGGINGS && tick_lluvia>70 && !event.player.world.isRemote) {
-	grebas.setItemDamage(grebas.getItemDamage()+1);
-}
-	if(botas.getItem() == Items.IRON_BOOTS && tick_lluvia>70 && !event.player.world.isRemote) {
-		botas.setItemDamage(botas.getItemDamage()+1);
-	}
-	if(tick_lluvia>70 ) {
-	tick_lluvia = 0;
-	}
-}else {
-	tick_lluvia =0;
-}
-}else {
-	tick_lluvia=0;
-}
-
+		//Te cambia la armadura de hierro por la de hierro oxidado si esta lloviendo
+		if(event.player.world.isRaining() && event.player.world.canSeeSky(event.player.getPosition()) && event.player.world.getBiome(event.player.getPosition()).canRain()) 
+		{
+			if(casco.getItem() == Items.IRON_HELMET || pechera.getItem() == Items.IRON_CHESTPLATE || grebas.getItem() == Items.IRON_LEGGINGS || botas.getItem() == Items.IRON_BOOTS) 
+			{
+				tick_lluvia++;
 				
-	 
-	}
+				if(casco.getItem() == Items.IRON_HELMET && tick_lluvia>70 && !event.player.world.isRemote) 
+				{
+					casco.setItemDamage(casco.getItemDamage()+1);
+				}
 	
+				if(pechera.getItem() == Items.IRON_CHESTPLATE && tick_lluvia>70 && !event.player.world.isRemote) 
+				{
+					pechera.setItemDamage(pechera.getItemDamage()+1);
+				}
+				
+				if(grebas.getItem() == Items.IRON_LEGGINGS && tick_lluvia>70 && !event.player.world.isRemote) 
+				{
+					grebas.setItemDamage(grebas.getItemDamage()+1);
+				}
+				
+				if(botas.getItem() == Items.IRON_BOOTS && tick_lluvia>70 && !event.player.world.isRemote) 
+				{
+					botas.setItemDamage(botas.getItemDamage()+1);
+				}
+	
+				if(tick_lluvia>70 ) 
+				{
+					tick_lluvia = 0;
+				}
+			}
+			else 
+			{
+				tick_lluvia =0;
+			}
+		}
+		else 
+		{
+			tick_lluvia=0;
+		}
+	}
 }
 	

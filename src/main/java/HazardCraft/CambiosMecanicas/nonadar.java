@@ -12,30 +12,22 @@ public class nonadar {
 	@SubscribeEvent
 	public void yourPlayerHarvestEvent(InputUpdateEvent event) 
 	{
-		
 		EntityPlayer player = event.getEntityPlayer();
 		
 		int level = EnchantmentHelper.getMaxEnchantmentLevel(Encantamiento.Habilidad_Aquatica, player);
 
-		if(player.isInWater() && !player.capabilities.isCreativeMode) {
-			
-			if(level == 0) {
+		if(player.isInWater() && !player.capabilities.isCreativeMode) 
+		{
+			if(level == 0) 
+			{
 				nonadar(event);
 			}
-			
-				
-		     }
 		}
-	
-	
-	
-	public static void nonadar(InputUpdateEvent event) {
-		
-		event.getMovementInput().jump = false;
-		
-
 	}
 	
 	
-
+	public static void nonadar(InputUpdateEvent event) 
+	{
+		event.getMovementInput().jump = false;
+	}
 }

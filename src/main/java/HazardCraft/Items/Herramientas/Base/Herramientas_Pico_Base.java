@@ -12,13 +12,9 @@ public class Herramientas_Pico_Base extends ItemPickaxe implements Modelos
 		super(material);
 		setUnlocalizedName(name);
 		setRegistryName(name);
-	
-		
-	  setCreativeTab(HazardCraft.HazardCraftTab_Herramientas);
-		
+		setCreativeTab(HazardCraft.HazardCraftTab_Herramientas);
 		
 		Items_OverWorld.ITEMS.add(this);
-		
 	}
 	
 	@Override

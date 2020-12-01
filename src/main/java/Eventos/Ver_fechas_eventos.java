@@ -25,11 +25,15 @@ public class Ver_fechas_eventos {
 	public static int ano;
 	public static String URL = "https://www.dropbox.com/s/39u9724yryb0uok/Hazardcraft-eventos-dias.txt?raw=1";
 
-	public static void VerFechasEventos(){
-		new Thread("VerFechaEventos"){
+	public static void VerFechasEventos()
+	{
+		new Thread("VerFechaEventos")
+		{
 			
-			public void run(){
-				try {
+			public void run()
+			{
+				try 
+				{
 					URL url = new URL(URL);
 					Scanner scanner = new Scanner(url.openStream());
 					String hueco1 = scanner.nextLine();
@@ -64,42 +68,47 @@ public class Ver_fechas_eventos {
 					Ver_fechas_eventos.MesVerano = Integer.parseInt(MesVerano);
 					scanner.close();
 					iniciar();
-				} catch (MalformedURLException e) {
+				} 
+				
+				catch (MalformedURLException e) 
+				{
 					HazardCraft.logger.info("No se ha podido verificar la fecha del evento error:" + e);
-					
-					
-				} catch (IOException e1) {
+				} 
+				
+				catch (IOException e1) 
+				{
 					HazardCraft.logger.info("No se ha podido verificar la fecha del evento error:" + e1);
-					
 				}
 			}
 			
-		}.start();
+		}
+		
+		.start();
 	}
 	
 	
-	public static void iniciar() {
-		
-		
+	public static void iniciar() 
+	{
 			Calendar calendar = Calendar.getInstance();
 			
 			//Testear Verano
-	    	if(calendar.get(2) + 1 == MesVerano && calendar.get(5) >= IVerano && calendar.get(5) <= AVerano){
-	    		  Eventos_Principal.Verano = true;
+	    	if(calendar.get(2) + 1 == MesVerano && calendar.get(5) >= IVerano && calendar.get(5) <= AVerano)
+	    	{
+	    		Eventos_Principal.Verano = true;
 	    	}
 
      
-	    	
 			//Testear Navidad
-		    if (calendar.get(2) + 1 == MesNavidad && calendar.get(5) >= INavidad && calendar.get(5) <= ANavidad){
-		      Eventos_Principal.Navidad = true;
-		      
-		       } 
+		    if (calendar.get(2) + 1 == MesNavidad && calendar.get(5) >= INavidad && calendar.get(5) <= ANavidad)
+		    {
+		    	Eventos_Principal.Navidad = true;
+		    } 
 		     
 		    	//Testear Hallowen
-		    	if(calendar.get(2) + 1 == MesHalloween && calendar.get(5) >= IHalloween && calendar.get(5) <= AHalloween){
-		    		Eventos_Principal.Halloween = true;
 		    	
+		    if(calendar.get(2) + 1 == MesHalloween && calendar.get(5) >= IHalloween && calendar.get(5) <= AHalloween)
+		    {
+		    	Eventos_Principal.Halloween = true;
 		    } 
 	}
 	

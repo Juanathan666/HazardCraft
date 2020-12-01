@@ -50,10 +50,10 @@ public class pilar_de_marmol_negro_inferior extends Registro_Bloques {
 		// TODO Auto-generated method stub
 		return Item.getItemFromBlock(Bloques_OverWorld_Decoracion.PILAR_DE_MARMOL_NEGRO);
 	}
-@Override
-protected boolean canSilkHarvest() {
-	// TODO Auto-generated method stub
-	return false;
-}
+
+	@Override
+	protected boolean canSilkHarvest() {
+		return false;
+	}
 	
 }

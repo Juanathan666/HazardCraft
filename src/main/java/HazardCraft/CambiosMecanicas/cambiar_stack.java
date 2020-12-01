@@ -8,7 +8,9 @@ public class cambiar_stack {
 
 	private static final int potion_max = 8;
 	private static final boolean  _allowDownsizing = true;
-	public static void iniciar() {
+	
+	public static void iniciar() 
+	{
 		new cambiar_stack().adjust(Items.POTIONITEM, potion_max);
 		new cambiar_stack().adjust(Items.SPLASH_POTION, potion_max);
 		new cambiar_stack().adjust(Items.LINGERING_POTION, potion_max);
@@ -17,11 +19,15 @@ public class cambiar_stack {
 	
 	
 	@SuppressWarnings("unused")
-	public void adjust(Item item, int preferredSize) {
+	public void adjust(Item item, int preferredSize) 
+	{
 	    if (preferredSize > 0 && (this._allowDownsizing || item.getItemStackLimit(new ItemStack(item)) < preferredSize))
-	      try {
-	        item.setMaxStackSize(preferredSize);
-	      } catch (RuntimeException runtimeException) {} 
+	    	try 
+	    	{
+	    		item.setMaxStackSize(preferredSize);
+	    	}
+	    
+	    catch (RuntimeException runtimeException) {} 
 	  }
 	
 }

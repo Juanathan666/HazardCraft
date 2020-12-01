@@ -14,7 +14,9 @@ public class ArmaduraBases extends ItemArmor implements Modelos {
 		
 		this.setUnlocalizedName(unlocalizedName);
 		this.setRegistryName(new ResourceLocation(HazardCraft.MODID, unlocalizedName));
-	     Items_OverWorld.ITEMS.add(this);
+		this.setCreativeTab(HazardCraft.HazardCraftTab_Armaduras);
+		
+	    Items_OverWorld.ITEMS.add(this);
 	}
 
 	@Override

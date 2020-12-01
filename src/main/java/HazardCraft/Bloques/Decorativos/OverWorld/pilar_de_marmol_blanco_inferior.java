@@ -24,7 +24,6 @@ public class pilar_de_marmol_blanco_inferior extends Registro_Bloques {
 		setHarvestLevel("pickaxe", 2);
 		setSoundType(SoundType.STONE);
 		this.setTickRandomly(true);
-
 	}
 
 	
@@ -39,6 +38,7 @@ public class pilar_de_marmol_blanco_inferior extends Registro_Bloques {
 	public boolean isFullCube(IBlockState state) {
 		return false;
 	}
+	
 	@Override
 	public void onBlockDestroyedByPlayer(World world, BlockPos pos, IBlockState state) {
 		PilarBase_estados.inferior_onblock_destroyed(world, pos, state, Bloques_OverWorld_Decoracion.PILAR_DE_MARMOL_BLANCO_INFERIOR, Bloques_OverWorld_Decoracion.PILAR_DE_MARMOL_BLANCO_SUPERIOR, Bloques_OverWorld_Decoracion.PILAR_DE_MARMOL_BLANCO);
@@ -47,13 +47,12 @@ public class pilar_de_marmol_blanco_inferior extends Registro_Bloques {
 	
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-		// TODO Auto-generated method stub
 		return Item.getItemFromBlock(Bloques_OverWorld_Decoracion.PILAR_DE_MARMOL_BLANCO);
 	}
-@Override
-protected boolean canSilkHarvest() {
-	// TODO Auto-generated method stub
-	return false;
-}
+
+	@Override
+	protected boolean canSilkHarvest() {
+		return false;
+	}
 	
 }

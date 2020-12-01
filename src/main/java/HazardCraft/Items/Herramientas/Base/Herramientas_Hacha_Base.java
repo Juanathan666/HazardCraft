@@ -26,17 +26,11 @@ public class Herramientas_Hacha_Base extends ItemTool implements Modelos {
         super(material, EFFECTIVE_ON);
         setUnlocalizedName(name);
 		setRegistryName(name);
-	
-		
-	  setCreativeTab(HazardCraft.HazardCraftTab_Herramientas);
-		
+		setCreativeTab(HazardCraft.HazardCraftTab_Herramientas);
 		
 		Items_OverWorld.ITEMS.add(this);
 
-       
-        
         this.attackDamage = material.getAttackDamage() + 5;
-       
     }
 
     protected Herramientas_Hacha_Base(Item.ToolMaterial material, float damage, float speed)

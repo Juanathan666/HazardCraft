@@ -14,11 +14,15 @@ public class Buscar_Actualizaciones {
 	private static boolean NuevaVersion = false;
 	public static boolean URLNOVALIDAERROR = false;
 	
-	public static void MirarActualizaciones(){
-		new Thread("Actualizaciones"){
+	public static void MirarActualizaciones()
+	{
+		new Thread("Actualizaciones")
+		{
 			
-			public void run(){
-				try {
+			public void run()
+			{
+				try 
+				{
 					URL url = new URL(Actualizacion_Url);
 					Scanner scanner = new Scanner(url.openStream());
 					String hueco1 = scanner.nextLine();
@@ -27,30 +31,46 @@ public class Buscar_Actualizaciones {
 					String Mensaje2 = scanner.nextLine();
 					String Mensaje3 = scanner.nextLine();
 					scanner.close();
-					if(!HazardCraft.VERSION.equals(UltimaVersion) && !URLNOVALIDAERROR){
+					
+					if(!HazardCraft.VERSION.equals(UltimaVersion) && !URLNOVALIDAERROR)
+					{
 						HazardCraft.logger.info("============================================================");
 						HazardCraft.logger.info(UltimaVersion + " Esta es la Ultima Version de HazardCraft Disponible");
 					
-						if(!Mensaje1.equals("")){
+						if(!Mensaje1.equals(""))
+						{
 							HazardCraft.logger.info(Mensaje1);
 						
 						TestearActualizaciones.Mensaje1 = Mensaje1;
-						}if(!Mensaje2.equals("")){
+						}
+						
+						if(!Mensaje2.equals(""))
+						{
 							HazardCraft.logger.info(Mensaje2);
 							
 							TestearActualizaciones.Mensaje2 = Mensaje2;
-						}else{
+						}
+						
+						else
+						{
 							TestearActualizaciones.Mensaje2a = false;
 						}	
-						if(!Mensaje3.equals("")){
+						
+						if(!Mensaje3.equals(""))
+						{
 							HazardCraft.logger.info(Mensaje3);
 							
 							TestearActualizaciones.Mensaje3 = Mensaje3;
 							HazardCraft.logger.info("============================================================");
-						}else{
+						}
+						
+						else
+						{
 							TestearActualizaciones.Mensaje3a = false;
 						}
-						if(Mensaje1.equals("") && Mensaje2.equals("") && Mensaje3.equals("")){			
+						
+						if(Mensaje1.equals("") && Mensaje2.equals("") && Mensaje3.equals(""))
+						{			
 							HazardCraft.logger.info("No hay cambios en actualizacion");
 							
 							TestearActualizaciones.Mensaje1 = "No hay Cambios en actualizacion";
@@ -60,16 +80,22 @@ public class Buscar_Actualizaciones {
 						TestearActualizaciones.UltimaVersion = UltimaVersion;
 						FijarNuevaVersion();
 					}
-				} catch (MalformedURLException e) {
+				} 
+				
+				catch (MalformedURLException e) 
+				{
 					URLNOVALIDAERROR = true;
-					
-				} catch (IOException e) {
+				} 
+				
+				catch (IOException e) 
+				{
 					HazardCraft.logger.info("Error al buscar actualizaciones: " + e);
 					URLNOVALIDAERROR = true;
 				}
 			}
-			
-		}.start();
+		}
+		
+		.start();
 	}
 	
 	public static synchronized void FijarNuevaVersion(){
