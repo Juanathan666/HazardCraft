@@ -1,6 +1,6 @@
 package CreativeTabs;
 
-import HazardCraft.Items.Herramientas.Base.Herramientas;
+import HazardCraft.Items.Herramientas.End.Registrar_Herramientas_End;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 
@@ -20,7 +20,7 @@ public class HazardCraftTab_Herramientas extends CreativeTabs {
 	@Override
 	public ItemStack getTabIconItem() 
 	{
-		return new ItemStack(Herramientas.espada_de_enderita);
+		return new ItemStack(Registrar_Herramientas_End.espada_de_enderita);
 	}
 
 	@Override

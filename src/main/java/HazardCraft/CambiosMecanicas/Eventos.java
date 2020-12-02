@@ -4,7 +4,7 @@ import java.util.Random;
 
 import HazardCraft.HazardCraft;
 import HazardCraft.Encantamientos.Encantamiento;
-import HazardCraft.Items.Armaduras.Base.Armaduras;
+import HazardCraft.Items.Armaduras.OverWorld.Registrar_Armaduras_OverWorld;
 import HazardCraft.Pociones.Pociones;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.init.Items;
@@ -169,7 +169,7 @@ public class Eventos {
 			
 			if(botas.getItem() == Items.IRON_BOOTS && event.player.world.isRaining()) 
 			{
-				event.player.setItemStackToSlot(EntityEquipmentSlot.FEET, new ItemStack(Armaduras.botas_de_hierro_oxidado));
+				event.player.setItemStackToSlot(EntityEquipmentSlot.FEET, new ItemStack(Registrar_Armaduras_OverWorld.botas_de_hierro_oxidado));
 			}
 			
 			else 
@@ -182,7 +182,7 @@ public class Eventos {
 		{
 			if(casco.getItem() == Items.IRON_HELMET && event.player.world.isRaining()) 
 			{
-				event.player.setItemStackToSlot(EntityEquipmentSlot.HEAD, new ItemStack(Armaduras.casco_de_hierro_oxidado));
+				event.player.setItemStackToSlot(EntityEquipmentSlot.HEAD, new ItemStack(Registrar_Armaduras_OverWorld.casco_de_hierro_oxidado));
 			}
 			else 
 			{
@@ -194,7 +194,7 @@ public class Eventos {
 		{
 			if(pechera.getItem() == Items.IRON_CHESTPLATE && event.player.world.isRaining()) 
 			{
-				event.player.setItemStackToSlot(EntityEquipmentSlot.CHEST, new ItemStack(Armaduras.pechera_de_hierro_oxidado));
+				event.player.setItemStackToSlot(EntityEquipmentSlot.CHEST, new ItemStack(Registrar_Armaduras_OverWorld.pechera_de_hierro_oxidado));
 			}
 			else 
 			{
@@ -206,7 +206,7 @@ public class Eventos {
 		{
 			if(grebas.getItem() == Items.IRON_LEGGINGS && event.player.world.isRaining()) 
 			{
-				event.player.setItemStackToSlot(EntityEquipmentSlot.LEGS, new ItemStack(Armaduras.grebas_de_hierro_oxidado));
+				event.player.setItemStackToSlot(EntityEquipmentSlot.LEGS, new ItemStack(Registrar_Armaduras_OverWorld.grebas_de_hierro_oxidado));
 			}
 			else 
 			{

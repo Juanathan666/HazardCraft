@@ -1,7 +1,7 @@
 {"type": "minecraft:crafting_shaped",
   "pattern": 
   [
-    "ll ",
+    " l ",
     " p ",
 	" p "
   ],
@@ -10,7 +10,7 @@
   {
     "l": 
     {
-      "item": "hc:lingote_de_netherita"
+      "item": "hc:lingote_de_estano"
     },
 
 "p": 
@@ -22,7 +22,7 @@
   
   "result": 
   {
-    "item": "hc:azada_de_netherita",
+    "item": "hc:pala_de_estano",
     "count": 1
   }
 }

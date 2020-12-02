@@ -16,15 +16,21 @@ import HazardCraft.CambiosMecanicas.DropeoBloquesMinecraft;
 import HazardCraft.CambiosMecanicas.Eventos;
 import HazardCraft.CambiosMecanicas.cambiar_stack;
 import HazardCraft.CambiosMecanicas.nonadar;
+import HazardCraft.Crafteos.Horno.End.Crafteos_Horno_End;
+import HazardCraft.Crafteos.Horno.Nether.Crafteos_Hornos_Nether;
+import HazardCraft.Crafteos.Horno.OverWorld.Crafteos_Hornos_OverWorld;
 import HazardCraft.Encantamientos.Registrar_encantamiento;
 import HazardCraft.Generacion.Registrar_generacion_estructuras;
 import HazardCraft.Generacion.generacion_normal;
-import HazardCraft.Iniciar.Crafteos_Hornos;
 import HazardCraft.Iniciar.Entidades;
 import HazardCraft.Iniciar.Entidades_Render;
 import HazardCraft.Iniciar.Sonidos;
-import HazardCraft.Items.Armaduras.Base.Armaduras;
-import HazardCraft.Items.Herramientas.Base.Herramientas;
+import HazardCraft.Items.Armaduras.End.Registrar_Armaduras_End;
+import HazardCraft.Items.Armaduras.Nether.Registrar_Armaduras_Nether;
+import HazardCraft.Items.Armaduras.OverWorld.Registrar_Armaduras_OverWorld;
+import HazardCraft.Items.Herramientas.End.Registrar_Herramientas_End;
+import HazardCraft.Items.Herramientas.Nether.Registrar_Herramientas_Nether;
+import HazardCraft.Items.Herramientas.OverWorld.Registrar_Herramientas_OverWorld;
 import HazardCraft.Pociones.Pociones;
 import HazardCraft.Proxy.ClientProxy;
 import HazardCraft.Proxy.CommonProxy;
@@ -99,8 +105,15 @@ public class HazardCraft
         
         MinecraftForge.EVENT_BUS.register(new Registrar_encantamiento());
        
-    	Armaduras.Registar_Armadura();
-    	Herramientas.Registrar_Herramientas();
+    	Registrar_Armaduras_OverWorld.Registar_Armadura();   
+    	Registrar_Armaduras_Nether.Registar_Armadura();
+    	Registrar_Armaduras_End.Registar_Armadura();
+
+    	
+    	Registrar_Herramientas_OverWorld.Registrar_Herramientas();
+    	Registrar_Herramientas_Nether.Registrar_Herramientas();
+    	Registrar_Herramientas_End.Registrar_Herramientas();
+    	
     	cambiar_stack.iniciar();
     	Pociones.iniciar();
     	Entidades.iniciar_entidades();
@@ -113,8 +126,11 @@ public class HazardCraft
     	Proxy.init();
     	Eventos_Principal.eventos_init();
     	ClientProxy.RegistrarInterfaces();
-        Crafteos_Hornos.iniciar();
         Sonidos.Iniciar();
+        
+        Crafteos_Hornos_OverWorld.Iniciar();
+        Crafteos_Hornos_Nether.Iniciar();
+        Crafteos_Horno_End.Iniciar();
     }
     
     @EventHandler

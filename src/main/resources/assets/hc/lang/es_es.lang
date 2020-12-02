@@ -23,6 +23,28 @@ item.pechera_de_hierro_oxidado.name=Pechera de hierro oxidado
 item.grebas_de_hierro_oxidado.name=Grebas de hierro oxidado
 item.botas_de_hierro_oxidado.name=Botas de hierro oxidado
 
+item.espada_de_estano.name=Espada de Estaño
+item.pico_de_estano.name= Pico de Estaño
+item.hacha_de_estano.name=Hacha de Estaño
+item.pala_de_estano.name=Pala de Estaño
+item.azada_de_estano.name=Azada de Estaño
+
+item.espada_de_cobre.name=Espada de Cobre
+item.pico_de_cobre.name=Pico de Cobre
+item.hacha_de_cobre.name=Hacha de Cobre
+item.pala_de_cobre.name=Pala de Cobre
+item.azada_de_cobre.name=Azada de Cobre
+
+item.espada_de_zafiro.name=Espada de Zafiro
+item.pico_de_zafiro.name=Pico de Zafiro
+item.hacha_de_zafiro.name=Hacha de Zafiro
+item.pala_de_zafiro.name=Pala de Zafiro
+item.azada_de_zafiro.name=Azada de Zafiro
+item.casco_de_zafiro.name=Casco de Zafiro
+item.pechera_de_zafiro.name=Pechera de Zafiro
+item.grebas_de_zafiro.name=Grebas de Zafiro
+item.botas_de_zafiro.name=Botas de Zafiro
+
 item.fragmento_de_enderita.name=Fragmento de Enderita
 item.lingote_de_enderita.name=Lingote de Enderita
 item.casco_de_enderita.name=Casco de Enderita

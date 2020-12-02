@@ -1,6 +1,6 @@
 package CreativeTabs;
 
-import HazardCraft.Items.Armaduras.Base.Armaduras;
+import HazardCraft.Items.Armaduras.End.Registrar_Armaduras_End;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 
@@ -20,7 +20,7 @@ public class HazardCraftTab_Armaduras extends CreativeTabs {
 	@Override
 	public ItemStack getTabIconItem() 
 	{
-		return new ItemStack(Armaduras.casco_de_enderita);
+		return new ItemStack(Registrar_Armaduras_End.casco_de_enderita);
 	}
 
 	@Override

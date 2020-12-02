@@ -1,0 +1,23 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "lll",
+    "lll",
+    "lll"
+  ],
+  
+  "key": 
+  {
+    "l": 
+    {
+      "item": "hc:gema_de_zafiro"
+    }
+
+  },
+  
+  "result": 
+  {
+    "item": "hc:bloque_de_zafiro",
+    "count": 1
+  }
+}

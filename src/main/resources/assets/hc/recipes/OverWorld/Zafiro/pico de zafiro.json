@@ -1,0 +1,28 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "lll",
+    " p ",
+	" p "
+  ],
+  
+  "key": 
+  {
+    "l": 
+    {
+      "item": "hc:gema_de_zafiro"
+    },
+
+"p": 
+    {
+      "item": "minecraft:stick"
+    }
+
+  },
+  
+  "result": 
+  {
+    "item": "hc:pico_de_zafiro",
+    "count": 1
+  }
+}

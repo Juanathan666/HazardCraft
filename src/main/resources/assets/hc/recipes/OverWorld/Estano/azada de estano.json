@@ -1,0 +1,28 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "ll ",
+    " p ",
+	" p "
+  ],
+  
+  "key": 
+  {
+    "l": 
+    {
+      "item": "hc:lingote_de_estano"
+    },
+
+	"p": 
+    {
+      "item": "minecraft:stick"
+    }
+
+  },
+  
+  "result": 
+  {
+    "item": "hc:azada_de_estano",
+    "count": 1
+  }
+}

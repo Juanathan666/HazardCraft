@@ -1,0 +1,28 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    " l ",
+    " l ",
+	" p "
+  ],
+  
+  "key": 
+  {
+    "l": 
+    {
+      "item": "hc:lingote_de_cobre"
+    },
+
+"p": 
+    {
+      "item": "minecraft:stick"
+    }
+
+  },
+  
+  "result": 
+  {
+    "item": "hc:espada_de_cobre",
+    "count": 1
+  }
+}

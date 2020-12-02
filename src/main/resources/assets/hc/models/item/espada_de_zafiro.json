@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+    "layer0": "hc:items/espada_de_zafiro"
+    }
+}

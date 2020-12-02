@@ -1,4 +1,4 @@
-package HazardCraft.Items.Armaduras.Base;
+package HazardCraft.Items.Armaduras.OverWorld;
 
 import HazardCraft.HazardCraft;
 import HazardCraft.Items.Registrar.Items_OverWorld;

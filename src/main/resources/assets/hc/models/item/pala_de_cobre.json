@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+    "layer0": "hc:items/pala_de_cobre"
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+ 
+	{
+	  "item": "hc:bloque_de_zafiro"
+	}
+	
+  ],
+  "result": {
+    "item": "hc:gema_de_zafiro",
+    "count": 9
+  }
+}
