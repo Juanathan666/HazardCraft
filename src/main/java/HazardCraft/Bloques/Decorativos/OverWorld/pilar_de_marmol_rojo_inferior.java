@@ -2,7 +2,6 @@ package HazardCraft.Bloques.Decorativos.OverWorld;
 
 import java.util.Random;
 
-import HazardCraft.HazardCraft;
 import HazardCraft.Bloques.Registrar.Bloques_OverWorld_Decoracion;
 import HazardCraft.Bloques.Registrar.Registro_Bloques;
 import HazardCraft.Util.PilarBase_estados;
@@ -18,7 +17,7 @@ public class pilar_de_marmol_rojo_inferior extends Registro_Bloques {
 	public pilar_de_marmol_rojo_inferior(String name, Material material) {
 		super(name, material);
 	
-		setCreativeTab(HazardCraft.HazardCraftTab_Bloques);
+		setCreativeTab(null);
 		setHardness(5.0F);
 		setResistance(5.0F);
 		setHarvestLevel("pickaxe", 2);

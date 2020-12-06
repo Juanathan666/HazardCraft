@@ -19,11 +19,11 @@ public class Crafteos_Hornos_OverWorld
 		
 		//Lingotes
 		
-		GameRegistry.addSmelting(Bloques_OverWorld_Menas.BLOQUE_DE_COBRE, new ItemStack(Items_OverWorld.LINGOTE_DE_COBRE, 1), 10.0F);
-		GameRegistry.addSmelting(Bloques_OverWorld_Menas.BLOQUE_DE_ESTANO, new ItemStack(Items_OverWorld.LINGOTE_DE_ESTANO, 1), 10.0F);
+		GameRegistry.addSmelting(Bloques_OverWorld_Menas.MENA_DE_COBRE, new ItemStack(Items_OverWorld.LINGOTE_DE_COBRE, 1), 10.0F);
+		GameRegistry.addSmelting(Bloques_OverWorld_Menas.MENA_DE_ESTANO, new ItemStack(Items_OverWorld.LINGOTE_DE_ESTANO, 1), 10.0F);
 		
 		//Gemas
 		
-		GameRegistry.addSmelting(Bloques_OverWorld_Menas.BLOQUE_DE_ZAFIRO, new ItemStack(Items_OverWorld.GEMA_DE_ZAFIRO, 1), 10.0F);
+		GameRegistry.addSmelting(Bloques_OverWorld_Menas.MENA_DE_ZAFIRO, new ItemStack(Items_OverWorld.GEMA_DE_ZAFIRO, 1), 10.0F);
 	}
 }

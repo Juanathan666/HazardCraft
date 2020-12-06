@@ -1,0 +1,23 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "lll",
+    " l ",
+    "lll"
+  ],
+  
+  "key": 
+  {
+    "l": 
+    {
+      "item": "hc:bloque_de_marmol_verde"
+    }
+
+  },
+  
+  "result": 
+  {
+    "item": "hc:pilar_de_marmol_verde",
+    "count": 4
+  }
+}

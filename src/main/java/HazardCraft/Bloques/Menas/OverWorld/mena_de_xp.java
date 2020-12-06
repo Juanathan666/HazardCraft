@@ -12,7 +12,8 @@ import net.minecraft.world.IBlockAccess;
 
 public class mena_de_xp extends Registro_Bloques {
 
-	public mena_de_xp(String name, Material material) {
+	public mena_de_xp(String name, Material material) 
+	{
 		super(name, material);
 	
 		setCreativeTab(HazardCraft.HazardCraftTab_Minerales);
@@ -23,15 +24,14 @@ public class mena_de_xp extends Registro_Bloques {
 	}
 
 	@Override
-	public int getExpDrop(IBlockState state, IBlockAccess world, BlockPos pos, int fortune) {
-	
+	public int getExpDrop(IBlockState state, IBlockAccess world, BlockPos pos, int fortune) 
+	{
 		return 200;
 	}
 	
 	@Override
-	public int quantityDropped(IBlockState state, int fortune, Random random) {
-		// TODO Auto-generated method stub
+	public int quantityDropped(IBlockState state, int fortune, Random random) 
+	{
 		return 0;
 	}
-	
 }

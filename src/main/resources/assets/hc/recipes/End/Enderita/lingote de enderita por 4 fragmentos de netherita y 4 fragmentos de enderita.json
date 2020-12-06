@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+
+	{
+	  "item": "hc:fragmento_de_netherita"
+	},
+	
+	{
+	  "item": "hc:fragmento_de_netherita"
+	},
+	
+	{
+	  "item": "hc:fragmento_de_netherita"
+	},
+	
+	{
+	  "item": "hc:fragmento_de_netherita"
+	},
+	{
+	  "item": "hc:fragmento_de_enderita"
+	},
+	
+	{
+	  "item": "hc:fragmento_de_enderita"
+	},
+	
+	{
+	  "item": "hc:fragmento_de_enderita"
+	},
+	
+	{
+	  "item": "hc:fragmento_de_enderita"
+	}
+	
+  ],
+  "result": {
+    "item": "hc:lingote_de_enderita",
+    "count": 1
+  }
+}

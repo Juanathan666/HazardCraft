@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+ 
+	{
+	  "item": "hc:lingote_de_estano"
+	}
+	
+  ],
+  "result": {
+    "item": "hc:pepita_de_estano",
+    "count": 9
+  }
+}
