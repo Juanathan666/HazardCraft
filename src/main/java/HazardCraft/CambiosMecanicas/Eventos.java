@@ -4,9 +4,11 @@ import java.util.Random;
 
 import HazardCraft.HazardCraft;
 import HazardCraft.Encantamientos.Encantamiento;
+import HazardCraft.Entidades.Enano;
 import HazardCraft.Items.Armaduras.OverWorld.Registrar_Armaduras_OverWorld;
 import HazardCraft.Pociones.Pociones;
 import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
@@ -17,6 +19,7 @@ import net.minecraft.world.EnumDifficulty;
 import net.minecraftforge.event.entity.living.LivingFallEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent.WorldTickEvent;
 
 public class Eventos {
 
@@ -39,6 +42,7 @@ public class Eventos {
 			
 		}
 	}**/
+
 	
 	@SubscribeEvent
 	public void OnplayerFallevent(LivingFallEvent event) 

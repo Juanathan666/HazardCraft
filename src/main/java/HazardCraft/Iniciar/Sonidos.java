@@ -13,6 +13,8 @@ public class Sonidos {
 	public static SoundEvent bloque_de_netherita_andar;
     public static SoundEvent armadura_de_netherita_poner;
     public static SoundEvent romper_varita;
+    public static SoundEvent enano_muerte;
+    public static SoundEvent enano_atacado;
 
 	public static void Iniciar(){
 		
@@ -21,6 +23,9 @@ public class Sonidos {
 		bloque_de_netherita_andar = registrar("block.bloque_de_netherita_andar");
 		armadura_de_netherita_poner = registrar("armor.armadura_de_netherita_poner");
 		romper_varita = registrar("item.romper_varita");
+		enano_muerte = registrar("entity.enano_muerte");
+		enano_atacado = registrar("entity.enano_atacado");
+		
 
 	}
 	public static SoundEvent registrar(String name){

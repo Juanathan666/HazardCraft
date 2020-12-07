@@ -22,6 +22,19 @@
 	"sounds": [ {"name":"hc:block/netherita/andar", "stream": true} ]
 	},
 	
+	
+	"entity.enano_muerte":{
+	"category": "hostile",
+	"subtitle": "Enano muerto",
+	"sounds": [ {"name":"hc:entity/enano/muerte", "stream": true} ]
+	},
+	
+	"entity.enano_atacado":{
+	"category": "hostile",
+	"subtitle": "Enano atacado",
+	"sounds": [ {"name":"hc:entity/enano/atacado", "stream": true} ]
+	},
+	
 	 "armor.armadura_de_netherita_poner":{
 	"category": "armor",
 	"subtitle": "Armadura de netherita puesta",

@@ -20,6 +20,7 @@ import HazardCraft.Crafteos.Horno.End.Crafteos_Horno_End;
 import HazardCraft.Crafteos.Horno.Nether.Crafteos_Hornos_Nether;
 import HazardCraft.Crafteos.Horno.OverWorld.Crafteos_Hornos_OverWorld;
 import HazardCraft.Encantamientos.Registrar_encantamiento;
+import HazardCraft.Entidades.Generar.Generar_Principal;
 import HazardCraft.Generacion.Registrar_generacion_estructuras;
 import HazardCraft.Generacion.generacion_normal;
 import HazardCraft.Iniciar.Entidades;
@@ -118,6 +119,7 @@ public class HazardCraft
     	Pociones.iniciar();
     	Entidades.iniciar_entidades();
     	Entidades_Render.registrar_modelos();
+    	Generar_Principal.iniciar();
     }
 
     @EventHandler
