@@ -6,10 +6,8 @@ import HazardCraft.Entidades.Texturas.Enano_Render;
 import HazardCraft.Entidades.Texturas.Renderprueba;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.init.Biomes;
 import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
-import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 public class Entidades_Render {
 

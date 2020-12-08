@@ -1,9 +1,10 @@
 package HazardCraft.Entidades;
 
+import java.util.Random;
 import java.util.UUID;
 
 import HazardCraft.Iniciar.Sonidos;
-import net.minecraft.block.Block;
+import HazardCraft.Items.Registrar.Items_OverWorld;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EnumCreatureAttribute;
@@ -21,7 +22,9 @@ import net.minecraft.entity.ai.attributes.RangedAttribute;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.monster.EntityZombieVillager;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.SoundEvents;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
@@ -35,6 +38,7 @@ public class Enano extends EntityMob
 {
     /** The attribute which determines the chance that this mob will spawn reinforcements */
     protected static final IAttribute SPAWN_REINFORCEMENTS_CHANCE = (new RangedAttribute((IAttribute)null, "zombie.spawnReinforcements", 0.0D, 0.0D, 1.0D)).setDescription("Spawn Reinforcements Chance");
+    
     private static final UUID BABY_SPEED_BOOST_ID = UUID.fromString("B9766B59-9566-4402-BC1F-2EE2A276D836");
     private static final AttributeModifier BABY_SPEED_BOOST = new AttributeModifier(BABY_SPEED_BOOST_ID, "Baby speed boost", 0.5D, 1);
     private static final DataParameter<Boolean> IS_CHILD = EntityDataManager.<Boolean>createKey(Enano.class, DataSerializers.BOOLEAN);
@@ -44,24 +48,27 @@ public class Enano extends EntityMob
      */
     private static final DataParameter<Integer> VILLAGER_TYPE = EntityDataManager.<Integer>createKey(Enano.class, DataSerializers.VARINT);
     private static final DataParameter<Boolean> ARMS_RAISED = EntityDataManager.<Boolean>createKey(Enano.class, DataSerializers.BOOLEAN);
+    
     private boolean isBreakDoorsTaskSet;
     /** The width of the entity */
     private float zombieWidth = -1.0F;
     /** The height of the the entity. */
     private float zombieHeight;
 
+    
     public Enano(World worldIn)
     {
         super(worldIn);
         this.setSize(0.6F, 1.95F);
     }
 
+    
     @Override
-    public boolean getCanSpawnHere() {
-    	
-    	
+    public boolean getCanSpawnHere() 
+    {
     	return super.getCanSpawnHere() && !this.world.canSeeSky(this.getPosition());
     }
+    
     
     protected void initEntityAI()
     {
@@ -74,6 +81,7 @@ public class Enano extends EntityMob
         this.applyEntityAI();
     }
 
+    
     protected void applyEntityAI()
     {
         //this.tasks.addTask(6, new EntityAIMoveThroughVillage(this, 1.0D, false));
@@ -83,6 +91,7 @@ public class Enano extends EntityMob
         //this.targetTasks.addTask(3, new EntityAINearestAttackableTarget(this, EntityIronGolem.class, true));
     }
 
+    
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
@@ -92,6 +101,7 @@ public class Enano extends EntityMob
         this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(2.0D);
     }
 
+    
     protected void entityInit()
     {
         super.entityInit();
@@ -119,14 +129,9 @@ public class Enano extends EntityMob
      */
     public void onLivingUpdate()
     {
-    		
-         
-    	
         super.onLivingUpdate();
     }
 
-
-    
 
     public boolean attackEntityAsMob(Entity entityIn)
     {
@@ -144,23 +149,27 @@ public class Enano extends EntityMob
 
         return flag;
     }
+    
 
     protected SoundEvent getAmbientSound()
     {
-        return SoundEvents.ENTITY_ZOMBIE_AMBIENT;
+        return null;
     }
+    
 
     protected SoundEvent getHurtSound(DamageSource damageSourceIn)
     {
         return Sonidos.enano_atacado;
     }
+    
 
     protected SoundEvent getDeathSound()
     {
         return Sonidos.enano_muerte;
     }
+    
 
-    protected SoundEvent getStepSound()
+    /*protected SoundEvent getStepSound()
     {
         return SoundEvents.ENTITY_ZOMBIE_STEP;
     }
@@ -169,15 +178,19 @@ public class Enano extends EntityMob
     {
         this.playSound(this.getStepSound(), 0.15F, 1.0F);
     }
+    
 
     /**
      * Get this Entity's EnumCreatureAttribute
      */
+    
+    
     public EnumCreatureAttribute getCreatureAttribute()
     {
         return EnumCreatureAttribute.ILLAGER;
     } 
 
+    
     public static void registerFixesZombie(DataFixer fixer)
     {
         EntityLiving.registerFixesMob(fixer, Enano.class);
@@ -185,14 +198,125 @@ public class Enano extends EntityMob
 
    
 
- @Override
-protected void dropFewItems(boolean wasRecentlyHit, int lootingModifier) {
-	
-	this.dropItem(HazardCraft.Items.Registrar.Items_End.FRAGMENTO_DE_ENDERITA, 2);
-	  
-	super.dropFewItems(wasRecentlyHit, lootingModifier);
-}
+	@Override
+    protected void dropFewItems(boolean wasRecentlyHit, int lootingModifier) 
+    {
+    	int prob;
+    	
+    	int tope1;  // Dropeo piedra
+    	int tope2;  // Dropeo lingote iron
+    	int tope3;  // Dropeo lingote oro
+    	int tope4;  // Dropeo zafiro
+    	int tope5;  // Dropeo diamante
+    	
+    	Random rand = new Random ();
+    	
+    	prob = rand.nextInt(100); //coge del 0 al 99
+    	
+    	if (lootingModifier == 0)
+    	{
+    		tope1 = 84;  // 85%
+    		tope2 = 99;  // 15%
+    		
+    		if (prob <= tope1)
+    		{
+    			this.entityDropItem(new ItemStack(Blocks.STONE), 1);
+    		}
+    		
+    		else if (prob > tope1 && prob <= tope2)
+    		{
+    			this.dropItem(Items.IRON_INGOT, 1);
+    		}
+    	}
+    	
+    	if (lootingModifier == 1)
+    	{
+    		tope1 = 79;  // 80%
+    		tope2 = 94;  // 15%
+    		tope3 = 99;  // 5%
+    		
+    		if (prob <= tope1)
+    		{
+    			this.entityDropItem(new ItemStack(Blocks.STONE), 1);
+    		}
+    		
+    		else if (prob > tope1 && prob <= tope2)
+    		{
+    			this.dropItem(Items.IRON_INGOT, 1);
+    		}
+    		
+    		else if (prob > tope2 && prob <= tope3)
+    		{
+    			this.dropItem(Items.GOLD_INGOT, 1);
+    		}
+    	}
+    	
+    	if (lootingModifier == 2)
+    	{
+    		tope1 = 74;  // 75%
+    		tope2 = 89;  // 15%
+    		tope3 = 96;  // 7%
+    		tope4 = 99;  // 3%
+    		
+    		if (prob <= tope1)
+    		{
+    			this.entityDropItem(new ItemStack(Blocks.STONE), 1);
+    		}
+    		
+    		else if (prob > tope1 && prob <= tope2)
+    		{
+    			this.dropItem(Items.IRON_INGOT, 1);
+    		}
+    		
+    		else if (prob > tope2 && prob <= tope3)
+    		{
+    			this.dropItem(Items.GOLD_INGOT, 1);
+    		}
+    		
+    		else if (prob > tope3 && prob <= tope4)
+    		{
+    			this.dropItem(Items_OverWorld.GEMA_DE_ZAFIRO, 1);
+    		}
+    	}
+    	
+    	if (lootingModifier == 3)
+    	{
+    		tope1 = 69;  // 70%
+    		tope2 = 84;  // 15%
+    		tope3 = 92;  // 8%
+    		tope4 = 97;  // 5%
+    		tope5 = 99;  // 2%
+    		
+    		if (prob <= tope1)
+    		{
+    			this.entityDropItem(new ItemStack(Blocks.STONE), 1);
+    		}
+    		
+    		else if (prob > tope1 && prob <= tope2)
+    		{
+    			this.dropItem(Items.IRON_INGOT, 1);
+    		}
+    		
+    		else if (prob > tope2 && prob <= tope3)
+    		{
+    			this.dropItem(Items.GOLD_INGOT, 1);
+    		}
+    		
+    		else if (prob > tope3 && prob <= tope4)
+    		{
+    			this.dropItem(Items_OverWorld.GEMA_DE_ZAFIRO, 1);
+    		}
+    		
+    		else if (prob > tope4 && prob <= tope5)
+    		{
+    			this.dropItem(Items.DIAMOND, 1);
+    		}
+    	}
+    	
+    	super.dropFewItems(wasRecentlyHit, lootingModifier);
+    }
 
+    
     public float getEyeHeight()
     {
         float f = 1.74F;
@@ -204,12 +328,15 @@ protected void dropFewItems(boolean wasRecentlyHit, int lootingModifier) {
 
         return f;
     }
+    
+    
     /**
      * Sets the width and height of the entity.
      */
     protected final void setSize(float width, float height)
     {
         boolean flag = this.zombieWidth > 0.0F && this.zombieHeight > 0.0F;
+        
         this.zombieWidth = width;
         this.zombieHeight = height;
 
@@ -218,6 +345,7 @@ protected void dropFewItems(boolean wasRecentlyHit, int lootingModifier) {
             this.multiplySize(1.0F);
         }
     }
+    
 
     /**
      * Multiplies the height and width by the provided float.
@@ -226,6 +354,7 @@ protected void dropFewItems(boolean wasRecentlyHit, int lootingModifier) {
     {
         super.setSize(this.zombieWidth * size, this.zombieHeight * size);
     }
+    
 
     /**
      * Returns the Y Offset of this entity.

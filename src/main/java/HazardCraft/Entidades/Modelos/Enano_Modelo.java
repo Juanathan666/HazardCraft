@@ -3,6 +3,7 @@ package HazardCraft.Entidades.Modelos;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.math.MathHelper;
 
 /**
  * Enano - Juanathan
@@ -117,9 +118,32 @@ public class Enano_Modelo extends ModelBase {
     /**
      * This is a helper function from Tabula to set the rotation of model parts
      */
-    public void setRotateAngle(ModelRenderer modelRenderer, float x, float y, float z) {
+    /*public void setRotateAngle(ModelRenderer modelRenderer, float x, float y, float z) {
         modelRenderer.rotateAngleX = x;
         modelRenderer.rotateAngleY = y;
         modelRenderer.rotateAngleZ = z;
+    }*/
+    
+    private void setRotation(ModelRenderer model, float x, float y, float z)
+    {
+      model.rotateAngleX = x;
+      model.rotateAngleY = y;
+      model.rotateAngleZ = z;
+    }
+    
+    public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity entity)
+    {
+  	  super.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
+  	    
+  	  this.Cabeza.rotateAngleX = f4 / (180F / (float)Math.PI);
+  	  this.BrazoDerecho.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 2.0F * f1 * 0.5F;
+  	  this.BrazoIzquierdo.rotateAngleX = MathHelper.cos(f * 0.6662F) * 2.0F * f1 * 0.5F;
+  	  this.BrazoDerecho.rotateAngleZ = 0.0F;
+  	  this.BrazoIzquierdo.rotateAngleZ = 0.0F;
+  	  this.PiernaDerecha.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
+  	  this.PiernaIzquierda.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
+  	  this.PiernaDerecha.rotateAngleY = 0.0F;
+  	  this.PiernaIzquierda.rotateAngleY = 0.0F;
+  	    super.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
     }
 }
