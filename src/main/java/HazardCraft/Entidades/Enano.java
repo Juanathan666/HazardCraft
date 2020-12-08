@@ -59,7 +59,7 @@ public class Enano extends EntityMob
     public Enano(World worldIn)
     {
         super(worldIn);
-        this.setSize(0.6F, 1.95F);
+        this.setSize(0.9F, 1.44F);
     }
 
     
@@ -319,7 +319,7 @@ public class Enano extends EntityMob
     
     public float getEyeHeight()
     {
-        float f = 1.74F;
+        float f = 1.225F;
 
         if (this.isChild())
         {
@@ -329,22 +329,6 @@ public class Enano extends EntityMob
         return f;
     }
     
-    
-    /**
-     * Sets the width and height of the entity.
-     */
-    protected final void setSize(float width, float height)
-    {
-        boolean flag = this.zombieWidth > 0.0F && this.zombieHeight > 0.0F;
-        
-        this.zombieWidth = width;
-        this.zombieHeight = height;
-
-        if (!flag)
-        {
-            this.multiplySize(1.0F);
-        }
-    }
     
 
     /**

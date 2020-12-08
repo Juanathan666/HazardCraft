@@ -135,7 +135,7 @@ public class Enano_Modelo extends ModelBase {
     {
   	  super.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
   	    
-  	  this.Cabeza.rotateAngleX = f4 / (180F / (float)Math.PI);
+  	  //this.Cabeza.rotateAngleX = f4 / (180F / (float)Math.PI);
   	  this.BrazoDerecho.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 2.0F * f1 * 0.5F;
   	  this.BrazoIzquierdo.rotateAngleX = MathHelper.cos(f * 0.6662F) * 2.0F * f1 * 0.5F;
   	  this.BrazoDerecho.rotateAngleZ = 0.0F;
