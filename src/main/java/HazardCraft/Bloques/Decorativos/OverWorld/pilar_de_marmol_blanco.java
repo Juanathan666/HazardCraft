@@ -26,7 +26,10 @@ public class pilar_de_marmol_blanco extends Registro_Bloques{
 	
 	@Override
 	public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer,ItemStack stack) {
-		PilarBase_estados.normal_onblock_placed(world, pos, state, Bloques_OverWorld_Decoracion.PILAR_DE_MARMOL_BLANCO_INFERIOR, Bloques_OverWorld_Decoracion.PILAR_DE_MARMOL_BLANCO_SUPERIOR, Bloques_OverWorld_Decoracion.PILAR_DE_MARMOL_BLANCO);
+		PilarBase_estados.normal_onblock_placed(world, pos, state, 
+													Bloques_OverWorld_Decoracion.PILAR_DE_MARMOL_BLANCO_INFERIOR, 
+													Bloques_OverWorld_Decoracion.PILAR_DE_MARMOL_BLANCO_SUPERIOR, 
+													Bloques_OverWorld_Decoracion.PILAR_DE_MARMOL_BLANCO);
 		super.onBlockPlacedBy(world, pos, state, placer, stack);
 	}
 	
