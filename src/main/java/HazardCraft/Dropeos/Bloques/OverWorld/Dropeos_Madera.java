@@ -1,5 +1,6 @@
 package HazardCraft.Dropeos.Bloques.OverWorld;
 
+import HazardCraft.HazardCraft;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -11,15 +12,18 @@ public class Dropeos_Madera
 	@SubscribeEvent
 	public void yourPlayerHarvestEvent(HarvestDropsEvent event) 
 	{
+		
 		if (event.getHarvester() != null) 
 		{
-			if (event.getState() == Blocks.LOG)
+			if (event.getState().toString().contains("jungle") && event.getState().toString().contains("log"))
 			{
 				event.getDrops().clear();
 				
 				event.setDropChance(100.0f); //probabilidad de dropeo
 				
 				event.getDrops().add(new ItemStack(Items.APPLE, 1)); //nuevo dropeo
+				
+				
 			}
 		}
 	}
