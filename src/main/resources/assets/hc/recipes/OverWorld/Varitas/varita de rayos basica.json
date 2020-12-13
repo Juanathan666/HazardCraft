@@ -1,0 +1,33 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "aaa",
+    "asa",
+	"apa"
+  ],
+  
+  "key": 
+  {
+  	"a": 
+    {
+      "item": "hc:gema_imbuida_de_poder_de_aire"
+    },
+    
+    "s": 
+    {
+      "item": "minecraft:diamond"
+    },
+    
+    "p": 
+    {
+      "item": "hc:varita_sin_poder"
+    }
+
+  },
+  
+  "result": 
+  {
+    "item": "hc:varita_de_rayos_basica",
+    "count": 1
+  }
+}

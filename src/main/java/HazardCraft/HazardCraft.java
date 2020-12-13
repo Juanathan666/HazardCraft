@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 import CreativeTabs.HazardCraftTab_Armaduras;
 import CreativeTabs.HazardCraftTab_Bloques;
 import CreativeTabs.HazardCraftTab_Herramientas;
+import CreativeTabs.HazardCraftTab_Magia;
 import CreativeTabs.HazardCraftTab_Minerales;
 import CreativeTabs.HazardCraftTab_Varitas;
 import Eventos.Eventos_Principal;
@@ -18,7 +19,13 @@ import HazardCraft.CambiosMecanicas.nonadar;
 import HazardCraft.Crafteos.Horno.End.Crafteos_Horno_End;
 import HazardCraft.Crafteos.Horno.Nether.Crafteos_Hornos_Nether;
 import HazardCraft.Crafteos.Horno.OverWorld.Crafteos_Hornos_OverWorld;
+import HazardCraft.Dropeos.Bloques.OverWorld.Dropeos_Arena;
 import HazardCraft.Dropeos.Bloques.OverWorld.Dropeos_Madera;
+import HazardCraft.Dropeos.Bloques.OverWorld.Dropeos_Menas;
+import HazardCraft.Dropeos.Bloques.OverWorld.Dropeos_Obsidiana;
+import HazardCraft.Dropeos.Bloques.OverWorld.Dropeos_Piedra;
+import HazardCraft.Dropeos.Bloques.OverWorld.Dropeos_Terracota;
+import HazardCraft.Dropeos.Bloques.OverWorld.Dropeos_Tierra;
 import HazardCraft.Encantamientos.Registrar_encantamiento;
 import HazardCraft.Entidades.Generar.Generar_Principal;
 import HazardCraft.Generacion.generacion_normal;
@@ -66,8 +73,9 @@ public class HazardCraft
     public static CreativeTabs HazardCraftTab_Minerales = new HazardCraftTab_Minerales(CreativeTabs.getNextID(), MODID, "HazardCraftTab_Minerales", 1);
     public static CreativeTabs HazardCraftTab_Herramientas = new HazardCraftTab_Herramientas(CreativeTabs.getNextID(), MODID, "HazardCraftTab_Herramientas", 2);
     public static CreativeTabs HazardCraftTab_Armaduras = new HazardCraftTab_Armaduras(CreativeTabs.getNextID(), MODID, "HazardCraftTab_Armaduras", 3);
-    public static CreativeTabs HazardCraftTab_Varitas = new HazardCraftTab_Varitas(CreativeTabs.getNextID(), MODID, "HazardCraftTab_Varitas", 4);
-    public static CreativeTabs EventosTab = new HazardCraftTabEventos(CreativeTabs.getNextID(), MODID, "EventosTab", 5);
+    public static CreativeTabs HazardCraftTab_Magia = new HazardCraftTab_Magia(CreativeTabs.getNextID(), MODID, "HazardCraftTab_Magia", 4);
+    public static CreativeTabs HazardCraftTab_Varitas = new HazardCraftTab_Varitas(CreativeTabs.getNextID(), MODID, "HazardCraftTab_Varitas", 5);
+    public static CreativeTabs EventosTab = new HazardCraftTabEventos(CreativeTabs.getNextID(), MODID, "EventosTab", 6);
     
     public static final Logger logger = LogManager.getFormatterLogger("HazardCraft");
     public static boolean cliente;
@@ -97,6 +105,12 @@ public class HazardCraft
         //MinecraftForge.EVENT_BUS.register(new DropeoBloquesMinecraft());
         MinecraftForge.EVENT_BUS.register(new Eventos());
         MinecraftForge.EVENT_BUS.register(new Dropeos_Madera());
+        MinecraftForge.EVENT_BUS.register(new Dropeos_Piedra());
+        MinecraftForge.EVENT_BUS.register(new Dropeos_Tierra());
+        MinecraftForge.EVENT_BUS.register(new Dropeos_Menas());
+        MinecraftForge.EVENT_BUS.register(new Dropeos_Arena());
+        MinecraftForge.EVENT_BUS.register(new Dropeos_Terracota());
+        MinecraftForge.EVENT_BUS.register(new Dropeos_Obsidiana());
         
         if(cliente) 
         {

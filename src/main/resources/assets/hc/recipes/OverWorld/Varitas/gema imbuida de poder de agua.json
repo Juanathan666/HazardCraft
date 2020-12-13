@@ -1,0 +1,28 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "aaa",
+    "asa",
+	"aaa"
+  ],
+  
+  "key": 
+  {
+  	"a": 
+    {
+      "item": "hc:poder_de_agua"
+    },
+    
+    "s": 
+    {
+      "item": "minecraft:emerald"
+    }
+
+  },
+  
+  "result": 
+  {
+    "item": "hc:gema_imbuida_de_poder_de_agua",
+    "count": 1
+  }
+}

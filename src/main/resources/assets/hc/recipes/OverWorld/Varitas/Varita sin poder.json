@@ -1,0 +1,43 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "tft",
+    "wpw",
+	"afa"
+  ],
+  
+  "key": 
+  {
+  	"t": 
+    {
+      "item": "hc:esencia_de_tierra"
+    },
+    
+    "f": 
+    {
+      "item": "hc:esencia_de_fuego"
+    },
+    
+    "w": 
+    {
+      "item": "hc:esencia_de_agua"
+    },
+    
+    "a": 
+    {
+      "item": "hc:esencia_de_aire"
+    },
+    
+    "p": 
+    {
+      "item": "minecraft:stick"
+    }
+
+  },
+  
+  "result": 
+  {
+    "item": "hc:varita_sin_poder",
+    "count": 1
+  }
+}

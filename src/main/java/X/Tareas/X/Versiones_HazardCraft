@@ -2,7 +2,7 @@ Version 1 (Mediados de diciembre 2020)
 
 	2 enemigos.
 		1 enemigo OverWorld
-		1 enemigo Nether
+		1 enemigo Nether (falta)
 
 	Bloques.
 		Marmol en todos sus estados
@@ -20,19 +20,45 @@ Version 1 (Mediados de diciembre 2020)
 		Armas, armaduras y herramientas de Zafiro
 		Armas, armaduras y herramientas de Netherita
 		Armas, armaduras y herramientas de Enderita
+		
+	Esencias
+		esencia de tierra
+		esencia de agua
+		esencia de aire
+		esencia de fuego
+		
+	Poder
+		poder de tierra
+		poder de agua
+		poder de aire
+		poder de fuego
+		
+	Gemas
+		gema imbuida de poder de tierra
+		gema imbuida de poder de agua
+		gema imbuida de poder de aire
+		gema imbuida de poder de fuego
 
 	Crafteos magia
-		Madera imbuida en magia
-		Palo para varitas
-		Gemas infusionadas de poder (Fuerza, caida lenta, rayos, curacion y explosion)
+		Items de poder
+		Gemas imbuidas de poder
+		varita sin poder
+		varita de rayos basica
+		varita de explosiones basica
 		
 		
 	Varitas
+		Varita sin poder
+	
 		Varita de caida lenta. Basica, principiante, experto y maestro.
 		Varita de fuerza. Basica, principiante, experto y maestro.
 		Varita de rayos. Basica, principiante, experto y maestro.
 		Varita de curacion. Basica, principiante, experto y maestro.
 		Varita de explosiones. Basica, principiante, experto y maestro.
+		
+		Solo estarán disponibles:
+			varita de rayos basica
+			varita de explosiones basica
 
 	Cambio de mecánicas.
 		El personaje no puede nadar
@@ -46,6 +72,7 @@ Version 2 (Ultimos de Enero 2021)
 	Bioma personalizado
 	Enemigo exclusivo del bioma
 	Ores exclusivos del bioma
+	2 cultivos nuevos
 	
 Version 3 (Mediados Marzo 2021)
 	Desabilitar dropeos de mobs

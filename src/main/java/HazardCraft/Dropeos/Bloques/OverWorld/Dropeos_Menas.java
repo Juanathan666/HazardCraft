@@ -2,13 +2,13 @@ package HazardCraft.Dropeos.Bloques.OverWorld;
 
 import java.util.Random;
 
-import net.minecraft.init.Items;
+import HazardCraft.Items.Registrar.Items_OverWorld;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import HazardCraft.Items.Registrar.Items_OverWorld;
+import scala.Console;
 
-public class Dropeos_Madera 
+public class Dropeos_Menas 
 {
 	Random rand = new Random();
 	
@@ -17,14 +17,15 @@ public class Dropeos_Madera
 	private int cantidad;
 	
 	private int tope1;
-	private int tope2;
+	
 	
 	@SubscribeEvent
-	public void Madera(HarvestDropsEvent event) 
+	public void Menas (HarvestDropsEvent event)
 	{
-		if (event.getHarvester() != null) 
+		if (event.getHarvester() != null)
 		{
-			if (event.getState().toString().contains("log"))
+			if (event.getState().toString().contains("ore") ||
+				event.getState().toString().contains("mena"))
 			{
 				event.setDropChance(1.0f); //probabilidad de dropeo
 				
@@ -32,27 +33,20 @@ public class Dropeos_Madera
 				
 				if (event.getHarvester().getHeldItem(event.getHarvester().getActiveHand()).getEnchantmentTagList().toString().contains("{lvl:1s,id:35s}"))  //Fortuna 1
 				{
-					tope1 = 95;  // 3%
-					tope2 = 98;  // 1%
+					tope1 = 96;  // 3%
 					
 					
-					if (prob > tope1 && prob <= tope2)
+					if (prob > tope1)
 					{
 						event.getDrops().add(new ItemStack(Items_OverWorld.ESENCIA_DE_TIERRA, 1)); //nuevo dropeo
-					}
-					
-					else if (prob > tope2)
-					{
-						event.getDrops().add(new ItemStack(Items_OverWorld.ESENCIA_DE_AGUA, 1)); //nuevo dropeo
 					}
 				}
 				
 				else if (event.getHarvester().getHeldItem(event.getHarvester().getActiveHand()).getEnchantmentTagList().toString().contains("{lvl:2s,id:35s}"))  // Fortuna 2
 				{
-					tope1 = 92;  // 5%
-					tope2 = 97;  // 2%
+					tope1 = 94;  // 5%
 					
-					if (prob > tope1 && prob <= tope2)
+					if (prob > tope1)
 					{
 						cantidad = rand.nextInt(2);
 						
@@ -63,20 +57,14 @@ public class Dropeos_Madera
 						
 						event.getDrops().add(new ItemStack(Items_OverWorld.ESENCIA_DE_TIERRA, cantidad)); //nuevo dropeo
 					}
-					
-					else if (prob > tope2)
-					{
-						event.getDrops().add(new ItemStack(Items_OverWorld.ESENCIA_DE_AGUA, 1)); //nuevo dropeo
-					}
 				}
 				
 				else if (event.getHarvester().getHeldItem(event.getHarvester().getActiveHand()).getEnchantmentTagList().toString().contains("{lvl:3s,id:35s}"))  // Fortuna 3
 				{
-					tope1 = 86;  // 8%
-					tope2 = 94;  // 5%
+					tope1 = 91;  // 8%
 					
 					
-					if (prob > tope1 && prob <= tope2)
+					if (prob > tope1)
 					{
 						cantidad = rand.nextInt(3);
 						
@@ -87,55 +75,17 @@ public class Dropeos_Madera
 						
 						event.getDrops().add(new ItemStack(Items_OverWorld.ESENCIA_DE_TIERRA, cantidad)); //nuevo dropeo
 					}
-					
-					else if (prob > tope2)
-					{
-						cantidad = rand.nextInt(2);
-						
-						if (cantidad < 1)
-						{
-							cantidad = 1;
-						}
-						
-						event.getDrops().add(new ItemStack(Items_OverWorld.ESENCIA_DE_AGUA, cantidad)); //nuevo dropeo
-					}
 				}
 				
 				else  // sin encantamiento de fortuna
 				{
-					tope1 = 97;  // 2%
+					tope1 = 98;  // 1%
 					
 					if (prob > tope1)
 					{
 						event.getDrops().add(new ItemStack(Items_OverWorld.ESENCIA_DE_TIERRA, 1)); //nuevo dropeo
 					}
 				}
-			}
-		}
-	}
-	
-	
-	@SubscribeEvent
-	public void Hojas(HarvestDropsEvent event)
-	{
-		if (event.getState().toString().contains("leaves"))
-		{
-			event.setDropChance(1.0f); //probabilidad de dropeo
-				
-			prob = rand.nextInt(100);
-				
-			tope1 = 95;  // 3%
-			tope2 = 98;  // 1%
-				
-				
-			if (prob > tope1 && prob <= tope2)
-			{
-				event.getDrops().add(new ItemStack(Items_OverWorld.ESENCIA_DE_TIERRA, 1)); //nuevo dropeo
-			}
-				
-			else if (prob > tope2)
-			{
-				event.getDrops().add(new ItemStack(Items_OverWorld.ESENCIA_DE_AIRE, 1)); //nuevo dropeo
 			}
 		}
 	}

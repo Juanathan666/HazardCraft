@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "hc:items/gema_imbuida_de_poder_de_agua"
+    }
+ }

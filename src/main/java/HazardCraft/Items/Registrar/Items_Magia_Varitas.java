@@ -27,11 +27,14 @@ import HazardCraft.Items.Magia.Varitas.varita_de_regeneracion_basica;
 import HazardCraft.Items.Magia.Varitas.varita_de_regeneracion_experto;
 import HazardCraft.Items.Magia.Varitas.varita_de_regeneracion_maestro;
 import HazardCraft.Items.Magia.Varitas.varita_de_regeneracion_principiante;
+import HazardCraft.Items.Magia.Varitas.varita_sin_poder;
 import net.minecraft.item.Item;
 
 public class Items_Magia_Varitas 
 {
 	public static final List<Item> ITEMS = new ArrayList<Item>();
+	
+	public static final Item VARITA_SIN_PODER = new varita_sin_poder("varita_sin_poder");
 
 	public static final Item VARITA_DE_EXPLOSIONES_BASICA = new varita_de_explosiones_basica("varita_de_explosiones_basica");
 	public static final Item VARITA_DE_EXPLOSIONES_PRINCIPIANTE = new varita_de_explosiones_principiante("varita_de_explosiones_principiante");

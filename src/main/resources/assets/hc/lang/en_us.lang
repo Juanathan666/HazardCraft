@@ -1,2 +1,213 @@
-itemGroup.hc=HazardCraft
+item.madera_item.name=Item de prueba
+
+//----------Tabs creativo----------//
+
+itemGroup.HazardCraftTab_Bloques=Blocks
+itemGroup.EventosTab=Events
+itemGroup.HazardCraftTab_Minerales=Minerals
+itemGroup.HazardCraftTab_Herramientas=Tools
+itemGroup.HazardCraftTab_Armaduras=Armor
+itemGroup.HazardCraftTab_Magia=Magic
+itemGroup.HazardCraftTab_Varitas=Wands
+
+//----------Mensajes en chat----------//
+
+death.attack.acida=The acid decomposed %1$s.
+death.attack.acida.player=%1$s broke down while escaping from %2$s.
+
+//----------Entidades----------//
+
+entity.EnanoH.name=Dwarf
+entity.prueba.name=Mob de prueba
+
+//----------Encantamientos----------//
+
+enchantment.Habilidad_Aquatica=Aquatic Ability
+
+//----------Pociones y efectos----------//
+
+effect.caida_lenta=Slow fall
+
+potion.effect.caida_lenta=Slow fall potion
+splash_potion.effect.caida_lenta=Slow fall potion splash
+tipped_arrow.effect.caida_lenta=Slow fall arrow
+lingering_potion.effect.caida_lenta=Slow fall potion persistent
+
+//----------Bloques----------//
+
+tile.bloque_de_marmol_blanco.name=Polished white marble
+tile.bloque_de_marmol_verde.name=Polished green marble
+tile.bloque_de_marmol_rojo.name=Polished red marble
+tile.bloque_de_marmol_negro.name=Polished black marble
+
+tile.mena_de_marmol_blanco.name=White marble
+tile.mena_de_marmol_verde.name=Green marble
+tile.mena_de_marmol_rojo.name=Red marble
+tile.mena_de_marmol_negro.name=Black marble
+
+tile.ladrillos_de_marmol_blanco.name=White marble bricks
+tile.ladrillos_de_marmol_verde.name=Green marble bricks
+tile.ladrillos_de_marmol_rojo.name=Red marble bricks
+tile.ladrillos_de_marmol_negro.name=Black marble bricks
+
+tile.pilar_de_marmol_blanco.name=White marble pillar
+tile.pilar_de_marmol_blanco_inferior.name=White marble pillar bottom
+tile.pilar_de_marmol_blanco_superior.name=White marble pillar top
+
+tile.pilar_de_marmol_verde.name=Green marble pillar
+tile.pilar_de_marmol_verde_inferior.name=Green marble pillar bottom
+tile.pilar_de_marmol_verde_superior.name=Green marble pillar top
+
+tile.pilar_de_marmol_negro.name=Black marble pillar
+tile.pilar_de_marmol_negro_inferior.name=Green marble pillar bottom
+tile.pilar_de_marmol_negro_superior.name=Green marble pillar top
+
+tile.pilar_de_marmol_rojo.name=Red marble pillar
+tile.pilar_de_marmol_rojo_inferior.name=Green marble pillar bottom
+tile.pilar_de_marmol_rojo_superior.name=Green marble pillar top
+
+//----------Menas----------//
+
+tile.mena_de_cobre.name=Copper ore
+tile.mena_de_zafiro.name=Sapphire ore
+tile.mena_de_estano.name=Tin ore
+tile.mena_de_xp.name=Xp ore
+
+tile.escombros_ancestrales.name=Ancient debris
+
+tile.mena_de_enderita.name=Enderite ore
+
+//----------Lingotes, gemas y bloques----------//
+
+item.lingote_de_cobre.name=Copper ingot
+item.lingote_de_estano.name=Tin ingot
+item.gema_de_zafiro.name=Sapphire
+
+tile.bloque_de_cobre.name=Copper block
+tile.bloque_de_estano.name=Tin block
+tile.bloque_de_zafiro.name=Sapphire block
+
+item.fragmento_de_netherita.name=Netherite shard
+item.lingote_de_netherita.name=Netherite ingot
+
+tile.bloque_de_netherita.name=Netherite block
+
+item.fragmento_de_enderita.name=Enderite shard
+item.lingote_de_enderita.name=Enderite ingot
+
+tile.bloque_de_enderita.name=Enderite block
+
+//----------Items----------//
+
+//----------Items Magia----------//
+
+item.esencia_de_tierra.name=Earth essence
+item.esencia_de_agua.name=Wather essence
+item.esencia_de_aire.name=Air essence
+item.esencia_de_fuego.name=Fire essence
+
+item.poder_de_tierra.name=Earth poder
+item.poder_de_agua.name=Wather poder
+item.poder_de_aire.name=Air power
+item.poder_de_fuego.name=Fire power
+
+item.gema_imbuida_de_poder_de_tierra.name=Earth Power Imbued Gem
+item.gema_imbuida_de_poder_de_agua.name=Wather Power Imbued Gem
+item.gema_imbuida_de_poder_de_aire.name=Air Power Imbued Gem
+item.gema_imbuida_de_poder_de_fuego.name=Fire Power Imbued Gem
+
+//----------Armas----------//
+
+item.espada_de_estano.name=Tin sword
+item.espada_de_cobre.name=Copper sword
+item.espada_de_zafiro.name=Sapphire sword
+item.espada_de_netherita.name=Netherite sword
+item.espada_de_enderita.name=Enderite sword
+
+//----------Armaduras----------//
+
+item.casco_de_hierro_oxidado.name=Rusty iron helmet
+item.pechera_de_hierro_oxidado.name=Rusty iron chestplate
+item.grebas_de_hierro_oxidado.name=Rusty iron leggins
+item.botas_de_hierro_oxidado.name=Rusty iron boots
+
+item.casco_de_zafiro.name=Sapphire helmet
+item.pechera_de_zafiro.name=Sapphire chestplate
+item.grebas_de_zafiro.name=Sapphire leggins
+item.botas_de_zafiro.name=Sapphire boots
+
+item.casco_de_netherita.name=Netherite helmet
+item.pechera_de_netherita.name=Netherite chestplate
+item.grebas_de_netherita.name=Netherite leggins
+item.botas_de_netherita.name=Netherite boots
+
+item.casco_de_enderita.name=Enderite helmet
+item.pechera_de_enderita.name=Enderite chestplate
+item.grebas_de_enderita.name=Enderite leggins
+item.botas_de_enderita.name=Enderite boots
+
+//----------Herramientas----------//
+
+item.pico_de_estano.name=Tin pickaxe
+item.hacha_de_estano.name=Tin axe
+item.pala_de_estano.name=Tin shovel
+item.azada_de_estano.name=Tin hoe
+
+item.pico_de_cobre.name=Copper pickaxe
+item.hacha_de_cobre.name=Copper axe
+item.pala_de_cobre.name=Copper shovel
+item.azada_de_cobre.name=Copper hoe
+
+item.pico_de_zafiro.name=Sapphire pickaxe
+item.hacha_de_zafiro.name=Sapphire axe
+item.pala_de_zafiro.name=Sapphire shovel
+item.azada_de_zafiro.name=Sapphire hoe
+
+item.pico_de_netherita.name=Netherite pickaxe
+item.hacha_de_netherita.name=Netherite axe
+item.pala_de_netherita.name=Netherite shovel
+item.azada_de_netherita.name=Netherite hoe
+
+item.pico_de_enderita.name=Enderite pickaxe
+item.hacha_de_enderita.name=Enderite axe
+item.pala_de_enderita.name=Enderite shovel
+item.azada_de_enderita.name=Enderite hoe
+
+//----------Varitas----------//
+
+item.varita_sin_poder.name=Powerless wand
+
+item.varita_de_caida_lenta_basica.name=Slow fall basic wand
+item.varita_de_caida_lenta_principiante.name=Slow fall beginners wand
+item.varita_de_caida_lenta_experto.name=Slow fall expert wand
+item.varita_de_caida_lenta_maestro.name=Slow fall master wand
+
+item.varita_de_fuego_basica.name=Fire basic wand
+item.varita_de_fuego_principiante.name=Fire beginners wand
+item.varita_de_fuego_experto.name=Fire expert wand
+item.varita_de_fuego_maestro.name=Fire master wand
+
+item.varita_de_fuerza_basica.name=strength basic wand
+item.varita_de_fuerza_principiante.name=strength beginners wand
+item.varita_de_fuerza_experto.name=strength expert wand
+item.varita_de_fuerza_maestro.name=strength master wand
+
+item.varita_de_explosiones_basica.name=Explosions basic wand
+item.varita_de_explosiones_principiante.name=Explosions beginners wand
+item.varita_de_explosiones_experto.name=Explosions expert wand
+item.varita_de_explosiones_maestro.name=Explosions master wand
+
+item.varita_de_regeneracion_basica.name=Regeneration basic wand
+item.varita_de_regeneracion_principiante.name=Regeneration beginners wand
+item.varita_de_regeneracion_experto.name=Regeneration expert wand
+item.varita_de_regeneracion_maestro.name=Regeneration master wand
+
+item.varita_de_rayos_basica.name=Lightning basic wand
+item.varita_de_rayos_principiante.name=Lightning beginners wand
+item.varita_de_rayos_experto.name=Lightning expert wand
+item.varita_de_rayos_maestro.name=Lightning master wand
+
+//----------Botones GUI----------//
+
+boton.siguiente.name=Next
 

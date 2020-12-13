@@ -1,64 +1,181 @@
 item.madera_item.name=Item de prueba
 
+//----------Tabs creativo----------//
+
 itemGroup.HazardCraftTab_Bloques=Bloques
 itemGroup.EventosTab=Eventos
 itemGroup.HazardCraftTab_Minerales=Minerales
 itemGroup.HazardCraftTab_Herramientas=Herramientas
 itemGroup.HazardCraftTab_Armaduras=Armaduras
+itemGroup.HazardCraftTab_Magia=Magia
 itemGroup.HazardCraftTab_Varitas=Varitas
+
+//----------Mensajes en chat----------//
 
 death.attack.acida=El acido descompuso a %1$s.
 death.attack.acida.player=%1$s Se descompuso mientras escapaba de %2$s.
 
+//----------Entidades----------//
+
 entity.EnanoH.name=Enano
 entity.prueba.name=Mob de prueba
 
+//----------Encantamientos----------//
+
 enchantment.Habilidad_Aquatica=Habilidad Aquatica
 
+//----------Pociones y efectos----------//
+
 effect.caida_lenta=Caida Lenta
+
 potion.effect.caida_lenta=Poción de Caida Lenta
 splash_potion.effect.caida_lenta=Poción de Caida Lenta arrojadiza
 tipped_arrow.effect.caida_lenta=Flecha de Caida Lenta
 lingering_potion.effect.caida_lenta=Poción de Caida Lenta persistente
+
+//----------Bloques----------//
+
+tile.bloque_de_marmol_blanco.name=Marmol Blanco pulido
+tile.bloque_de_marmol_verde.name=Marmol Verde pulido
+tile.bloque_de_marmol_rojo.name=Marmol Rojo pulido
+tile.bloque_de_marmol_negro.name=Marmol Negro pulido
+
+tile.mena_de_marmol_blanco.name=Marmol Blanco
+tile.mena_de_marmol_verde.name=Marmol Verde
+tile.mena_de_marmol_rojo.name=Marmol Rojo
+tile.mena_de_marmol_negro.name=Marmol Negro
+
+tile.ladrillos_de_marmol_blanco.name=Ladrillos de Marmol Blanco
+tile.ladrillos_de_marmol_verde.name=Ladrillos de Marmol Verde
+tile.ladrillos_de_marmol_rojo.name=Ladrillos de Marmol Rojo
+tile.ladrillos_de_marmol_negro.name=Ladrillos de Marmol Negro
+
+tile.pilar_de_marmol_blanco.name=Pilar de Marmol Blanco
+tile.pilar_de_marmol_blanco_inferior.name=Pilar de Marmol Blanco Inferior
+tile.pilar_de_marmol_blanco_superior.name=Pilar de Marmol Blanco Superior
+
+tile.pilar_de_marmol_verde.name=Pilar de Marmol Verde
+tile.pilar_de_marmol_verde_inferior.name=Pilar de Marmol Verde Inferior
+tile.pilar_de_marmol_verde_superior.name=Pilar de Marmol Verde Superior
+
+tile.pilar_de_marmol_negro.name=Pilar de Marmol Negro
+tile.pilar_de_marmol_negro_inferior.name=Pilar de Marmol Negro Inferior
+tile.pilar_de_marmol_negro_superior.name=Pilar de Marmol Negro Superior
+
+tile.pilar_de_marmol_rojo.name=Pilar de Marmol Rojo
+tile.pilar_de_marmol_rojo_inferior.name=Pilar de Marmol Rojo Inferior
+tile.pilar_de_marmol_rojo_superior.name=Pilar de Marmol Rojo Superior
+
+//----------Menas----------//
+
+tile.mena_de_cobre.name=Mena de Cobre
+tile.mena_de_zafiro.name=Mena de Zafiro
+tile.mena_de_estano.name=Mena de Estaño
+tile.mena_de_xp.name=Mena de Experiencia
+
+tile.escombros_ancestrales.name=Escombros ancestrales
+
+tile.mena_de_enderita.name=Mena de Enderita
+
+//----------Lingotes, gemas y bloques----------//
+
+item.lingote_de_cobre.name=Lingote de Cobre
+item.lingote_de_estano.name=Lingote de estaño
+item.gema_de_zafiro.name=Zafiro
+
+tile.bloque_de_cobre.name=Bloque de Cobre
+tile.bloque_de_estano.name=Bloque de Estaño
+tile.bloque_de_zafiro.name=Bloque de Zafiro
+
+item.fragmento_de_netherita.name=Fragmento de netherita
+item.lingote_de_netherita.name=Lingote de netherita
+
+tile.bloque_de_netherita.name=Bloque de netherita
+
+item.fragmento_de_enderita.name=Fragmento de Enderita
+item.lingote_de_enderita.name=Lingote de Enderita
+
+tile.bloque_de_enderita.name=Bloque de Enderita
+
+//----------Items----------//
+
+//----------Items Magia----------//
+
+item.esencia_de_tierra.name=Esencia de Tierra
+item.esencia_de_agua.name=Esencia de Agua
+item.esencia_de_aire.name=Esencia de Aire
+item.esencia_de_fuego.name=Esencia de Fuego
+
+item.poder_de_tierra.name=Poder de Tierra
+item.poder_de_agua.name=Poder de Agua
+item.poder_de_aire.name=Poder de Aire
+item.poder_de_fuego.name=Poder de Fuego
+
+item.gema_imbuida_de_poder_de_tierra.name=Gema imbuida de poder de Tierra
+item.gema_imbuida_de_poder_de_agua.name=Gema imbuida de poder de Agua
+item.gema_imbuida_de_poder_de_aire.name=Gema imbuida de poder de Aire
+item.gema_imbuida_de_poder_de_fuego.name=Gema imbuida de poder de Fuego
+
+//----------Armas----------//
+
+item.espada_de_estano.name=Espada de Estaño
+item.espada_de_cobre.name=Espada de Cobre
+item.espada_de_zafiro.name=Espada de Zafiro
+item.espada_de_netherita.name=Espada de Netherita
+item.espada_de_enderita.name=Espada de Enderita
+
+//----------Armaduras----------//
 
 item.casco_de_hierro_oxidado.name=Casco de hierro oxidado
 item.pechera_de_hierro_oxidado.name=Pechera de hierro oxidado
 item.grebas_de_hierro_oxidado.name=Grebas de hierro oxidado
 item.botas_de_hierro_oxidado.name=Botas de hierro oxidado
 
-item.espada_de_estano.name=Espada de Estaño
-item.pico_de_estano.name= Pico de Estaño
-item.hacha_de_estano.name=Hacha de Estaño
-item.pala_de_estano.name=Pala de Estaño
-item.azada_de_estano.name=Azada de Estaño
-
-item.espada_de_cobre.name=Espada de Cobre
-item.pico_de_cobre.name=Pico de Cobre
-item.hacha_de_cobre.name=Hacha de Cobre
-item.pala_de_cobre.name=Pala de Cobre
-item.azada_de_cobre.name=Azada de Cobre
-
-item.espada_de_zafiro.name=Espada de Zafiro
-item.pico_de_zafiro.name=Pico de Zafiro
-item.hacha_de_zafiro.name=Hacha de Zafiro
-item.pala_de_zafiro.name=Pala de Zafiro
-item.azada_de_zafiro.name=Azada de Zafiro
 item.casco_de_zafiro.name=Casco de Zafiro
 item.pechera_de_zafiro.name=Pechera de Zafiro
 item.grebas_de_zafiro.name=Grebas de Zafiro
 item.botas_de_zafiro.name=Botas de Zafiro
 
-item.fragmento_de_enderita.name=Fragmento de Enderita
-item.lingote_de_enderita.name=Lingote de Enderita
+item.casco_de_netherita.name=Casco de Netherita
+item.pechera_de_netherita.name=Pechera de Netherita
+item.grebas_de_netherita.name=Grebas de Netherita
+item.botas_de_netherita.name=Botas de Netherita
+
 item.casco_de_enderita.name=Casco de Enderita
 item.pechera_de_enderita.name=Pechera de Enderita
 item.grebas_de_enderita.name=Grebas de Enderita
 item.botas_de_enderita.name=Botas de Enderita
+
+//----------Herramientas----------//
+
+item.pico_de_estano.name= Pico de Estaño
+item.hacha_de_estano.name=Hacha de Estaño
+item.pala_de_estano.name=Pala de Estaño
+item.azada_de_estano.name=Azada de Estaño
+
+item.pico_de_cobre.name=Pico de Cobre
+item.hacha_de_cobre.name=Hacha de Cobre
+item.pala_de_cobre.name=Pala de Cobre
+item.azada_de_cobre.name=Azada de Cobre
+
+item.pico_de_zafiro.name=Pico de Zafiro
+item.hacha_de_zafiro.name=Hacha de Zafiro
+item.pala_de_zafiro.name=Pala de Zafiro
+item.azada_de_zafiro.name=Azada de Zafiro
+
+item.pico_de_netherita.name=Pico de Netherita
+item.hacha_de_netherita.name=Hacha de Netherita
+item.pala_de_netherita.name=Pala de Netherita
+item.azada_de_netherita.name=Azada de Netherita
+
 item.pico_de_enderita.name=Pico de Enderita
-item.espada_de_enderita.name=Espada de Enderita
 item.hacha_de_enderita.name=Hacha de Enderita
 item.pala_de_enderita.name=Pala de Enderita
 item.azada_de_enderita.name=Azada de Enderita
+
+//----------Varitas----------//
+
+item.varita_sin_poder.name=Varita sin poder
 
 item.varita_de_caida_lenta_basica.name=Varita de caida lenta Basica
 item.varita_de_caida_lenta_principiante.name=Varita de caida lenta de Principiantes
@@ -90,68 +207,7 @@ item.varita_de_rayos_principiante.name=Varita de rayos de Principiantes
 item.varita_de_rayos_experto.name=Varita de rayos Experto
 item.varita_de_rayos_maestro.name=Varita de rayos Maestro
 
-tile.bloque_de_marmol_blanco.name=Marmol Blanco pulido
-tile.bloque_de_marmol_verde.name=Marmol Verde pulido
-tile.bloque_de_marmol_rojo.name=Marmol Rojo pulido
-tile.bloque_de_marmol_negro.name=Marmol Negro pulido
-
-tile.mena_de_marmol_blanco.name=Marmol Blanco
-tile.mena_de_marmol_verde.name=Marmol Verde
-tile.mena_de_marmol_rojo.name=Marmol Rojo
-tile.mena_de_marmol_negro.name=Marmol Negro
-
-tile.mena_de_cobre.name=Mena de Cobre
-tile.mena_de_zafiro.name=Mena de Zafiro
-tile.mena_de_estano.name=Mena de Estaño
-tile.mena_de_xp.name=Mena de Experiencia
-
-tile.bloque_de_cobre.name=Bloque de Cobre
-tile.bloque_de_estano.name=Bloque de Estaño
-tile.bloque_de_zafiro.name=Bloque de Zafiro
-
-item.lingote_de_cobre.name=Lingote de Cobre
-item.lingote_de_estano.name=Lingote de estaño
-item.gema_de_zafiro.name=Zafiro
-
-tile.ladrillos_de_marmol_blanco.name=Ladrillos de Marmol Blanco
-tile.ladrillos_de_marmol_verde.name=Ladrillos de Marmol Verde
-tile.ladrillos_de_marmol_rojo.name=Ladrillos de Marmol Rojo
-tile.ladrillos_de_marmol_negro.name=Ladrillos de Marmol Negro
-
-tile.pilar_de_marmol_blanco.name=Pilar de Marmol Blanco
-tile.pilar_de_marmol_blanco_inferior.name=Pilar de Marmol Blanco Inferior
-tile.pilar_de_marmol_blanco_superior.name=Pilar de Marmol Blanco Superior
-
-tile.pilar_de_marmol_verde.name=Pilar de Marmol Verde
-tile.pilar_de_marmol_verde_inferior.name=Pilar de Marmol Verde Inferior
-tile.pilar_de_marmol_verde_superior.name=Pilar de Marmol Verde Superior
-
-tile.pilar_de_marmol_negro.name=Pilar de Marmol Negro
-tile.pilar_de_marmol_negro_inferior.name=Pilar de Marmol Negro Inferior
-tile.pilar_de_marmol_negro_superior.name=Pilar de Marmol Negro Superior
-
-tile.pilar_de_marmol_rojo.name=Pilar de Marmol Rojo
-tile.pilar_de_marmol_rojo_inferior.name=Pilar de Marmol Rojo Inferior
-tile.pilar_de_marmol_rojo_superior.name=Pilar de Marmol Rojo Superior
-
-tile.mena_de_enderita.name=Mena de Enderita
-tile.bloque_de_enderita.name=Bloque de Enderita
+//----------Botones GUI----------//
 
 boton.siguiente.name=siguiente
 
-//Nether Update 1.16 vanilla
-//Bloques
-tile.escombros_ancestrales.name=Escombros ancestrales
-tile.bloque_de_netherita.name=Bloque de netherita
-//Items
-item.fragmento_de_netherita.name=Fragmento de netherita
-item.lingote_de_netherita.name=Lingote de netherita
-item.casco_de_netherita.name=Casco de Netherita
-item.pechera_de_netherita.name=Pechera de Netherita
-item.grebas_de_netherita.name=Grebas de Netherita
-item.botas_de_netherita.name=Botas de Netherita
-item.pico_de_netherita.name=Pico de Netherita
-item.espada_de_netherita.name=Espada de Netherita
-item.hacha_de_netherita.name=Hacha de Netherita
-item.pala_de_netherita.name=Pala de Netherita
-item.azada_de_netherita.name=Azada de Netherita

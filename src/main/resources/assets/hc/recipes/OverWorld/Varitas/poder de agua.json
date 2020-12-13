@@ -1,0 +1,22 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "aaa",
+    "aaa",
+	"aaa"
+  ],
+  
+  "key": 
+  {
+  	"a": 
+    {
+      "item": "hc:esencia_de_agua"
+    }
+  },
+  
+  "result": 
+  {
+    "item": "hc:poder_de_agua",
+    "count": 1
+  }
+}

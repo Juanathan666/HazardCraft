@@ -2,13 +2,12 @@ package HazardCraft.Dropeos.Bloques.OverWorld;
 
 import java.util.Random;
 
-import net.minecraft.init.Items;
+import HazardCraft.Items.Registrar.Items_OverWorld;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import HazardCraft.Items.Registrar.Items_OverWorld;
 
-public class Dropeos_Madera 
+public class Dropeos_Arena 
 {
 	Random rand = new Random();
 	
@@ -19,12 +18,14 @@ public class Dropeos_Madera
 	private int tope1;
 	private int tope2;
 	
+	
 	@SubscribeEvent
-	public void Madera(HarvestDropsEvent event) 
+	public void Arena (HarvestDropsEvent event)
 	{
-		if (event.getHarvester() != null) 
+		if (event.getHarvester() != null)
 		{
-			if (event.getState().toString().contains("log"))
+			if (event.getState().toString().contains("[variant=sand]") ||
+				event.getState().toString().contains("[variant=red_sand]"))
 			{
 				event.setDropChance(1.0f); //probabilidad de dropeo
 				
@@ -110,32 +111,6 @@ public class Dropeos_Madera
 						event.getDrops().add(new ItemStack(Items_OverWorld.ESENCIA_DE_TIERRA, 1)); //nuevo dropeo
 					}
 				}
-			}
-		}
-	}
-	
-	
-	@SubscribeEvent
-	public void Hojas(HarvestDropsEvent event)
-	{
-		if (event.getState().toString().contains("leaves"))
-		{
-			event.setDropChance(1.0f); //probabilidad de dropeo
-				
-			prob = rand.nextInt(100);
-				
-			tope1 = 95;  // 3%
-			tope2 = 98;  // 1%
-				
-				
-			if (prob > tope1 && prob <= tope2)
-			{
-				event.getDrops().add(new ItemStack(Items_OverWorld.ESENCIA_DE_TIERRA, 1)); //nuevo dropeo
-			}
-				
-			else if (prob > tope2)
-			{
-				event.getDrops().add(new ItemStack(Items_OverWorld.ESENCIA_DE_AIRE, 1)); //nuevo dropeo
 			}
 		}
 	}
