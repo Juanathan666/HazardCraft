@@ -2,7 +2,6 @@ package HazardCraft.Items.Magia.Varitas;
 
 import java.util.Random;
 
-import HazardCraft.HazardCraft;
 import HazardCraft.Iniciar.Sonidos;
 import HazardCraft.Items.Registrar.Items_Magia_Varitas;
 import HazardCraft.Items.Registrar.Registro_Items;
@@ -28,7 +27,7 @@ public class varita_de_rayos_experto extends Registro_Items
 		super(name);
 		setMaxDamage(durabilidad);
 		setMaxStackSize(1);
-		setCreativeTab(HazardCraft.HazardCraftTab_Varitas);
+		//setCreativeTab(HazardCraft.HazardCraftTab_Varitas);
 	}
 	
 	@Override

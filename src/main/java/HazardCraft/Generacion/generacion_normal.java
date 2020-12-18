@@ -49,8 +49,12 @@ public class generacion_normal implements IWorldGenerator {
 		generateOre(Bloques_OverWorld_Menas.MENA_DE_MARMOL_VERDE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(7) + 4, 18, Blocks.STONE);
 		generateOre(Bloques_OverWorld_Menas.MENA_DE_MARMOL_NEGRO.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(7) + 4, 18, Blocks.STONE);
 		generateOre(Bloques_OverWorld_Menas.MENA_DE_MARMOL_ROJO.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(7) + 4, 18, Blocks.STONE);
+		
+		generateOre(Bloques_OverWorld_Menas.MENA_DE_ESTANO.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(7) + 4, 18, Blocks.STONE);
 		generateOre(Bloques_OverWorld_Menas.MENA_DE_COBRE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(7) + 4, 18, Blocks.STONE);
-		generateOre(Bloques_OverWorld_Menas.MENA_DE_ZAFIRO.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(7) + 4, 18, Blocks.STONE);
+		
+		generateOre(Bloques_OverWorld_Menas.MENA_DE_ZAFIRO.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 2, 17, random.nextInt(5) + 1, 18, Blocks.STONE);
+		
 		generateOre_bajo_probabilidad(Bloques_OverWorld_Menas.MENA_DE_XP.getDefaultState(), world, random, chunkX*16, chunkZ*16, 3, 17, 20+random.nextInt(10), 100, Blocks.STONE);
 
 	}

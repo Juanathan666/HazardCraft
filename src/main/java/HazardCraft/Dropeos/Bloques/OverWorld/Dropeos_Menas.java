@@ -6,7 +6,6 @@ import HazardCraft.Items.Registrar.Items_OverWorld;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import scala.Console;
 
 public class Dropeos_Menas 
 {
