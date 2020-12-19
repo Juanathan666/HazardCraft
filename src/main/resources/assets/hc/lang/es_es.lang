@@ -79,8 +79,11 @@ tile.mena_de_enderita.name=Mena de Enderita
 
 //----------Lingotes, gemas y bloques----------//
 
+item.pepita_de_estano.name=Pepita de Estaño
+item.pepita_de_cobre.name.Pepita de Cobre
+
 item.lingote_de_cobre.name=Lingote de Cobre
-item.lingote_de_estano.name=Lingote de estaño
+item.lingote_de_estano.name=Lingote de Estaño
 item.gema_de_zafiro.name=Zafiro
 
 tile.bloque_de_cobre.name=Bloque de Cobre

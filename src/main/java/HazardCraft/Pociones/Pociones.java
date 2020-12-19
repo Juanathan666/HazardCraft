@@ -1,5 +1,6 @@
 package HazardCraft.Pociones;
 
+import HazardCraft.Items.Registrar.Items_OverWorld;
 import net.minecraft.init.PotionTypes;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
@@ -29,7 +30,7 @@ public class Pociones {
 	
 	private static void registerPotionMix() 
 	{
-		PotionHelper.addMix(PotionTypes.AWKWARD, net.minecraft.init.Items.FEATHER, CAIDA_LENTA_POCION);
+		PotionHelper.addMix(PotionTypes.AWKWARD, Items_OverWorld.GEMA_IMBUIDA_DE_PODER_DE_AIRE, CAIDA_LENTA_POCION);
 	}
 	
 }

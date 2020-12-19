@@ -2,7 +2,6 @@ Version 1 (Mediados de diciembre 2020)
 
 	2 enemigos.
 		1 enemigo OverWorld
-		1 enemigo Nether (falta)
 
 	Bloques.
 		Marmol en todos sus estados
@@ -68,6 +67,7 @@ Version 1 (Mediados de diciembre 2020)
 		Manzana dorada stackeable en 8
 	
 Version 2 (Ultimos de Enero 2021)
+	1 enemigo Nether
 	2 dungeon normales
 	Bioma personalizado
 	Enemigo exclusivo del bioma
