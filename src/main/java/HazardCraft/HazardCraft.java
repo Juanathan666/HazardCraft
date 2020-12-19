@@ -131,7 +131,9 @@ public class HazardCraft
     	cambiar_stack.iniciar();
     	Pociones.iniciar();
     	Entidades.iniciar_entidades();
+    	if(cliente) {
     	Entidades_Render.registrar_modelos();
+    	}
     	Generar_Principal.iniciar();
     }
 
