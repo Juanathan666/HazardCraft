@@ -30,6 +30,8 @@ public class Registro_Bloques extends Block implements Modelos
 
 		Bloques_Nether_Menas.BLOCKS.add(this);
 		
+		Bloques_Overworld_Plantas.BLOCKS.add(this);
+		
 		Bloques_End_Menas.BLOCKS.add(this);
 		
 		Items_OverWorld.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));

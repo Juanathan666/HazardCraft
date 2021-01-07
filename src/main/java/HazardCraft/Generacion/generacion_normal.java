@@ -2,6 +2,7 @@ package HazardCraft.Generacion;
 
 import java.util.Random;
 
+import HazardCraft.Biomas.Biomas;
 import HazardCraft.Bloques.Registrar.Bloques_End_Menas;
 import HazardCraft.Bloques.Registrar.Bloques_Nether_Menas;
 import HazardCraft.Bloques.Registrar.Bloques_OverWorld_Menas;
@@ -11,6 +12,7 @@ import net.minecraft.block.state.pattern.BlockMatcher;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.gen.feature.WorldGenMinable;
@@ -57,12 +59,28 @@ public class generacion_normal implements IWorldGenerator {
 		
 		generateOre_bajo_probabilidad(Bloques_OverWorld_Menas.MENA_DE_XP.getDefaultState(), world, random, chunkX*16, chunkZ*16, 3, 17, 20+random.nextInt(10), 100, Blocks.STONE);
 
+		//generar_ore_bioma(Blocks.BEACON.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 2, 17, random.nextInt(5) + 1, 18, Blocks.STONE, Biomas.ANCIENT_FOREST);
+
 	}
 	
 	private void generateNether(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
 	
 	generateOre(Bloques_Nether_Menas.ESCOMBROS_ANCESTRALES.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(7) + 4, 18, Blocks.NETHERRACK);
 	
+	}
+	
+	
+	private void generar_ore_bioma(IBlockState ore, World world, Random random, int x, int z, int minY, int maxY, int size, int chances, Block quebloquereemplaza, Biome bioma) 
+	{
+		int deltaY = maxY - minY;
+		
+		for (int i = 0; i < chances; i++) {
+			BlockPos pos = new BlockPos(x + random.nextInt(16), minY + random.nextInt(deltaY), z + random.nextInt(16));
+			WorldGenMinable generator = new WorldGenMinable(ore, size, BlockMatcher.forBlock(quebloquereemplaza));
+			if(world.getBiome(pos).equals(bioma)) {
+			generator.generate(world, random, pos);
+			}
+		}
 	}
 	
 	

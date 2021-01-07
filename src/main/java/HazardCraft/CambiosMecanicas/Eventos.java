@@ -64,10 +64,11 @@ public class Eventos {
 		
 		if(!mensaje && event.player.world.isRaining()) 
 		{
+			mensaje = true;
 			Random rand = new Random();
 			prob_lluvia = rand.nextInt(10);
-			
-			if(prob_lluvia==1 && !event.player.world.isRemote)
+			HazardCraft.logger.info("******************************************** Bingoo el numero premiado para la lluvia acida es:" + prob_lluvia + "********************************************");
+			if(prob_lluvia<=1 && !event.player.world.isRemote)
 			{
 				 event.player.sendMessage(new TextComponentTranslation(HazardCraft.nombre_mensajes + TextFormatting.RED + "LLuvia acida activada."));
 				 activar_lluvia_acida = true;
@@ -77,7 +78,7 @@ public class Eventos {
 				//event.player.sendMessage(new TextComponentTranslation(HazardCraft.nombre_mensajes + TextFormatting.GREEN + "La Lluvia no contiene acido."));
 			}
 			
-			mensaje = true;
+			
 			//Pone en default las variables al dejar de llover
 			
 		}

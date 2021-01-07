@@ -13,6 +13,7 @@ import Eventos.Eventos_Principal;
 import Eventos.HazardCraftTabEventos;
 import HazardCraft.Actualizaciones.Buscar_Actualizaciones;
 import HazardCraft.Actualizaciones.TestearActualizaciones;
+import HazardCraft.Biomas.Biomas;
 import HazardCraft.CambiosMecanicas.Eventos;
 import HazardCraft.CambiosMecanicas.cambiar_stack;
 import HazardCraft.CambiosMecanicas.nonadar;
@@ -28,6 +29,7 @@ import HazardCraft.Dropeos.Bloques.OverWorld.Dropeos_Terracota;
 import HazardCraft.Dropeos.Bloques.OverWorld.Dropeos_Tierra;
 import HazardCraft.Encantamientos.Registrar_encantamiento;
 import HazardCraft.Entidades.Generar.Generar_Principal;
+import HazardCraft.Generacion.Registrar_generacion_estructuras;
 import HazardCraft.Generacion.generacion_normal;
 import HazardCraft.Iniciar.Entidades;
 import HazardCraft.Iniciar.Entidades_Render;
@@ -83,7 +85,7 @@ public class HazardCraft
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-    	//GameRegistry.registerWorldGenerator(new Registrar_generacion_estructuras(), 0);423
+    	//GameRegistry.registerWorldGenerator(new Registrar_generacion_estructuras(), 0);
     	GameRegistry.registerWorldGenerator(new generacion_normal(), 3);
     	Eventos_Principal.eventos_preinit();
     	Buscar_Actualizaciones.MirarActualizaciones();
@@ -127,7 +129,7 @@ public class HazardCraft
     	Registrar_Herramientas_OverWorld.Registrar_Herramientas();
     	Registrar_Herramientas_Nether.Registrar_Herramientas();
     	Registrar_Herramientas_End.Registrar_Herramientas();
-    	
+    	Biomas.registarBiomas();
     	cambiar_stack.iniciar();
     	Pociones.iniciar();
     	Entidades.iniciar_entidades();

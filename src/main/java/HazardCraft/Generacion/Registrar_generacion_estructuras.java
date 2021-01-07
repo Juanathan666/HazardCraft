@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
+import HazardCraft.Biomas.Biomas;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
@@ -31,7 +32,7 @@ public class Registrar_generacion_estructuras implements IWorldGenerator {
 
 		case 0:
 			
-			generarestructura_bajo_tierra_por_partes(PRUEBA, world, random, chunkX, chunkZ, 25, Blocks.STONE, BiomeDesert.class);
+			generarestructura_bajo_tierra_por_partes(PRUEBA, world, random, chunkX, chunkZ, 25, Blocks.STONE, Biomas.ANCIENT_FOREST.getClass());
 			
 			break;
 			
