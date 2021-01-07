@@ -68,7 +68,7 @@ public class HazardCraft
 	
     public static final String MODID = "hc";
     public static final String NAME = "HazardCraft";
-    public static final String VERSION = "1.0";
+    public static final String VERSION = "1.1";
     public static String nombre_mensajes = TextFormatting.GRAY + "[" + TextFormatting.BLUE + "HazardCraft" + TextFormatting.GRAY + "] " + TextFormatting.RESET;
     
     public static CreativeTabs HazardCraftTab_Bloques = new HazardCraftTab_Bloques(CreativeTabs.getNextID(), MODID, "HazardCraftTab_Bloques", 0);	
