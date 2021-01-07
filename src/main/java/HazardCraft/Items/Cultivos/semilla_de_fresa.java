@@ -2,12 +2,9 @@ package HazardCraft.Items.Cultivos;
 
 import HazardCraft.Bloques.Registrar.Bloques_Overworld_Plantas;
 import HazardCraft.Items.Registrar.Registro_Items;
-import HazardCraft.Util.Registros_Bloques_Items;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -24,7 +21,7 @@ public class semilla_de_fresa extends Registro_Items implements IPlantable {
 		super(name);
 		
 		
-		setCreativeTab(HazardCraft.HazardCraft.HazardCraftTab_Magia);
+		setCreativeTab(HazardCraft.HazardCraft.HazardCraftTab_Cultivos);
 	}
 
 	

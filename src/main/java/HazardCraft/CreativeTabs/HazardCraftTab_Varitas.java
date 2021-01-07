@@ -1,16 +1,16 @@
-package CreativeTabs;
+package HazardCraft.CreativeTabs;
 
-import HazardCraft.Items.Registrar.Items_OverWorld;
+import HazardCraft.Items.Registrar.Items_Magia_Varitas;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 
-public class HazardCraftTab_Minerales extends CreativeTabs {
+public class HazardCraftTab_Varitas extends CreativeTabs {
 
 	public static void Inicializar_Tabs()
 	{
 	}
 
-	public HazardCraftTab_Minerales(int i, String modid, String string, int j) 
+	public HazardCraftTab_Varitas(int i, String modid, String string, int j) 
 	{
 		super(string);
 		
@@ -20,7 +20,7 @@ public class HazardCraftTab_Minerales extends CreativeTabs {
 	@Override
 	public ItemStack getTabIconItem() 
 	{
-		return new ItemStack(Items_OverWorld.GEMA_DE_ZAFIRO);
+		return new ItemStack(Items_Magia_Varitas.VARITA_DE_FUERZA_MAESTRO);
 	}
 
 	@Override

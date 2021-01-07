@@ -9,6 +9,7 @@ itemGroup.HazardCraftTab_Herramientas=Herramientas
 itemGroup.HazardCraftTab_Armaduras=Armaduras
 itemGroup.HazardCraftTab_Magia=Magia
 itemGroup.HazardCraftTab_Varitas=Varitas
+itemGroup.HazardCraftTab_Cultivos=Cultivos
 
 //----------Mensajes en chat----------//
 
@@ -80,7 +81,7 @@ tile.mena_de_enderita.name=Mena de Enderita
 //----------Lingotes, gemas y bloques----------//
 
 item.pepita_de_estano.name=Pepita de Estaño
-item.pepita_de_cobre.name.Pepita de Cobre
+item.pepita_de_cobre.name=Pepita de Cobre
 
 item.lingote_de_cobre.name=Lingote de Cobre
 item.lingote_de_estano.name=Lingote de Estaño
@@ -209,6 +210,14 @@ item.varita_de_rayos_basica.name=Varita de rayos Basica
 item.varita_de_rayos_principiante.name=Varita de rayos de Principiantes
 item.varita_de_rayos_experto.name=Varita de rayos Experto
 item.varita_de_rayos_maestro.name=Varita de rayos Maestro
+
+//----------Comidas----------//
+
+item.fresa.name=Fresa
+
+//----------Semillas----------//
+
+item.semilla_de_fresa.name=Semilla de Fresa
 
 //----------Botones GUI----------//
 

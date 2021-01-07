@@ -2,7 +2,6 @@ package HazardCraft.Generacion;
 
 import java.util.Random;
 
-import HazardCraft.Biomas.Biomas;
 import HazardCraft.Bloques.Registrar.Bloques_End_Menas;
 import HazardCraft.Bloques.Registrar.Bloques_Nether_Menas;
 import HazardCraft.Bloques.Registrar.Bloques_OverWorld_Menas;

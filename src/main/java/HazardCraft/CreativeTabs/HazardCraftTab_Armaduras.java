@@ -1,16 +1,16 @@
-package CreativeTabs;
+package HazardCraft.CreativeTabs;
 
-import HazardCraft.Bloques.Registrar.Bloques_OverWorld_Decoracion;
+import HazardCraft.Items.Armaduras.End.Registrar_Armaduras_End;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 
-public class HazardCraftTab_Bloques extends CreativeTabs {
+public class HazardCraftTab_Armaduras extends CreativeTabs {
 
 	public static void Inicializar_Tabs()
 	{
 	}
 
-	public HazardCraftTab_Bloques(int i, String modid, String string, int j) 
+	public HazardCraftTab_Armaduras(int i, String modid, String string, int j) 
 	{
 		super(string);
 		
@@ -20,7 +20,7 @@ public class HazardCraftTab_Bloques extends CreativeTabs {
 	@Override
 	public ItemStack getTabIconItem() 
 	{
-		return new ItemStack(Bloques_OverWorld_Decoracion.BLOQUE_DE_MARMOL_ROJO);
+		return new ItemStack(Registrar_Armaduras_End.casco_de_enderita);
 	}
 
 	@Override
@@ -28,5 +28,4 @@ public class HazardCraftTab_Bloques extends CreativeTabs {
 	{
 		return true;
 	}
-
 }

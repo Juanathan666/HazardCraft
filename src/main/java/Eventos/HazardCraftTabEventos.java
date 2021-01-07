@@ -34,7 +34,7 @@ public class HazardCraftTabEventos extends CreativeTabs {
 		}
 		else 
 		{
-			return new ItemStack(Items.BEETROOT);
+			return new ItemStack(Blocks.BARRIER);
 		}
 	}
 

@@ -49,6 +49,7 @@ public class Buscar_Actualizaciones {
 							HazardCraft.logger.info(Mensaje2);
 							
 							TestearActualizaciones.Mensaje2 = Mensaje2;
+							
 						}
 						
 						else
@@ -66,6 +67,7 @@ public class Buscar_Actualizaciones {
 						
 						else
 						{
+							HazardCraft.logger.info("============================================================");
 							TestearActualizaciones.Mensaje3a = false;
 						}
 						

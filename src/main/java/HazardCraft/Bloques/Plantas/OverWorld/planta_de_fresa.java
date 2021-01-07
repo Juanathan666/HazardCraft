@@ -2,16 +2,13 @@ package HazardCraft.Bloques.Plantas.OverWorld;
 
 import java.util.Random;
 
-import HazardCraft.HazardCraft;
 import HazardCraft.Bloques.Registrar.Bloques_End_Menas;
 import HazardCraft.Bloques.Registrar.Bloques_Nether_Menas;
 import HazardCraft.Bloques.Registrar.Bloques_OverWorld_Decoracion;
 import HazardCraft.Bloques.Registrar.Bloques_OverWorld_Menas;
 import HazardCraft.Bloques.Registrar.Bloques_Overworld_Plantas;
-import HazardCraft.Bloques.Registrar.Registro_Bloques;
 import HazardCraft.Items.Registrar.Items_OverWorld;
 import net.minecraft.block.BlockCrops;
-import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
@@ -53,8 +50,9 @@ public class planta_de_fresa extends BlockCrops {
 public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 
 	if(!worldIn.isRemote) {
+		Random rand = new Random();
 		if(this.isMaxAge(state)) {
-			worldIn.spawnEntity(new EntityItem(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items_OverWorld.SEMILLA_DE_FRESA, 2)));
+			worldIn.spawnEntity(new EntityItem(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items_OverWorld.FRESA, 1+rand.nextInt(2))));
 			worldIn.setBlockState(pos, this.withAge(0));
 			return true;
 			
@@ -63,22 +61,22 @@ public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, 
 	
 	return false;
 }	
-		
+
  @Override
 public int getMaxAge() {
-	// TODO Auto-generated method stub
+	
 	return 3;
 }
 
 	@Override
 	protected Item getSeed() {
-		// TODO Auto-generated method stub
+		
 		return Items_OverWorld.SEMILLA_DE_FRESA;
 	}
 	
 	@Override
 	protected Item getCrop() {
-		// TODO Auto-generated method stub
+	
 		return Items_OverWorld.FRESA;
 	}
 	

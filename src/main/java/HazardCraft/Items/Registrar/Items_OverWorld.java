@@ -55,6 +55,6 @@ public class Items_OverWorld
 	public static final Item GEMA_IMBUIDA_DE_PODER_DE_FUEGO = new gema_imbuida_de_poder_de_fuego ("gema_imbuida_de_poder_de_fuego");
 	
 	public static final Item SEMILLA_DE_FRESA = new semilla_de_fresa("semilla_de_fresa");
-	public static final Item FRESA = new fresa("fresa");
+	public static final Item FRESA = new fresa(2, 2, false, "fresa");
 
 }

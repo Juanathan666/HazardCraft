@@ -1,16 +1,16 @@
-package CreativeTabs;
+package HazardCraft.CreativeTabs;
 
-import HazardCraft.Items.Armaduras.End.Registrar_Armaduras_End;
+import HazardCraft.Items.Herramientas.End.Registrar_Herramientas_End;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 
-public class HazardCraftTab_Armaduras extends CreativeTabs {
+public class HazardCraftTab_Herramientas extends CreativeTabs {
 
 	public static void Inicializar_Tabs()
 	{
 	}
 
-	public HazardCraftTab_Armaduras(int i, String modid, String string, int j) 
+	public HazardCraftTab_Herramientas(int i, String modid, String string, int j) 
 	{
 		super(string);
 		
@@ -20,7 +20,7 @@ public class HazardCraftTab_Armaduras extends CreativeTabs {
 	@Override
 	public ItemStack getTabIconItem() 
 	{
-		return new ItemStack(Registrar_Armaduras_End.casco_de_enderita);
+		return new ItemStack(Registrar_Herramientas_End.espada_de_enderita);
 	}
 
 	@Override

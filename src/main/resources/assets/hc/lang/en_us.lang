@@ -9,6 +9,7 @@ itemGroup.HazardCraftTab_Herramientas=Tools
 itemGroup.HazardCraftTab_Armaduras=Armor
 itemGroup.HazardCraftTab_Magia=Magic
 itemGroup.HazardCraftTab_Varitas=Wands
+itemGroup.HazardCraftTab_Cultivos=Crops
 
 //----------Mensajes en chat----------//
 
@@ -78,6 +79,9 @@ tile.escombros_ancestrales.name=Ancient debris
 tile.mena_de_enderita.name=Enderite ore
 
 //----------Lingotes, gemas y bloques----------//
+
+item.pepita_de_estano.name=Tin nuggets
+item.pepita_de_cobre.name=Copper nuggets
 
 item.lingote_de_cobre.name=Copper ingot
 item.lingote_de_estano.name=Tin ingot
@@ -206,6 +210,14 @@ item.varita_de_rayos_basica.name=Lightning basic wand
 item.varita_de_rayos_principiante.name=Lightning beginners wand
 item.varita_de_rayos_experto.name=Lightning expert wand
 item.varita_de_rayos_maestro.name=Lightning master wand
+
+//----------Comidas----------//
+
+item.fresa.name=Fresa
+
+//----------Semillas----------//
+
+item.semilla_de_fresa.name=Semilla de Fresa
 
 //----------Botones GUI----------//
 
