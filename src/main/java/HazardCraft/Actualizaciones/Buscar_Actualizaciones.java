@@ -37,14 +37,14 @@ public class Buscar_Actualizaciones {
 						HazardCraft.logger.info("============================================================");
 						HazardCraft.logger.info(UltimaVersion + " Esta es la Ultima Version de HazardCraft Disponible");
 					
-						if(!Mensaje1.equals(""))
+						if(!Mensaje1.equals(" "))
 						{
 							HazardCraft.logger.info(Mensaje1);
 						
 						TestearActualizaciones.Mensaje1 = Mensaje1;
 						}
 						
-						if(!Mensaje2.equals(""))
+						if(!Mensaje2.equals(" "))
 						{
 							HazardCraft.logger.info(Mensaje2);
 							
@@ -56,7 +56,7 @@ public class Buscar_Actualizaciones {
 							TestearActualizaciones.Mensaje2a = false;
 						}	
 						
-						if(!Mensaje3.equals(""))
+						if(!Mensaje3.equals(" "))
 						{
 							HazardCraft.logger.info(Mensaje3);
 							
