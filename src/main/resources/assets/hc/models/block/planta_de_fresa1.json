@@ -1,0 +1,7 @@
+{
+	"parent":"block/crop",
+	"textures":
+	{
+		"crop": "hc:blocks/planta_de_fresa1"
+	}
+}

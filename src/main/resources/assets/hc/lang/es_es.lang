@@ -214,10 +214,15 @@ item.varita_de_rayos_maestro.name=Varita de rayos Maestro
 //----------Comidas----------//
 
 item.fresa.name=Fresa
+item.tomate.name=Tomate
+item.fresa_con_azucar.name=Fresa con azucar
+item.bol_fresas_azucar.name=Bol de fresas con azucar
+item.bocadillo_ternera.name=Bocadillo de ternera con tomate
 
 //----------Semillas----------//
 
 item.semilla_de_fresa.name=Semilla de Fresa
+item.semilla_de_tomate.name=Semilla de Tomate
 
 //----------Botones GUI----------//
 

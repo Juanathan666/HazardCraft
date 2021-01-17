@@ -1,0 +1,33 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "ppp",
+    "ftf",
+    "ppp"
+  ],
+  
+  "key": 
+  {
+    "t": 
+    {
+      "item": "hc:tomate"
+    },
+
+	"f": 
+    {
+      "item": "minecraft:cooked_beef"
+    },
+
+	"p": 
+    {
+      "item": "minecraft:bread"
+    }
+
+  },
+  
+  "result": 
+  {
+    "item": "hc:bocadillo_ternera",
+    "count": 1
+  }
+}

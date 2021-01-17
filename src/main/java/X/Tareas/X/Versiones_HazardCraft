@@ -1,6 +1,6 @@
 Version 1 (Mediados de diciembre 2020)
 
-	2 enemigos.
+	1 enemigo.
 		1 enemigo OverWorld
 
 	Bloques.
@@ -67,12 +67,37 @@ Version 1 (Mediados de diciembre 2020)
 		Manzana dorada stackeable en 8
 	
 Version 2 (Ultimos de Enero 2021)
+
 	1 enemigo Nether
+	
 	2 dungeon normales
+	
 	Bioma personalizado
+	
+		Bioma Ancient_Forest
+	
 	Enemigo exclusivo del bioma
+	
 	Ores exclusivos del bioma
+	
 	2 cultivos nuevos
+	
+		Fresa. Se podrá encontrar en el OverWorld, en llanuras. Al cogerla te dará una fresa. 
+			De la fresa se obtendrán 2 semillas que se podrán plantar. La planta cultivada de fresa dará un random de entre 1 y 2 fresas, siendo un 95% 1 y un 5% 2.
+			Se stackeará en 64
+			Al comer repondrá un muslito.
+			Tendrá distintos crafteos.
+				Fresa con azucar. 1 de fresa con 2 de azucar dará una fresa con azúcar. Repondrá 1.5 muslitos.
+				Bol de fresas con azucar. 5 de fresa con 3 de azucar y un bol dará un bol de fresas con azucar. Repondrá 4 muslitos y 6 de saturacion.
+	     		Tarta de fresas. 3 de leche, 2 de azucar, 1 fresa, 2 de trigo y 1 huevo dará una tarta de fresas. Repondrá 7 muslitos.
+			
+		Tomate. Se podrá encontrar en el OverWorld, en llanuras. Al cogerla te dará un tomate.
+			Del tomate se obtendrán 2 semillas que se podrán plantar. La planta cultivada de fresa dará un random de entre 1 y 2 fresas, siendo un 95% 1 y un 5% 2.
+			Se stackeará en 64
+			Al comer repondrá un muslito.
+			Tendrá distintos crafteos.
+				Bocadillo de ternera. 3 panes arriba, 2 filetes y un tomate en medio, y otros 3 panes abajo darán un bocadillo de ternera. Repondrá 10 muslitos y 10 de saturacion.
+		
 	
 Version 3 (Mediados Marzo 2021)
 	Desabilitar dropeos de mobs

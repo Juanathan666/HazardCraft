@@ -1,0 +1,7 @@
+{
+	"parent":"block/cross",
+	"textures":
+	{
+		"cross": "hc:blocks/planta_de_tomate1"
+	}
+}

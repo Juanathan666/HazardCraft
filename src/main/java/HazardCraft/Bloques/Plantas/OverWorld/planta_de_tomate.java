@@ -19,19 +19,15 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class planta_de_fresa extends BlockCrops 
+public class planta_de_tomate extends BlockCrops 
 {
 
-	private static final AxisAlignedBB[] FRESA_AXIS = new AxisAlignedBB[] {new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.125D, 1.0D), 
-																		   new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.25D, 1.0D), 
-																		   new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.375D, 1.0D), 
-																		   new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.5D, 1.0D), 
-																		   new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.625D, 1.0D), 
-																		   new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.75D, 1.0D), 
-																		   new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.875D, 1.0D), 
-																		   new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 1.0D, 1.0D)};
+	private static final AxisAlignedBB[] TOMATE_AXIS = new AxisAlignedBB[] {new AxisAlignedBB(0.40D, 0.0D, 0.40D, 0.6D, 0.125D, 0.6D), 
+																		   new AxisAlignedBB(0.3D, 0.0D, 0.3D, 0.7D, 0.25D, 0.7D), 
+																		   new AxisAlignedBB(0.3D, 0.0D, 0.3D, 0.7D, 0.75D, 0.7D), 
+																		   new AxisAlignedBB(0.2D, 0.0D, 0.2D, 0.8D, 1.0D, 0.8D)};
 	
-	public planta_de_fresa(String name) 
+	public planta_de_tomate(String name) 
 	{
 		setUnlocalizedName(name);
 		setRegistryName(name);
@@ -53,7 +49,7 @@ public class planta_de_fresa extends BlockCrops
 		
 			if(this.isMaxAge(state)) 
 			{
-				worldIn.spawnEntity(new EntityItem(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items_OverWorld.FRESA, 1+rand.nextInt(2))));
+				worldIn.spawnEntity(new EntityItem(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items_OverWorld.TOMATE, 1+rand.nextInt(2))));
 				worldIn.setBlockState(pos, this.withAge(0));
 			
 				return true;
@@ -74,20 +70,20 @@ public class planta_de_fresa extends BlockCrops
 	@Override
 	protected Item getSeed() 
 	{
-		return Items_OverWorld.SEMILLA_DE_FRESA;
+		return Items_OverWorld.SEMILLA_DE_TOMATE;
 	}
 	
 	@Override
 	protected Item getCrop() 
 	{
-		return Items_OverWorld.FRESA;
+		return Items_OverWorld.TOMATE;
 	}
 	
 	
 	@Override
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) 
 	{
-		return FRESA_AXIS[((Integer)state.getValue(this.getAgeProperty())).intValue()];
+		return TOMATE_AXIS[((Integer)state.getValue(this.getAgeProperty())).intValue()];
 	}
 	
 }

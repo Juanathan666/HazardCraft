@@ -6,7 +6,8 @@ import net.minecraft.item.ItemFood;
 
 public class Registro_Comidas extends ItemFood implements Modelos
 {
-	public  Registro_Comidas(int amount, float saturation, boolean isWolfFood, String name) {
+	public  Registro_Comidas(int amount, float saturation, boolean isWolfFood, String name) 
+	{
         super(amount, saturation, isWolfFood);
 		setUnlocalizedName(name);
 		setRegistryName(name);

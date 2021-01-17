@@ -1,11 +1,11 @@
-package HazardCraft.Items.Cultivos;
+package HazardCraft.Items.Comida;
 
 import HazardCraft.HazardCraft;
 import HazardCraft.Items.Registrar.Registro_Comidas;
 
-public class fresa extends Registro_Comidas {
+public class bol_fresas_azucar extends Registro_Comidas {
 
-	public fresa(int amount, float saturation, boolean isWolfFood, String name) 
+	public bol_fresas_azucar(int amount, float saturation, boolean isWolfFood, String name) 
 	{
 		super(amount, saturation, isWolfFood, name);
 

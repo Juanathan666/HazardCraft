@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"age=0": {"model": "hc:planta_de_fresa0"},
+		"age=1": {"model": "hc:planta_de_fresa1"},
+		"age=2": {"model": "hc:planta_de_fresa2"},
+		"age=3": {"model": "hc:planta_de_fresa3"}
+	}
+}

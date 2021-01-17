@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"age=0": {"model": "hc:planta_de_tomate0"},
+		"age=1": {"model": "hc:planta_de_tomate1"},
+		"age=2": {"model": "hc:planta_de_tomate2"},
+		"age=3": {"model": "hc:planta_de_tomate3"}
+	}
+}

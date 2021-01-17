@@ -16,10 +16,10 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.IPlantable;
 
-public class semilla_de_fresa extends Registro_Comidas implements Modelos, IPlantable 
+public class semilla_de_tomate extends Registro_Comidas implements Modelos, IPlantable 
 {
 	
-	public semilla_de_fresa(int amount, float saturation, boolean isWolfFood, String name) 
+	public semilla_de_tomate(int amount, float saturation, boolean isWolfFood, String name) 
 	{
 		super(amount, saturation, isWolfFood, name);
 
@@ -37,7 +37,7 @@ public class semilla_de_fresa extends Registro_Comidas implements Modelos, IPlan
 		if(facing == EnumFacing.UP && player.canPlayerEdit(pos.offset(facing), facing, stack) && state.getBlock().canSustainPlant(state, worldIn, pos, EnumFacing.UP, this) && worldIn.isAirBlock(pos.up())) 
 		{
 			
-			worldIn.setBlockState(pos.up(), Bloques_Overworld_Plantas.PLANTA_DE_FRESA.getDefaultState());
+			worldIn.setBlockState(pos.up(), Bloques_Overworld_Plantas.PLANTA_DE_TOMATE.getDefaultState());
 			stack.shrink(1);
 			
 			return EnumActionResult.SUCCESS;
@@ -60,7 +60,7 @@ public class semilla_de_fresa extends Registro_Comidas implements Modelos, IPlan
 	@Override
 	public IBlockState getPlant(IBlockAccess world, BlockPos pos) 
 	{
-		return Bloques_Overworld_Plantas.PLANTA_DE_FRESA.getDefaultState();
+		return Bloques_Overworld_Plantas.PLANTA_DE_TOMATE.getDefaultState();
 	}
 
 }

@@ -1,0 +1,33 @@
+{"type": "minecraft:crafting_shaped",
+  "pattern": 
+  [
+    "aaa",
+    "fff",
+    "fbf"
+  ],
+  
+  "key": 
+  {
+    "f": 
+    {
+      "item": "hc:fresa"
+    },
+
+	"a": 
+    {
+      "item": "minecraft:sugar"
+    },
+
+	"b": 
+    {
+      "item": "minecraft:bowl"
+    }
+
+  },
+  
+  "result": 
+  {
+    "item": "hc:bol_fresas_azucar",
+    "count": 1
+  }
+}
