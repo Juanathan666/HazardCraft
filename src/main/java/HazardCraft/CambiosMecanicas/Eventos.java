@@ -56,7 +56,7 @@ public class Eventos {
 	{	
 		if(event.player.isPotionActive(Pociones.CAIDA_LENTA_EFECTO)) 
 		{
-			event.player.motionY = -0.3D;
+			event.player.motionY = -0.3D; //Te baja las coordenadas poco a poco para que de el efecto de caida lenta
 		}
 		
 		//System.out.println(tick+" " + tick_lluvia + " " + tick_lluvia_acida + mensaje + " " + activar_lluvia_acida + " " + prob_lluvia);
