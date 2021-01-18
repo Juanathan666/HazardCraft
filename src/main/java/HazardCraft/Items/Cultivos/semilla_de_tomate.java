@@ -33,7 +33,7 @@ public class semilla_de_tomate extends Registro_Items implements Modelos, IPlant
 		
 		ItemStack stack = player.getHeldItem(hand);
 		IBlockState state = worldIn.getBlockState(pos);
-		
+		 
 		if(facing == EnumFacing.UP && player.canPlayerEdit(pos.offset(facing), facing, stack) && state.getBlock().canSustainPlant(state, worldIn, pos, EnumFacing.UP, this) && worldIn.isAirBlock(pos.up())) 
 		{
 			
