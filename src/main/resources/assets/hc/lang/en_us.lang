@@ -15,6 +15,7 @@ itemGroup.HazardCraftTab_Cultivos=Crops
 
 death.attack.acida=The acid decomposed %1$s.
 death.attack.acida.player=%1$s broke down while escaping from %2$s.
+mensaje.nonadar.name=§8[§9HazardCraft§8]§c You can't swim without the Aquatic Ability enchantment on your boots
 
 //----------Entidades----------//
 
