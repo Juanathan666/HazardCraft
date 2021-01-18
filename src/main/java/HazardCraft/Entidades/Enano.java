@@ -66,7 +66,7 @@ public class Enano extends EntityMob
     @Override
     public boolean getCanSpawnHere() 
     {
-    	return super.getCanSpawnHere() && !this.world.canSeeSky(this.getPosition());
+    	return super.getCanSpawnHere() && !this.world.canSeeSky(this.getPosition()) && this.posY<47;
     }
     
     
