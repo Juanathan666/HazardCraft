@@ -2,7 +2,7 @@ package HazardCraft.Items.Cultivos;
 
 import HazardCraft.HazardCraft;
 import HazardCraft.Bloques.Registrar.Bloques_Overworld_Plantas;
-import HazardCraft.Items.Registrar.Registro_Comidas;
+import HazardCraft.Items.Registrar.Registro_Items;
 import HazardCraft.Util.Modelos;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -16,12 +16,12 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.IPlantable;
 
-public class semilla_de_fresa extends Registro_Comidas implements Modelos, IPlantable 
+public class semilla_de_fresa extends Registro_Items implements Modelos, IPlantable 
 {
 	
-	public semilla_de_fresa(int amount, float saturation, boolean isWolfFood, String name) 
+	public semilla_de_fresa(String name) 
 	{
-		super(amount, saturation, isWolfFood, name);
+		super(name);
 
 		setCreativeTab(HazardCraft.HazardCraftTab_Cultivos);
 	}
@@ -62,5 +62,6 @@ public class semilla_de_fresa extends Registro_Comidas implements Modelos, IPlan
 	{
 		return Bloques_Overworld_Plantas.PLANTA_DE_FRESA.getDefaultState();
 	}
+
 
 }
