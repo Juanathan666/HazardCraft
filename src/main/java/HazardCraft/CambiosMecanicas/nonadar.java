@@ -22,7 +22,7 @@ public class nonadar {
 		if(player.isInWater() && !player.capabilities.isCreativeMode) 
 		{
 			if(level == 0) 
-			{
+			{ 
 				if(!mensaje_una_vez) 
 				{
 					event.getEntity().sendMessage(new TextComponentTranslation("mensaje.nonadar.name"));
