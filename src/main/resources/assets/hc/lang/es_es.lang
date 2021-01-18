@@ -15,6 +15,7 @@ itemGroup.HazardCraftTab_Cultivos=Cultivos
 
 death.attack.acida=El acido descompuso a %1$s.
 death.attack.acida.player=%1$s Se descompuso mientras escapaba de %2$s.
+mensaje.nonadar.name=§8[§9HazardCraft§8]§c No puedas nadar sin el encantamiento de Habilidad Aquatica en las botas
 
 //----------Entidades----------//
 

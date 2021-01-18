@@ -1,14 +1,17 @@
 package HazardCraft.CambiosMecanicas;
 
+import HazardCraft.HazardCraft;
 import HazardCraft.Encantamientos.Encantamiento;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.client.event.InputUpdateEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class nonadar {
 
-	
+	private static boolean mensaje_una_vez = false;
 	@SubscribeEvent
 	public void yourPlayerHarvestEvent(InputUpdateEvent event) 
 	{
@@ -20,6 +23,11 @@ public class nonadar {
 		{
 			if(level == 0) 
 			{
+				if(!mensaje_una_vez) 
+				{
+					event.getEntity().sendMessage(new TextComponentTranslation("mensaje.nonadar.name"));
+					mensaje_una_vez = true;
+				}
 				nonadar(event);
 			}
 		}
@@ -28,6 +36,7 @@ public class nonadar {
 	
 	public static void nonadar(InputUpdateEvent event) 
 	{
+		
 		event.getMovementInput().jump = false;
 	}
 }
