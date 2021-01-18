@@ -62,10 +62,10 @@ public class Items_OverWorld
 	
 	//Frutos y semillas
 	
-	public static final Item SEMILLA_DE_FRESA = new semilla_de_fresa("semilla_de_fresa");
+	public static final Item SEMILLA_DE_FRESA = new semilla_de_fresa(0, 0, false, "semilla_de_fresa");
 	public static final Item FRESA = new fresa(2, 2, false, "fresa");
 	
-	public static final Item SEMILLA_DE_TOMATE = new semilla_de_tomate("semilla_de_tomate");
+	public static final Item SEMILLA_DE_TOMATE = new semilla_de_tomate(0, 0, false, "semilla_de_tomate");
 	public static final Item TOMATE = new tomate(2, 2, false, "tomate");
 	
 	
