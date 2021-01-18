@@ -103,7 +103,6 @@ public class HazardCraft
     		cliente = false;
     	}
     	
-    	
         //MinecraftForge.EVENT_BUS.register(new Pollos());
         //MinecraftForge.EVENT_BUS.register(new DropeoBloquesMinecraft());
         MinecraftForge.EVENT_BUS.register(new Eventos());
