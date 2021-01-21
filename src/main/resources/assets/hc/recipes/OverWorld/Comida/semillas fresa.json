@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+ 
+	{
+	  "item": "hc:fresa"
+	}
+	
+  ],
+  "result": {
+    "item": "hc:semilla_de_fresa",
+    "count": 2
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+ 
+	{
+	  "item": "hc:tomate"
+	}
+	
+  ],
+  "result": {
+    "item": "hc:semilla_de_tomate",
+    "count": 2
+  }
+}

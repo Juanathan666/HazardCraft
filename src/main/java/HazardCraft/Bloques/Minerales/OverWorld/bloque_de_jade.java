@@ -2,13 +2,13 @@ package HazardCraft.Bloques.Minerales.OverWorld;
 
 import HazardCraft.HazardCraft;
 import HazardCraft.Bloques.Registrar.Registro_Bloques;
+import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 
-public class bloque_de_cobre extends Registro_Bloques {
+public class bloque_de_jade extends Registro_Bloques {
 
-	public bloque_de_cobre(String name, Material material) 
-	{
+	public bloque_de_jade(String name, Material material) {
 		super(name, material);
 	
 		setCreativeTab(HazardCraft.HazardCraftTab_Minerales);
@@ -17,5 +17,4 @@ public class bloque_de_cobre extends Registro_Bloques {
 		setHarvestLevel("pickaxe", 4);
 		setSoundType(SoundType.METAL);
 	}
-
 }

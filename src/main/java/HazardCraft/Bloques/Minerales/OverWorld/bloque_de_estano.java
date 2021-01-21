@@ -14,7 +14,6 @@ public class bloque_de_estano extends Registro_Bloques {
 		setHardness(10.0F);
 		setResistance(10.0F);
 		setHarvestLevel("pickaxe", 4);
-		setSoundType(SoundType.STONE);
+		setSoundType(SoundType.METAL);
 	}
-
 }

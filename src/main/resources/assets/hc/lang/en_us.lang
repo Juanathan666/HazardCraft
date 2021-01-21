@@ -73,6 +73,10 @@ tile.pilar_de_marmol_rojo_superior.name=Green marble pillar top
 tile.mena_de_cobre.name=Copper ore
 tile.mena_de_zafiro.name=Sapphire ore
 tile.mena_de_estano.name=Tin ore
+
+tile.mena_de_jade.name=Jade ore
+tile.mena_de_agata_negra.name=Black Agatha ore
+
 tile.mena_de_xp.name=Xp ore
 
 tile.escombros_ancestrales.name=Ancient debris
@@ -91,6 +95,8 @@ item.gema_de_zafiro.name=Sapphire
 tile.bloque_de_cobre.name=Copper block
 tile.bloque_de_estano.name=Tin block
 tile.bloque_de_zafiro.name=Sapphire block
+tile.bloque_de_jade.name=Jade Block
+tile.bloque_de_agata_negra.name=Black Agatha Block
 
 item.fragmento_de_netherita.name=Netherite shard
 item.lingote_de_netherita.name=Netherite ingot

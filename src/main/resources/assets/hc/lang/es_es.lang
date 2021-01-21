@@ -73,6 +73,10 @@ tile.pilar_de_marmol_rojo_superior.name=Pilar de Marmol Rojo Superior
 tile.mena_de_cobre.name=Mena de Cobre
 tile.mena_de_zafiro.name=Mena de Zafiro
 tile.mena_de_estano.name=Mena de Estaño
+
+tile.mena_de_jade.name=Mena de Jade
+tile.mena_de_agata_negra.name=Mena de Agata Negra
+
 tile.mena_de_xp.name=Mena de Experiencia
 
 tile.escombros_ancestrales.name=Escombros ancestrales
@@ -91,6 +95,8 @@ item.gema_de_zafiro.name=Zafiro
 tile.bloque_de_cobre.name=Bloque de Cobre
 tile.bloque_de_estano.name=Bloque de Estaño
 tile.bloque_de_zafiro.name=Bloque de Zafiro
+tile.bloque_de_jade.name=Bloque de Jade
+tile.bloque_de_agata_negra.name=Bloque de Agata Negra
 
 item.fragmento_de_netherita.name=Fragmento de netherita
 item.lingote_de_netherita.name=Lingote de netherita

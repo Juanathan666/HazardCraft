@@ -2,9 +2,11 @@ package HazardCraft.Generacion;
 
 import java.util.Random;
 
+import HazardCraft.Biomas.Biomas;
 import HazardCraft.Bloques.Registrar.Bloques_End_Menas;
 import HazardCraft.Bloques.Registrar.Bloques_Nether_Menas;
 import HazardCraft.Bloques.Registrar.Bloques_OverWorld_Menas;
+import HazardCraft.Bloques.Registrar.Bloques_Overworld_Plantas;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.block.state.pattern.BlockMatcher;
@@ -12,6 +14,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.BiomePlains;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.gen.feature.WorldGenMinable;
@@ -56,7 +59,13 @@ public class generacion_normal implements IWorldGenerator {
 		
 		generateOre(Bloques_OverWorld_Menas.MENA_DE_ZAFIRO.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 2, 17, random.nextInt(5) + 1, 18, Blocks.STONE);
 		
+		generar_ore_bioma(Bloques_OverWorld_Menas.MENA_DE_AGATA_NEGRA.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 2, 13, random.nextInt(5) + 1, 18, Blocks.STONE, Biomas.ANCIENT_FOREST);
+		generar_ore_bioma(Bloques_OverWorld_Menas.MENA_DE_JADE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 2, 13, random.nextInt(3) + 1, 18, Blocks.STONE, Biomas.ANCIENT_FOREST);
+		
 		generateOre_bajo_probabilidad(Bloques_OverWorld_Menas.MENA_DE_XP.getDefaultState(), world, random, chunkX*16, chunkZ*16, 3, 17, 20+random.nextInt(10), 100, Blocks.STONE);
+		
+
+		generateOre(Bloques_Overworld_Plantas.PLANTA_DE_FRESA_SALVAJE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 40, 130, random.nextInt(3) + 1, 180, Blocks.TALLGRASS);
 
 		//generar_ore_bioma(Blocks.BEACON.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 2, 17, random.nextInt(5) + 1, 18, Blocks.STONE, Biomas.ANCIENT_FOREST);
 
