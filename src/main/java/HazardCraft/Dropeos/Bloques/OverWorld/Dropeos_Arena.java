@@ -23,7 +23,7 @@ public class Dropeos_Arena
 	public void Arena (HarvestDropsEvent event)
 	{
 		if (event.getHarvester() != null)
-		{
+		{ 
 			if (event.getState().toString().contains("[variant=sand]") ||
 				event.getState().toString().contains("[variant=red_sand]"))
 			{

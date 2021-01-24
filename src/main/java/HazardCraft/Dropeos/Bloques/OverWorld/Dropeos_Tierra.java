@@ -24,7 +24,7 @@ public class Dropeos_Tierra
 	{
 		if (event.getHarvester() != null)
 		{
-			Console.out().println(event.getState());
+			//Console.out().println(event.getState());
 			
 			
 			if (event.getState().toString().contains("grass"))
