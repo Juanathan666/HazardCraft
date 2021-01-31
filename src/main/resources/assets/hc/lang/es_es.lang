@@ -83,6 +83,13 @@ tile.escombros_ancestrales.name=Escombros ancestrales
 
 tile.mena_de_enderita.name=Mena de Enderita
 
+//----------Bloques irrompibles----------//
+tile.ladrillo_de_piedra_irrompible.name=Ladrillos de piedra
+tile.ladrillo_de_piedra_agrietado_irrompible.name=Ladrillos de piedra agrietados
+tile.ladrillo_de_piedra_cincelado_irrompible.name=Ladrillos de piedra cincelados
+tile.ladrillo_de_piedra_musgosa_irrompible.name=Ladrillos de piedra musgosa
+tile.piedra_irrompible.name=Piedra
+
 //----------Lingotes, gemas y bloques----------//
 
 item.pepita_de_estano.name=Pepita de Estaño
@@ -231,7 +238,10 @@ item.bocadillo_ternera.name=Bocadillo de ternera con tomate
 item.semilla_de_fresa.name=Semilla de Fresa
 item.semilla_de_tomate.name=Semilla de Tomate
 
+//----------Planta Bloque----------//
+
+tile.planta_de_fresa_salvaje.name=Planta de fresa salvaje
+
 //----------Botones GUI----------//
 
 boton.siguiente.name=siguiente
-

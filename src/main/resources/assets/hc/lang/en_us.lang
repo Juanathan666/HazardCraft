@@ -83,6 +83,13 @@ tile.escombros_ancestrales.name=Ancient debris
 
 tile.mena_de_enderita.name=Enderite ore
 
+//----------Bloques irrompibles----------//
+tile.ladrillo_de_piedra_irrompible.name=Stone Brick
+tile.ladrillo_de_piedra_agrietado_irrompible.name=Cracked Stone Brick
+tile.ladrillo_de_piedra_cincelado_irrompible.name=Chiseled Stone Brick
+tile.ladrillo_de_piedra_musgosa_irrompible.name=Mossy Stone Brick
+tile.piedra_irrompible.name=Piedra
+
 //----------Lingotes, gemas y bloques----------//
 
 item.pepita_de_estano.name=Tin nuggets
@@ -220,13 +227,21 @@ item.varita_de_rayos_maestro.name=Lightning master wand
 
 //----------Comidas----------//
 
-item.fresa.name=Fresa
+item.fresa.name=Strawberry
+item.tomate.name=Tomato
+item.fresa_con_azucar.name=Strawberry with sugar
+item.bol_fresas_azucar.name=Bowl of strawberries with sugar
+item.bocadillo_ternera.name=Veal sandwich
 
 //----------Semillas----------//
 
-item.semilla_de_fresa.name=Semilla de Fresa
+item.semilla_de_fresa.name=Strawberry Seeds
+item.semilla_de_tomate.name=Tomato Seeds
+
+//----------Planta Bloque----------//
+
+tile.planta_de_fresa_salvaje.name=Wild strawberry plant
 
 //----------Botones GUI----------//
 
 boton.siguiente.name=Next
-

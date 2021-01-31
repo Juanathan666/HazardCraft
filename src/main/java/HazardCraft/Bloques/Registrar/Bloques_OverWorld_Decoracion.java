@@ -3,6 +3,7 @@ package HazardCraft.Bloques.Registrar;
 import java.util.ArrayList;
 import java.util.List;
 
+import HazardCraft.Bloques.Decorativos.OverWorld.Bloques_irrompibles;
 import HazardCraft.Bloques.Decorativos.OverWorld.bloque_de_marmol_blanco;
 import HazardCraft.Bloques.Decorativos.OverWorld.bloque_de_marmol_negro;
 import HazardCraft.Bloques.Decorativos.OverWorld.bloque_de_marmol_rojo;
@@ -65,4 +66,14 @@ public class Bloques_OverWorld_Decoracion
 	//Slab
 	
 	//Escaleras
+	
+	
+	//Dungeons
+	
+	public static Block LADRILLO_DE_PIEDRA_IRROMPIBLE = new Bloques_irrompibles("ladrillo_de_piedra_irrompible", Material.BARRIER);
+	public static Block LADRILLO_DE_PIEDRA_AGRIETADO_IRROMPIBLE = new Bloques_irrompibles("ladrillo_de_piedra_agrietado_irrompible", Material.BARRIER);
+	public static Block LADRILLO_DE_PIEDRA_CINCELADO_IRROMPIBLE = new Bloques_irrompibles("ladrillo_de_piedra_cincelado_irrompible", Material.BARRIER);
+	public static Block LADRILLO_DE_PIEDRA_MUSGOSA_IRROMPIBLE = new Bloques_irrompibles("ladrillo_de_piedra_musgosa_irrompible", Material.BARRIER);
+	public static Block PIEDRA_IRROMPIBLE = new Bloques_irrompibles("piedra_irrompible", Material.BARRIER);
+	
 }
