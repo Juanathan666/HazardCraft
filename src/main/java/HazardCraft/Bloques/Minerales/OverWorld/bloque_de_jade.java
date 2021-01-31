@@ -2,7 +2,6 @@ package HazardCraft.Bloques.Minerales.OverWorld;
 
 import HazardCraft.HazardCraft;
 import HazardCraft.Bloques.Registrar.Registro_Bloques;
-import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 

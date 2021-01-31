@@ -1,11 +1,9 @@
 package HazardCraft.CambiosMecanicas;
 
-import HazardCraft.HazardCraft;
 import HazardCraft.Encantamientos.Encantamiento;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.text.TextComponentTranslation;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.client.event.InputUpdateEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
