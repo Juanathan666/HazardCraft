@@ -1,6 +1,12 @@
 {
-    "parent": "block/cube_all",
+    "parent": "block/cube",
     "textures": {
-        "all": "hc:blocks/tronco_de_caoba"
+        "particle": "hc:blocks/tronco_de_caoba",
+        "up": "hc:blocks/tronco_de_caoba_top",
+        "down": "hc:blocks/tronco_de_caoba_top",
+        "north": "hc:blocks/tronco_de_caoba",
+        "south": "hc:blocks/tronco_de_caoba",
+        "west": "hc:blocks/tronco_de_caoba",
+        "east": "hc:blocks/tronco_de_caoba"
     }
  }

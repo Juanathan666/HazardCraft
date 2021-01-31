@@ -1,5 +1,6 @@
 {
-     "variants": {
-	 "normal": {"model": "hc:tronco_de_caoba"}
+     "variants": 
+     {
+	 	"normal": {"model": "hc:tronco_de_caoba"}
 	 }
 }

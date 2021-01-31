@@ -68,6 +68,13 @@ tile.pilar_de_marmol_rojo.name=Pilar de Marmol Rojo
 tile.pilar_de_marmol_rojo_inferior.name=Pilar de Marmol Rojo Inferior
 tile.pilar_de_marmol_rojo_superior.name=Pilar de Marmol Rojo Superior
 
+
+//----------Madera----------//
+
+tile.hojas_de_caoba.name=Hojas de caoba
+tile.tronco_de_caoba.name=Tronco de caoba
+tile.madera_de_caoba.name=Madera de caoba
+
 //----------Menas----------//
 
 tile.mena_de_cobre.name=Mena de Cobre
@@ -89,6 +96,7 @@ tile.ladrillo_de_piedra_agrietado_irrompible.name=Ladrillos de piedra agrietados
 tile.ladrillo_de_piedra_cincelado_irrompible.name=Ladrillos de piedra cincelados
 tile.ladrillo_de_piedra_musgosa_irrompible.name=Ladrillos de piedra musgosa
 tile.piedra_irrompible.name=Piedra
+tile.hojas_de_roble_irrompible.name=Hojas de roble
 
 //----------Lingotes, gemas y bloques----------//
 

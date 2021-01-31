@@ -68,6 +68,13 @@ tile.pilar_de_marmol_rojo.name=Red marble pillar
 tile.pilar_de_marmol_rojo_inferior.name=Green marble pillar bottom
 tile.pilar_de_marmol_rojo_superior.name=Green marble pillar top
 
+
+//----------Madera----------//
+
+tile.hojas_de_caoba.name=Mahogany leaves
+tile.tronco_de_caoba.name=Mahogany log
+tile.madera_de_caoba.name=Mahogany planks
+
 //----------Menas----------//
 
 tile.mena_de_cobre.name=Copper ore
@@ -89,6 +96,7 @@ tile.ladrillo_de_piedra_agrietado_irrompible.name=Cracked Stone Brick
 tile.ladrillo_de_piedra_cincelado_irrompible.name=Chiseled Stone Brick
 tile.ladrillo_de_piedra_musgosa_irrompible.name=Mossy Stone Brick
 tile.piedra_irrompible.name=Piedra
+tile.hojas_de_roble_irrompible.name=Oak leaves
 
 //----------Lingotes, gemas y bloques----------//
 
