@@ -29,6 +29,7 @@ public class Registro_Bloques extends Block implements Modelos
 		setRegistryName(name);
 		
 		Bloques_Overworld_Plantas.BLOCKS.add(this);
+		Bloques_Arboles.BLOCKS.add(this);
 		
 		Bloques_OverWorld_Decoracion.BLOCKS.add(this);
 		Bloques_OverWorld_Menas.BLOCKS.add(this);
