@@ -6,7 +6,6 @@ import java.util.List;
 import HazardCraft.Bloques.Maderas.OverWorld.hojas_de_caoba;
 import HazardCraft.Bloques.Maderas.OverWorld.madera_de_caoba;
 import HazardCraft.Bloques.Maderas.OverWorld.tronco_de_caoba;
-import HazardCraft.Bloques.Menas.Nether.escombros_ancestrales;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 

@@ -1,8 +1,5 @@
 package HazardCraft.Bloques.Registrar;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import HazardCraft.HazardCraft;
 import HazardCraft.Items.Registrar.Items_OverWorld;
 import HazardCraft.Util.Modelos;

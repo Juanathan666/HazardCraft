@@ -20,6 +20,7 @@ mensaje.nonadar.name=§8[§9HazardCraft§8]§c You can't swim without the Aquati
 //----------Entidades----------//
 
 entity.EnanoH.name=Dwarf
+entity.Espiritu_Ancestral.name=Ancestral spirit
 entity.prueba.name=Mob de prueba
 
 //----------Encantamientos----------//
