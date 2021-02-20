@@ -7,21 +7,20 @@ import HazardCraft.Bloques.Registrar.Registro_Bloques;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
-public class Bloques_irrompibles extends Registro_Bloques 
+public class ladrillo_de_piedra_semiirrompible extends Registro_Bloques 
 {
 
-	public Bloques_irrompibles(String name, Material material) 
+	public ladrillo_de_piedra_semiirrompible(String name, Material material) 
 	{
 		super(name, material);
 	
 		setCreativeTab(HazardCraft.HazardCraftTab_Bloques);
-		setBlockUnbreakable();
-		setResistance(Float.MAX_VALUE);
+		setHardness(500.0F);
+		setResistance(8.0F);
 		setSoundType(SoundType.STONE);
 	}
 	
@@ -29,7 +28,7 @@ public class Bloques_irrompibles extends Registro_Bloques
 	@Override
 	public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced) 
 	{
-		tooltip.add(TextFormatting.RED + "Irrompible");
+		tooltip.add(TextFormatting.RED + "Semiirrompible");
 		
 		super.addInformation(stack, player, tooltip, advanced);
 	}

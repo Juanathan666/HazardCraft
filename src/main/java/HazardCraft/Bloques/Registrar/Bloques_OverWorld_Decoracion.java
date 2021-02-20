@@ -9,6 +9,7 @@ import HazardCraft.Bloques.Decorativos.OverWorld.bloque_de_marmol_blanco;
 import HazardCraft.Bloques.Decorativos.OverWorld.bloque_de_marmol_negro;
 import HazardCraft.Bloques.Decorativos.OverWorld.bloque_de_marmol_rojo;
 import HazardCraft.Bloques.Decorativos.OverWorld.bloque_de_marmol_verde;
+import HazardCraft.Bloques.Decorativos.OverWorld.ladrillo_de_piedra_semiirrompible;
 import HazardCraft.Bloques.Decorativos.OverWorld.ladrillos_de_marmol_blanco;
 import HazardCraft.Bloques.Decorativos.OverWorld.ladrillos_de_marmol_negro;
 import HazardCraft.Bloques.Decorativos.OverWorld.ladrillos_de_marmol_rojo;
@@ -77,5 +78,7 @@ public class Bloques_OverWorld_Decoracion
 	public static Block LADRILLO_DE_PIEDRA_MUSGOSA_IRROMPIBLE = new Bloques_irrompibles("ladrillo_de_piedra_musgosa_irrompible", Material.BARRIER);
 	public static Block PIEDRA_IRROMPIBLE = new Bloques_irrompibles("piedra_irrompible", Material.BARRIER);
 	public static Block HOJAS_DE_ROBLE_IRROMPIBLE = new Bloques_hojas_irrompibles("hojas_de_roble_irrompible", Material.BARRIER);
+	
+	public static Block LADRILLO_DE_PIEDRA_SEMIIRROMPIBLE = new ladrillo_de_piedra_semiirrompible("ladrillo_de_piedra_semiirrompible", Material.ROCK);
 	
 }
