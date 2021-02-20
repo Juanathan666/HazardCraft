@@ -19,8 +19,9 @@ public class ladrillo_de_piedra_semiirrompible extends Registro_Bloques
 		super(name, material);
 	
 		setCreativeTab(HazardCraft.HazardCraftTab_Bloques);
-		setHardness(500.0F);
-		setResistance(8.0F);
+		setHardness(Float.MAX_VALUE);
+		setResistance(Float.MAX_VALUE);
+		
 		setSoundType(SoundType.STONE);
 	}
 	

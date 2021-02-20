@@ -21,6 +21,7 @@ import net.minecraftforge.fml.common.IWorldGenerator;
 public class Registrar_generacion_estructuras implements IWorldGenerator {
 
 	public static final WorldGenEstructuras PRUEBA = new WorldGenEstructuras("prueba");
+	public static final WorldGenEstructuras MAZMORRA_TROLL_1 = new WorldGenEstructuras("mazmorra_troll_1");
 	
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator,IChunkProvider chunkProvider) {
@@ -32,7 +33,8 @@ public class Registrar_generacion_estructuras implements IWorldGenerator {
 		case 0:
 			
 			//generarestructura_bajo_tierra_por_partes(PRUEBA, world, random, chunkX, chunkZ, 25, Blocks.SAND, Biomas.ANCIENT_FOREST.getClass());
-			generarestructura(PRUEBA, world, random, chunkX, chunkZ, 50, Blocks.GRASS, -26, Biomas.ANCIENT_FOREST.getClass());
+			//generarestructura(PRUEBA, world, random, chunkX, chunkZ, 50, Blocks.GRASS, -26, Biomas.ANCIENT_FOREST.getClass());
+			generarestructura(MAZMORRA_TROLL_1, world, random, chunkX, chunkZ, 90, Blocks.GRASS, -26, Biomas.ANCIENT_FOREST.getClass());
 
 			
 			break;
