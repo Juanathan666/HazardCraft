@@ -1,5 +1,6 @@
 package HazardCraft.Biomas;
 
+import HazardCraft.Entidades.Espiritu_Ancestral;
 import net.minecraft.entity.monster.EntityCaveSpider;
 import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.monster.EntityEnderman;
@@ -15,7 +16,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class Ancient_Forest extends Biome {
 
-	public static int color = 238080;
+	public static int color = 4538683;
 	
 	public Ancient_Forest() {
 		//para lo del agua https://www.mathsisfun.com/hexadecimal-decimal-colors.html
@@ -31,6 +32,7 @@ public class Ancient_Forest extends Biome {
 		this.spawnableMonsterList.add(new SpawnListEntry(EntityWitch.class, 100, 1, 2));
 		this.spawnableMonsterList.add(new SpawnListEntry(EntityEnderman.class, 100, 3, 2));
 		this.spawnableMonsterList.add(new SpawnListEntry(EntityCaveSpider.class, 100, 1, 1));
+		this.spawnableMonsterList.add(new SpawnListEntry(Espiritu_Ancestral.class, 30, 1, 2));
 
 
 		
@@ -45,8 +47,8 @@ public class Ancient_Forest extends Biome {
 
 		
 		this.decorator.bigMushroomsPerChunk = 1;
-		this.decorator.treesPerChunk = 20;
-		this.decorator.flowersPerChunk= 10;
+		this.decorator.treesPerChunk = 2;
+		this.decorator.flowersPerChunk= -1;
 		this.decorator.grassPerChunk = 10;
 		
 		

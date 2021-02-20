@@ -1,8 +1,10 @@
 package HazardCraft.Iniciar;
 
 import HazardCraft.Entidades.Enano;
+import HazardCraft.Entidades.Espiritu_Ancestral;
 import HazardCraft.Entidades.prueba;
 import HazardCraft.Entidades.Texturas.Enano_Render;
+import HazardCraft.Entidades.Texturas.Espiritu_Ancestral_Render;
 import HazardCraft.Entidades.Texturas.Renderprueba;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
@@ -34,7 +36,15 @@ RenderingRegistry.registerEntityRenderingHandler(Enano.class, new IRenderFactory
 	}
 	
 });
-		
+RenderingRegistry.registerEntityRenderingHandler(Espiritu_Ancestral.class, new IRenderFactory() {
+	
+	@Override
+	public Render<? super Espiritu_Ancestral> createRenderFor(RenderManager manager) {
+		// TODO Auto-generated method stub
+		return new Espiritu_Ancestral_Render(manager);
+	}
+	
+});
 		
 	}
 	

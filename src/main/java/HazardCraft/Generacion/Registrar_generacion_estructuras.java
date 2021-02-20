@@ -8,6 +8,7 @@ import java.util.Random;
 
 import HazardCraft.Biomas.Biomas;
 import net.minecraft.block.Block;
+import net.minecraft.init.Biomes;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -26,12 +27,13 @@ public class Registrar_generacion_estructuras implements IWorldGenerator {
 	
 		switch (world.provider.getDimension()) {
 		case 1:
-			
 			break;
 
 		case 0:
 			
-			generarestructura_bajo_tierra_por_partes(PRUEBA, world, random, chunkX, chunkZ, 25, Blocks.STONE, Biomas.ANCIENT_FOREST.getClass());
+			//generarestructura_bajo_tierra_por_partes(PRUEBA, world, random, chunkX, chunkZ, 25, Blocks.SAND, Biomas.ANCIENT_FOREST.getClass());
+			generarestructura(PRUEBA, world, random, chunkX, chunkZ, 50, Blocks.GRASS, -26, Biomas.ANCIENT_FOREST.getClass());
+
 			
 			break;
 			
@@ -87,12 +89,12 @@ private void generarestructura_bajo_tierra(WorldGenerator generator, World world
 		
 	}
 	
-	private void generarestructura(WorldGenerator generator, World world, Random rand, int chunkx, int chunkz, int probabilidad, Block topblock, Class<?>... classes) {
+	private void generarestructura(WorldGenerator generator, World world, Random rand, int chunkx, int chunkz, int probabilidad, Block topblock, int altura, Class<?>... classes) {
 		
 		ArrayList<Class<?>> lista_de_clases = new ArrayList<Class<?>>(Arrays.asList(classes));
 		int x = (chunkx * 16) + rand.nextInt(15);
 		int z = (chunkz * 16) + rand.nextInt(15);
-		int y = calcular_alturas(world, x, z, topblock);
+		int y = calcular_alturas(world, x, z, topblock) + (altura);
 		BlockPos pos = new BlockPos(x,y,z);
 
 		Class<?> biome = world.provider.getBiomeForCoords(pos).getClass();

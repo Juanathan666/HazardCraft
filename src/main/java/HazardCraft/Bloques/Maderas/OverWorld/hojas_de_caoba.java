@@ -12,10 +12,10 @@ public class hojas_de_caoba extends Registro_Bloques
 	{
 		super(name, material);
 	
-		setCreativeTab(HazardCraft.HazardCraftTab_Minerales);
+		setCreativeTab(HazardCraft.HazardCraftTab_Bloques);
 		setHardness(5.0F);
 		setResistance(5.0F);
-		setHarvestLevel("pickaxe", 3);
-		setSoundType(SoundType.STONE);
+		setHarvestLevel("axe", 1);
+		setSoundType(SoundType.WOOD);
 	}
 }
