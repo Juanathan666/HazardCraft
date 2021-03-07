@@ -2,6 +2,7 @@ package HazardCraft.Entidades.Generar;
 
 import HazardCraft.Biomas.Biomas;
 import HazardCraft.Entidades.Enano;
+import HazardCraft.Entidades.Espiritu_Ancestral;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.init.Biomes;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
@@ -73,5 +74,7 @@ public class Generar_Overworld {
 				Biomes.TAIGA_HILLS);
 		
 		EntityRegistry.addSpawn(Enano.class, 1000, 1, 2, EnumCreatureType.MONSTER, Biomas.ANCIENT_FOREST);
+		
+		EntityRegistry.addSpawn(Espiritu_Ancestral.class, 1000, 1, 2, EnumCreatureType.MONSTER, Biomas.ANCIENT_FOREST);
 	}
 }
