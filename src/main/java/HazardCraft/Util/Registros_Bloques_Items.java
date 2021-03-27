@@ -17,6 +17,7 @@ public class Registros_Bloques_Items
 	public static void onItemRegister(RegistryEvent.Register<Item> event)
 	{    	
 		event.getRegistry().registerAll(Items_OverWorld.ITEMS.toArray(new Item [0]));
+		
 	
 	}
 	

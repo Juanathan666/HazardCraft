@@ -44,6 +44,7 @@ import HazardCraft.Items.Herramientas.OverWorld.Registrar_Herramientas_OverWorld
 import HazardCraft.Pociones.Pociones;
 import HazardCraft.Proxy.ClientProxy;
 import HazardCraft.Proxy.CommonProxy;
+import HazardCraft.Util.TilentityHandler;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.common.MinecraftForge;
@@ -138,6 +139,7 @@ public class HazardCraft
     	Entidades_Render.registrar_modelos();
     	}
     	Generar_Principal.iniciar();
+    	TilentityHandler.registerTileEntities();
     }
 
     @EventHandler

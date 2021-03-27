@@ -1,6 +1,7 @@
 package HazardCraft.Bloques.Registrar;
 
 import HazardCraft.HazardCraft;
+import HazardCraft.Energia.Bloques_energia;
 import HazardCraft.Items.Registrar.Items_OverWorld;
 import HazardCraft.Util.Modelos;
 import net.minecraft.block.Block;
@@ -36,6 +37,7 @@ public class Registro_Bloques extends Block implements Modelos
 		Bloques_End_Menas.BLOCKS.add(this);
 		
 		Items_OverWorld.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
+		Bloques_energia.BLOCKS_ENERGY.add(this);
 	}
 
 	@Override
