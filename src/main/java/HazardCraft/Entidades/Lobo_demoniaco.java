@@ -59,7 +59,7 @@ public class Lobo_demoniaco extends EntityMob
     public Lobo_demoniaco(World worldIn)
     {
         super(worldIn);
-        this.setSize(0.9F, 1.44F);
+        this.setSize(2.5F, 1.24F);
     }
 
     
@@ -153,19 +153,19 @@ public class Lobo_demoniaco extends EntityMob
 
     protected SoundEvent getAmbientSound()
     {
-        return null;
+        return Sonidos.lobo_demoniaco_ambiente;
     }
     
 
     protected SoundEvent getHurtSound(DamageSource damageSourceIn)
     {
-        return Sonidos.enano_atacado;
+        return Sonidos.lobo_demoniaco_atacado;
     }
     
 
     protected SoundEvent getDeathSound()
     {
-        return Sonidos.enano_muerte;
+        return Sonidos.lobo_demoniaco_muerte;
     }
     
 

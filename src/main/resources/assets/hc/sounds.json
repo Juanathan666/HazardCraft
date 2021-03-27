@@ -34,7 +34,23 @@
 	"subtitle": "Enano atacado",
 	"sounds": [ {"name":"hc:entity/enano/atacado", "stream": true} ]
 	},
+	"entity.lobo_demoniaco_muerte":{
+	"category": "hostile",
+	"subtitle": "Lobo demoniaco muerto",
+	"sounds": [ {"name":"hc:entity/lobo_demoniaco/muerte", "stream": true} ]
+	},
 	
+	"entity.lobo_demoniaco_atacado":{
+	"category": "hostile",
+	"subtitle": "Lobo demoniaco atacado",
+	"sounds": [ {"name":"hc:entity/lobo_demoniaco/atacado", "stream": true} ]
+	},
+	
+	"entity.lobo_demoniaco_ambiente":{
+	"category": "hostile",
+	"subtitle": "Lobo demoniaco ambiente",
+	"sounds": [ {"name":"hc:entity/lobo_demoniaco/ambiente", "stream": true} ]
+	},
 	 "armor.armadura_de_netherita_poner":{
 	"category": "armor",
 	"subtitle": "Armadura de netherita puesta",

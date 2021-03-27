@@ -15,16 +15,27 @@ public class Sonidos {
     public static SoundEvent romper_varita;
     public static SoundEvent enano_muerte;
     public static SoundEvent enano_atacado;
+    public static SoundEvent lobo_demoniaco_muerte;
+    public static SoundEvent lobo_demoniaco_atacado;
+    public static SoundEvent lobo_demoniaco_ambiente;
 
 	public static void Iniciar(){
 		
 		bloque_de_netherita_romper = registrar("block.bloque_de_netherita_romper");
 		bloque_de_netherita_colocar = registrar("block.bloque_de_netherita_colocar");
 		bloque_de_netherita_andar = registrar("block.bloque_de_netherita_andar");
+		
 		armadura_de_netherita_poner = registrar("armor.armadura_de_netherita_poner");
+		
 		romper_varita = registrar("item.romper_varita");
+		
 		enano_muerte = registrar("entity.enano_muerte");
 		enano_atacado = registrar("entity.enano_atacado");
+		
+		lobo_demoniaco_ambiente = registrar("entity.lobo_demoniaco_ambiente");
+		lobo_demoniaco_atacado = registrar("entity.lobo_demoniaco_atacado");
+		lobo_demoniaco_muerte = registrar("entity.lobo_demoniaco_muerte");
+		
 		
 
 	}
